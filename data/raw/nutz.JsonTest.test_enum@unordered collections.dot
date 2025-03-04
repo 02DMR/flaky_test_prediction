@@ -1,0 +1,20 @@
+digraph PDG {
+label = "test_enum <3...8>";
+0.3 [style = filled, label = "assertEquals(\"\"T\"\",Json.toJson(TT.T,JsonFormat.full().ignoreJsonShape())); <7>", fillcolor = deeppink, shape = ellipse];
+0.2 [style = filled, label = "assertEquals(expected,Json.toJson(TT.T)); <6>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "assertEquals(\"\"K\"\",Json.toJson(K.K)); <4>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "String expected =  ( \"{
+\" + ( ( ( ( \"   \"name\": \"t\",
+\" + \"   \"index\": 1
+\" )) + \"}\" )) ); <5>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "Enter <3...8>", fillcolor = aquamarine, shape = diamond];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = solid, label="expected"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = bold, label=""];
+0.4 -> 0.0 [style = dotted, label="true"];
+0.4 -> 0.0 [style = bold, label=""];
+0.4 -> 0.1 [style = dotted, label="true"];
+0.4 -> 0.2 [style = dotted, label="true"];
+0.4 -> 0.3 [style = dotted, label="true"];
+}

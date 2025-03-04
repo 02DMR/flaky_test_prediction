@@ -1,0 +1,32 @@
+digraph PDG {
+label = "onReceive <3...17>";
+0.7 [style = filled, label = "assertThat(broadcastReceiver.job.get().isCancelled).isTrue(); <16>", fillcolor = deeppink, shape = ellipse];
+0.0 [style = filled, label = "object broadcastReceiver = TestBroadcast(); <4>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "Enter <3...17>", fillcolor = aquamarine, shape = diamond];
+0.2 [style = filled, label = "String value = \"value\"; <9>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertWithMessage(\"Broadcast receiver did not execute\").that(broadcastReceiver.broadcastExecuted.await(1,SECONDS)).isTrue(); <12...14>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "context.sendBroadcast(Intent(BROADCAST_ACTION).putExtra(EXTRA_STRING,value)); <10>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "context.registerReceiver(broadcastReceiver,IntentFilter(BROADCAST_ACTION)); <5...8>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "assertThat(broadcastReceiver.extraValue.get()).isEqualTo(value); <15>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "shadowOf(getMainLooper()).idle(); <11>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="broadcastReceiver"];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="context"];
+0.2 -> 0.3 [style = solid, label="value"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.6 [style = solid, label="value"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.6 -> 0.7 [style = bold, label=""];
+0.8 -> 0.0 [style = dotted, label="true"];
+0.8 -> 0.0 [style = bold, label=""];
+0.8 -> 0.1 [style = dotted, label="true"];
+0.8 -> 0.2 [style = dotted, label="true"];
+0.8 -> 0.3 [style = dotted, label="true"];
+0.8 -> 0.4 [style = dotted, label="true"];
+0.8 -> 0.5 [style = dotted, label="true"];
+0.8 -> 0.6 [style = dotted, label="true"];
+0.8 -> 0.7 [style = dotted, label="true"];
+}

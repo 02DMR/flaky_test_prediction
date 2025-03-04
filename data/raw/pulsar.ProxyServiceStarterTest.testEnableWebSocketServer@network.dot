@@ -1,0 +1,36 @@
+digraph PDG {
+label = "testEnableWebSocketServer <3...12>";
+0.6 [style = filled, label = "sessionFuture.get().getRemote().sendPing(ByteBuffer.wrap(\"ping\".getBytes())); <10>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "webSocketClient.start(); <6>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "HttpClient httpClient = new HttpClient(); <4>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "Future<Session> sessionFuture = webSocketClient.connect(myWebSocket,URI.create(webSocketUri)); <9>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "MyWebSocket myWebSocket = new MyWebSocket(); <7>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "String webSocketUri = \"ws\"; <8>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "Enter <3...12>", fillcolor = aquamarine, shape = diamond];
+0.1 [style = filled, label = "WebSocketClient webSocketClient = new WebSocketClient(httpClient); <5>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "assertTrue(myWebSocket.getResponse().contains(\"ping\")); <11>", fillcolor = deeppink, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="httpClient"];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = solid, label="webSocketClient"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.5 [style = solid, label="webSocketClient"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.5 [style = solid, label="webSocketClient"];
+0.3 -> 0.4 [style = bold, label=""];
+0.3 -> 0.5 [style = solid, label="myWebSocket"];
+0.3 -> 0.7 [style = solid, label="myWebSocket"];
+0.4 -> 0.5 [style = solid, label="webSocketUri"];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = solid, label="sessionFuture"];
+0.5 -> 0.6 [style = bold, label=""];
+0.6 -> 0.7 [style = bold, label=""];
+0.8 -> 0.0 [style = dotted, label="true"];
+0.8 -> 0.0 [style = bold, label=""];
+0.8 -> 0.1 [style = dotted, label="true"];
+0.8 -> 0.2 [style = dotted, label="true"];
+0.8 -> 0.3 [style = dotted, label="true"];
+0.8 -> 0.4 [style = dotted, label="true"];
+0.8 -> 0.5 [style = dotted, label="true"];
+0.8 -> 0.6 [style = dotted, label="true"];
+0.8 -> 0.7 [style = dotted, label="true"];
+}

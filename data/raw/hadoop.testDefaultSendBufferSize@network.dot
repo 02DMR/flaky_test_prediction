@@ -1,0 +1,11 @@
+digraph PDG {
+label = "testDefaultSendBufferSize <3...8>";
+0.1 [style = filled, label = "assertEquals(\"Send buffer size should be the default value.\",DFS_CLIENT_SOCKET_SEND_BUFFER_SIZE_DEFAULT,socket.getSendBufferSize()); <5...7>", fillcolor = deeppink, shape = ellipse];
+0.0 [style = filled, label = "socket = createSocket(); <4>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "Enter <3...8>", fillcolor = aquamarine, shape = diamond];
+0.0 -> 0.1 [style = solid, label="socket"];
+0.0 -> 0.1 [style = bold, label=""];
+0.2 -> 0.0 [style = dotted, label="true"];
+0.2 -> 0.0 [style = bold, label=""];
+0.2 -> 0.1 [style = dotted, label="true"];
+}

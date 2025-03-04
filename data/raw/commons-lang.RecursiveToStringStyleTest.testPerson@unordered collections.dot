@@ -1,0 +1,36 @@
+digraph PDG {
+label = "testPerson <4...14>";
+0.1 [style = filled, label = "p.name = \"John Doe\"; <6>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "p.job.title = \"Manager\"; <10>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "final String pBaseStr =  ( ( ( p.getClass().getName() + \"@\" )) + Integer.toHexString(System.identityHashCode(p)) ); <11>", fillcolor = white, shape = ellipse];
+0.9 [style = filled, label = "Enter <4...14>", fillcolor = aquamarine, shape = diamond];
+0.7 [style = filled, label = "final String pJobStr =  ( ( ( p.job.getClass().getName() + \"@\" )) + Integer.toHexString(System.identityHashCode(p.job)) ); <12>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "p.job = new Job(); <9>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "final Person p = new Person(); <5>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "assertEquals( ( ( ( ( ( pBaseStr + \"[name=John Doe,age=33,smoker=false,job=\" )) + pJobStr )) + \"[title=Manager]]\" ),new ReflectionToStringBuilder(p,new RecursiveToStringStyle()).toString()); <13>", fillcolor = deeppink, shape = ellipse];
+0.2 [style = filled, label = "p.age = 33; <7>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "p.smoker = false; <8>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.6 [style = solid, label="p"];
+0.0 -> 0.8 [style = solid, label="p"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.4 -> 0.7 [style = solid, label="job"];
+0.5 -> 0.6 [style = bold, label=""];
+0.6 -> 0.7 [style = bold, label=""];
+0.6 -> 0.8 [style = solid, label="pBaseStr"];
+0.7 -> 0.8 [style = solid, label="pJobStr"];
+0.7 -> 0.8 [style = bold, label=""];
+0.9 -> 0.0 [style = dotted, label="true"];
+0.9 -> 0.0 [style = bold, label=""];
+0.9 -> 0.1 [style = dotted, label="true"];
+0.9 -> 0.2 [style = dotted, label="true"];
+0.9 -> 0.3 [style = dotted, label="true"];
+0.9 -> 0.4 [style = dotted, label="true"];
+0.9 -> 0.5 [style = dotted, label="true"];
+0.9 -> 0.6 [style = dotted, label="true"];
+0.9 -> 0.7 [style = dotted, label="true"];
+0.9 -> 0.8 [style = dotted, label="true"];
+}

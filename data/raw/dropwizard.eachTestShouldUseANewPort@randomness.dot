@@ -1,0 +1,15 @@
+digraph PDG {
+label = "eachTestShouldUseANewPort <3...8>";
+0.3 [style = filled, label = "Enter <3...8>", fillcolor = aquamarine, shape = diamond];
+0.0 [style = filled, label = "final int port = resources.target(\"/\").getUri().getPort(); <4>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "usedPorts.add(port); <6>", fillcolor = deeppink, shape = ellipse];
+0.1 [style = filled, label = "assertThat(usedPorts).doesNotContain(port); <5>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="port"];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="port"];
+0.1 -> 0.2 [style = bold, label=""];
+0.3 -> 0.0 [style = dotted, label="true"];
+0.3 -> 0.0 [style = bold, label=""];
+0.3 -> 0.1 [style = dotted, label="true"];
+0.3 -> 0.2 [style = dotted, label="true"];
+}

@@ -1,0 +1,28 @@
+digraph PDG {
+label = "testCompositeBindingOps <3...10>";
+0.4 [style = filled, label = "final ModelNode compositeOp = Operations.CompositeOperationBuilder.create().addStep(addOp).addStep(Operations.createWriteAttributeOperation(addr,NamingSubsystemModel.LOOKUP,\"java:global/a\")).build().getOperation(); <8>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "Enter <3...10>", fillcolor = aquamarine, shape = diamond];
+0.0 [style = filled, label = "final KernelServices services = createKernelServicesBuilder(createAdditionalInitialization()).setSubsystemXml(getSubsystemXml()).build(); <4>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "final ModelNode addr = Operations.createAddress(ModelDescriptionConstants.SUBSYSTEM,NamingExtension.SUBSYSTEM_NAME,NamingSubsystemModel.BINDING,\"java:global/alookup\"); <5>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "final ModelNode addOp = Operations.createAddOperation(addr); <6>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "addOp.get(NamingSubsystemModel.BINDING_TYPE).set(NamingSubsystemModel.LOOKUP); <7>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "ModelTestUtils.checkOutcome(services.executeOperation(compositeOp)); <9>", fillcolor = deeppink, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.5 [style = solid, label="services"];
+0.1 -> 0.2 [style = solid, label="addr"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.4 [style = solid, label="addr"];
+0.2 -> 0.3 [style = solid, label="addOp"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="addOp"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = solid, label="compositeOp"];
+0.4 -> 0.5 [style = bold, label=""];
+0.6 -> 0.0 [style = dotted, label="true"];
+0.6 -> 0.0 [style = bold, label=""];
+0.6 -> 0.1 [style = dotted, label="true"];
+0.6 -> 0.2 [style = dotted, label="true"];
+0.6 -> 0.3 [style = dotted, label="true"];
+0.6 -> 0.4 [style = dotted, label="true"];
+0.6 -> 0.5 [style = dotted, label="true"];
+}

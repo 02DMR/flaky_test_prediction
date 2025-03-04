@@ -1,0 +1,14 @@
+digraph PDG {
+label = "testSkipCheckoutWithoutConnectionUrl <3...11>";
+0.2 [style = filled, label = "fail(\"mojo execution must fail.\"); <7>", fillcolor = deeppink, shape = ellipse];
+0.0 [style = filled, label = "CheckoutMojo mojo = ((CheckoutMojo)(lookupMojo(\"checkout\",getTestFile(\"src/test/resources/mojos/checkout/checkoutWithoutConnectionUrl.xml\")))); <4>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "Enter <3...11>", fillcolor = aquamarine, shape = diamond];
+0.1 [style = filled, label = "mojo.execute(); <6>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="mojo"];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = bold, label=""];
+0.3 -> 0.0 [style = dotted, label="true"];
+0.3 -> 0.0 [style = bold, label=""];
+0.3 -> 0.1 [style = dotted, label="true"];
+0.3 -> 0.2 [style = dotted, label="true"];
+}

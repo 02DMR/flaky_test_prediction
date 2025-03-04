@@ -1,0 +1,46 @@
+digraph PDG {
+label = "afterResponseNextClientRequestSucceeds <3...24>";
+0.6 [style = filled, label = "ConnectionContext ctx2 = contextQueue.poll(); <17>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "ConnectionContext ctx1 = contextQueue.poll(); <15>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "assertThat(ctx2,not(nullValue())); <18>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "validateClientResponse(client.request(client.get(\"/1\"))); <13>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "Queue<ConnectionContext> contextQueue = new ArrayBlockingQueue<>(4); <4>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "ServerSocketChannel server = nettyServer(RESPONSE_MSG); <5>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "validateClientResponse(client.request(client.get(\"/2\"))); <14>", fillcolor = white, shape = ellipse];
+0.10 [style = filled, label = "{
+server.close().sync();
+} <21...23>", fillcolor = deeppink, shape = ellipse];
+0.9 [style = filled, label = "assertThat(contextQueue,empty()); <20>", fillcolor = white, shape = ellipse];
+0.11 [style = filled, label = "Enter <3...24>", fillcolor = aquamarine, shape = diamond];
+0.5 [style = filled, label = "assertThat(ctx1,not(nullValue())); <16>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "assertThat(ctx1,not(equalTo(ctx2))); <19>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.4 [style = solid, label="contextQueue"];
+0.0 -> 0.6 [style = solid, label="contextQueue"];
+0.0 -> 0.9 [style = solid, label="contextQueue"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.10 [style = solid, label="server"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = solid, label="ctx1"];
+0.4 -> 0.5 [style = bold, label=""];
+0.4 -> 0.8 [style = solid, label="ctx1"];
+0.5 -> 0.6 [style = bold, label=""];
+0.6 -> 0.7 [style = solid, label="ctx2"];
+0.6 -> 0.7 [style = bold, label=""];
+0.6 -> 0.8 [style = solid, label="ctx2"];
+0.7 -> 0.8 [style = bold, label=""];
+0.8 -> 0.9 [style = bold, label=""];
+0.9 -> 0.10 [style = bold, label=""];
+0.11 -> 0.0 [style = dotted, label="true"];
+0.11 -> 0.0 [style = bold, label=""];
+0.11 -> 0.1 [style = dotted, label="true"];
+0.11 -> 0.2 [style = dotted, label="true"];
+0.11 -> 0.3 [style = dotted, label="true"];
+0.11 -> 0.4 [style = dotted, label="true"];
+0.11 -> 0.5 [style = dotted, label="true"];
+0.11 -> 0.6 [style = dotted, label="true"];
+0.11 -> 0.7 [style = dotted, label="true"];
+0.11 -> 0.8 [style = dotted, label="true"];
+0.11 -> 0.9 [style = dotted, label="true"];
+}

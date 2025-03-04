@@ -1,0 +1,13 @@
+digraph PDG {
+label = "appliesOuterTimeout <3...16>";
+0.1 [style = filled, label = "doAnswer(null).when(strategy1).waitUntilReady(eq(container)); <8...11>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "Enter <3...16>", fillcolor = aquamarine, shape = diamond];
+0.0 [style = filled, label = "final WaitStrategy underTest = new WaitAllStrategy().withStrategy(strategy1).withStartupTimeout(Duration.ofMillis(10)); <4...6>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "assertThrows(\"The outer strategy timeout applies\",,null); <13...15>", fillcolor = deeppink, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = bold, label=""];
+0.3 -> 0.0 [style = dotted, label="true"];
+0.3 -> 0.0 [style = bold, label=""];
+0.3 -> 0.1 [style = dotted, label="true"];
+0.3 -> 0.2 [style = dotted, label="true"];
+}

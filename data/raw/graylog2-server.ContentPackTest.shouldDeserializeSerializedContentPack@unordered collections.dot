@@ -1,0 +1,48 @@
+digraph PDG {
+label = "shouldDeserializeSerializedContentPack <3...14>";
+0.2 [style = filled, label = "Path path = Paths.get(contentPackURL.toURI()); <6>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "String expectedJSON = String.join(\"\",Files.readAllLines(path)).replace(\"
+\",\"\").replace(\"
+\",\"\"); <7>", fillcolor = white, shape = ellipse];
+0.10 [style = filled, label = "Enter <3...14>", fillcolor = aquamarine, shape = diamond];
+0.1 [style = filled, label = "final URL contentPackURL = .getResource(\"expected_content_pack.json\"); <5>", fillcolor = white, shape = ellipse];
+0.9 [style = filled, label = "assertThat(readContentPack.revision()).isEqualTo(contentPack.revision()); <13>", fillcolor = deeppink, shape = ellipse];
+0.4 [style = filled, label = "final String jsonTxt = objectMapper.writeValueAsString(contentPack); <8>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "final ContentPack contentPack = createTestContentPack(); <4>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "assertThat(readContentPack.version()).isEqualTo(contentPack.version()); <12>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertThat(jsonTxt).isEqualTo(expectedJSON); <9>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "assertThat(readContentPack.id()).isEqualTo(contentPack.id()); <11>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "final ContentPack readContentPack = objectMapper.readValue(jsonTxt,); <10>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.4 [style = solid, label="contentPack"];
+0.0 -> 0.7 [style = solid, label="contentPack"];
+0.0 -> 0.8 [style = solid, label="contentPack"];
+0.0 -> 0.9 [style = solid, label="contentPack"];
+0.1 -> 0.2 [style = solid, label="contentPackURL"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = solid, label="path"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.3 -> 0.5 [style = solid, label="expectedJSON"];
+0.4 -> 0.5 [style = solid, label="jsonTxt"];
+0.4 -> 0.5 [style = bold, label=""];
+0.4 -> 0.6 [style = solid, label="jsonTxt"];
+0.5 -> 0.6 [style = bold, label=""];
+0.6 -> 0.7 [style = solid, label="readContentPack"];
+0.6 -> 0.7 [style = bold, label=""];
+0.6 -> 0.8 [style = solid, label="readContentPack"];
+0.6 -> 0.9 [style = solid, label="readContentPack"];
+0.7 -> 0.8 [style = bold, label=""];
+0.8 -> 0.9 [style = bold, label=""];
+0.10 -> 0.0 [style = dotted, label="true"];
+0.10 -> 0.0 [style = bold, label=""];
+0.10 -> 0.1 [style = dotted, label="true"];
+0.10 -> 0.2 [style = dotted, label="true"];
+0.10 -> 0.3 [style = dotted, label="true"];
+0.10 -> 0.4 [style = dotted, label="true"];
+0.10 -> 0.5 [style = dotted, label="true"];
+0.10 -> 0.6 [style = dotted, label="true"];
+0.10 -> 0.7 [style = dotted, label="true"];
+0.10 -> 0.8 [style = dotted, label="true"];
+0.10 -> 0.9 [style = dotted, label="true"];
+}

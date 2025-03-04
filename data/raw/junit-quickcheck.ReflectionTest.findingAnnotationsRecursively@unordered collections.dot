@@ -1,0 +1,31 @@
+digraph PDG {
+label = "findingAnnotationsRecursively <3...11>";
+0.2 [style = filled, label = "assertEquals(4,annotations.size()); <6>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "assertEquals(,annotations.get(1).annotationType()); <8>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "assertEquals(,annotations.get(0).annotationType()); <7>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertEquals(,annotations.get(2).annotationType()); <9>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "Enter <3...11>", fillcolor = aquamarine, shape = diamond];
+0.0 [style = filled, label = "Method method = findMethod(this.getClass(),\"withMarker\",); <4>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "List<Annotation> annotations = allAnnotations(method.getParameters()[0]); <5>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "assertEquals(,annotations.get(3).annotationType()); <10>", fillcolor = deeppink, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="method"];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = solid, label="annotations"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="annotations"];
+0.1 -> 0.4 [style = solid, label="annotations"];
+0.1 -> 0.5 [style = solid, label="annotations"];
+0.1 -> 0.6 [style = solid, label="annotations"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.7 -> 0.0 [style = dotted, label="true"];
+0.7 -> 0.0 [style = bold, label=""];
+0.7 -> 0.1 [style = dotted, label="true"];
+0.7 -> 0.2 [style = dotted, label="true"];
+0.7 -> 0.3 [style = dotted, label="true"];
+0.7 -> 0.4 [style = dotted, label="true"];
+0.7 -> 0.5 [style = dotted, label="true"];
+0.7 -> 0.6 [style = dotted, label="true"];
+}

@@ -1,0 +1,27 @@
+digraph PDG {
+label = "directMemoryInt <3...10>";
+0.0 [style = filled, label = "long memory = this.memory.allocate(32); <4>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "this.memory.writeInt(null,memory,0x12345678); <5>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "assertEquals(0x12345678,this.memory.readInt(null,memory)); <6>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "this.memory.writeInt(null,memory,INT_VAL); <7>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "this.memory.freeMemory(memory,32); <9>", fillcolor = deeppink, shape = ellipse];
+0.4 [style = filled, label = "assertEquals(INT_VAL,this.memory.readInt(null,memory)); <8>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "Enter <3...10>", fillcolor = aquamarine, shape = diamond];
+0.0 -> 0.1 [style = solid, label="memory"];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="memory"];
+0.0 -> 0.3 [style = solid, label="memory"];
+0.0 -> 0.4 [style = solid, label="memory"];
+0.0 -> 0.5 [style = solid, label="memory"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.6 -> 0.0 [style = dotted, label="true"];
+0.6 -> 0.0 [style = bold, label=""];
+0.6 -> 0.1 [style = dotted, label="true"];
+0.6 -> 0.2 [style = dotted, label="true"];
+0.6 -> 0.3 [style = dotted, label="true"];
+0.6 -> 0.4 [style = dotted, label="true"];
+0.6 -> 0.5 [style = dotted, label="true"];
+}

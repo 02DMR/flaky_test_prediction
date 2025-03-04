@@ -1,0 +1,18 @@
+digraph PDG {
+label = "flakyTestTest <4...10>";
+0.0 [style = filled, label = "onBrickAtPosition(0).checkShowsText(R.string.brick_when_started); <5>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "assertTrue( ( randomNumber < 50 )); <8>", fillcolor = deeppink, shape = ellipse];
+0.4 [style = filled, label = "Enter <4...10>", fillcolor = aquamarine, shape = diamond];
+0.1 [style = filled, label = "Random randomGenerator = new Random(); <6>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "int randomNumber = randomGenerator.nextInt(100); <7>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = solid, label="randomGenerator"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = solid, label="randomNumber"];
+0.2 -> 0.3 [style = bold, label=""];
+0.4 -> 0.0 [style = dotted, label="true"];
+0.4 -> 0.0 [style = bold, label=""];
+0.4 -> 0.1 [style = dotted, label="true"];
+0.4 -> 0.2 [style = dotted, label="true"];
+0.4 -> 0.3 [style = dotted, label="true"];
+}

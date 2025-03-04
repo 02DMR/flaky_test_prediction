@@ -1,0 +1,37 @@
+digraph PDG {
+label = "testReplicatorProducerName <3...16>";
+0.1 [style = filled, label = "final String topicName = BrokerTestUtil.newUniqueName(\"persistent\"); <5>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "Set<String> remoteClusters = topic.get().getProducers().values().stream().map(null).collect(Collectors.toSet()); <14>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "log.info(\"--- Starting ReplicatorTest::testReplicatorProducerName ---\"); <4>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "Optional<Topic> topic = pulsar2.getBrokerService().getTopicReference(topicName); <12>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "@Cleanup MessageProducer producer1 = new MessageProducer(url1,dest); <7...8>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "Awaitility.await().untilAsserted(null); <9...11>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "assertTrue(topic.isPresent()); <13>", fillcolor = white, shape = ellipse];
+0.9 [style = filled, label = "Enter <3...16>", fillcolor = aquamarine, shape = diamond];
+0.2 [style = filled, label = "final TopicName dest = TopicName.get(topicName); <6>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "assertTrue(remoteClusters.contains(\"r1\")); <15>", fillcolor = deeppink, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = solid, label="topicName"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.5 [style = solid, label="topicName"];
+0.2 -> 0.3 [style = solid, label="dest"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = solid, label="topic"];
+0.5 -> 0.6 [style = bold, label=""];
+0.5 -> 0.7 [style = solid, label="topic"];
+0.6 -> 0.7 [style = bold, label=""];
+0.7 -> 0.8 [style = solid, label="remoteClusters"];
+0.7 -> 0.8 [style = bold, label=""];
+0.9 -> 0.0 [style = dotted, label="true"];
+0.9 -> 0.0 [style = bold, label=""];
+0.9 -> 0.1 [style = dotted, label="true"];
+0.9 -> 0.2 [style = dotted, label="true"];
+0.9 -> 0.3 [style = dotted, label="true"];
+0.9 -> 0.4 [style = dotted, label="true"];
+0.9 -> 0.5 [style = dotted, label="true"];
+0.9 -> 0.6 [style = dotted, label="true"];
+0.9 -> 0.7 [style = dotted, label="true"];
+0.9 -> 0.8 [style = dotted, label="true"];
+}

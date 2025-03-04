@@ -1,0 +1,77 @@
+digraph PDG {
+label = "testEncoding <3...29>";
+0.3 [style = filled, label = "TokenStream tokenStream = analyzer.tokenStream(FIELD_NAME,new StringReader(rawDocContent)); <16>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); <19>", fillcolor = white, shape = ellipse];
+0.15 [style = filled, label = "assertEquals(\"XHTML Encoding should have worked:\",rawDocContent,decodedSnippet); <28>", fillcolor = deeppink, shape = ellipse];
+0.12 [style = filled, label = "nodes = body.getElementsByTagName(\"h2\"); <25>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "String xhtml = (((( ( \"<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+\" + \"<!DOCTYPE html>\" ))))); <18>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "Document doc = db.parse(new ByteArrayInputStream(xhtml.getBytes())); <21>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "DocumentBuilder db = dbf.newDocumentBuilder(); <20>", fillcolor = white, shape = ellipse];
+0.9 [style = filled, label = "Element root = doc.getDocumentElement(); <22>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "highlighter.setTextFragmenter(new SimpleFragmenter(2000)); <15>", fillcolor = white, shape = ellipse];
+0.16 [style = filled, label = "Enter <3...29>", fillcolor = aquamarine, shape = diamond];
+0.1 [style = filled, label = "Highlighter highlighter = new Highlighter(this,new SimpleHTMLEncoder(),new Scorer(){
+public void startFragment (TextFragment newFragment  ) {
+}public float getTokenScore (Token token  ) {
+return 0;
+}public float getFragmentScore ( ) {
+return 1;
+}}); <5...14>", fillcolor = white, shape = ellipse];
+0.14 [style = filled, label = "String decodedSnippet = h2.getFirstChild().getNodeValue(); <27>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "String encodedSnippet = highlighter.getBestFragments(tokenStream,rawDocContent,1,\"\"); <17>", fillcolor = white, shape = ellipse];
+0.10 [style = filled, label = "NodeList nodes = root.getElementsByTagName(\"body\"); <23>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "String rawDocContent = \"\"Smith & sons' prices < 3 and >4\" claims article\"; <4>", fillcolor = white, shape = ellipse];
+0.11 [style = filled, label = "Element body = ((Element)(nodes.item(0))); <24>", fillcolor = white, shape = ellipse];
+0.13 [style = filled, label = "Element h2 = ((Element)(nodes.item(0))); <26>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.3 [style = solid, label="rawDocContent"];
+0.0 -> 0.4 [style = solid, label="rawDocContent"];
+0.0 -> 0.15 [style = solid, label="rawDocContent"];
+0.1 -> 0.2 [style = solid, label="highlighter"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.4 [style = solid, label="highlighter"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="highlighter"];
+0.3 -> 0.4 [style = solid, label="tokenStream"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.5 -> 0.8 [style = solid, label="xhtml"];
+0.6 -> 0.7 [style = solid, label="dbf"];
+0.6 -> 0.7 [style = bold, label=""];
+0.7 -> 0.8 [style = solid, label="db"];
+0.7 -> 0.8 [style = bold, label=""];
+0.8 -> 0.9 [style = solid, label="doc"];
+0.8 -> 0.9 [style = bold, label=""];
+0.9 -> 0.10 [style = solid, label="root"];
+0.9 -> 0.10 [style = bold, label=""];
+0.10 -> 0.11 [style = solid, label="nodes"];
+0.10 -> 0.11 [style = bold, label=""];
+0.10 -> 0.13 [style = solid, label="nodes"];
+0.11 -> 0.12 [style = solid, label="body"];
+0.11 -> 0.12 [style = bold, label=""];
+0.12 -> 0.13 [style = solid, label="nodes"];
+0.12 -> 0.13 [style = bold, label=""];
+0.13 -> 0.14 [style = solid, label="h2"];
+0.13 -> 0.14 [style = bold, label=""];
+0.14 -> 0.15 [style = solid, label="decodedSnippet"];
+0.14 -> 0.15 [style = bold, label=""];
+0.16 -> 0.0 [style = dotted, label="true"];
+0.16 -> 0.0 [style = bold, label=""];
+0.16 -> 0.1 [style = dotted, label="true"];
+0.16 -> 0.2 [style = dotted, label="true"];
+0.16 -> 0.3 [style = dotted, label="true"];
+0.16 -> 0.4 [style = dotted, label="true"];
+0.16 -> 0.5 [style = dotted, label="true"];
+0.16 -> 0.6 [style = dotted, label="true"];
+0.16 -> 0.7 [style = dotted, label="true"];
+0.16 -> 0.8 [style = dotted, label="true"];
+0.16 -> 0.9 [style = dotted, label="true"];
+0.16 -> 0.10 [style = dotted, label="true"];
+0.16 -> 0.11 [style = dotted, label="true"];
+0.16 -> 0.12 [style = dotted, label="true"];
+0.16 -> 0.13 [style = dotted, label="true"];
+0.16 -> 0.14 [style = dotted, label="true"];
+0.16 -> 0.15 [style = dotted, label="true"];
+}

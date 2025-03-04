@@ -1,0 +1,40 @@
+digraph PDG {
+label = "testDelegationTokenWithRealUser <3...20>";
+0.7 [style = filled, label = "Assert.assertEquals(identifier.getUser().getRealUser().getUserName(),REAL_USER); <17>", fillcolor = deeppink, shape = ellipse];
+0.3 [style = filled, label = "DelegationTokenIdentifier identifier = new DelegationTokenIdentifier(); <13>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "final UserGroupInformation proxyUgi = UserGroupInformation.createProxyUserForTesting(PROXY_USER,ugi,GROUP_NAMES); <5>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "byte[] tokenId = tokens[0].getIdentifier(); <14>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "UserGroupInformation ugi = UserGroupInformation.createRemoteUser(REAL_USER); <4>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "identifier.readFields(new DataInputStream(new ByteArrayInputStream(tokenId))); <15>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "Enter <3...20>", fillcolor = aquamarine, shape = diamond];
+0.2 [style = filled, label = "Token<?>[] tokens = proxyUgi.doAs(new PrivilegedExceptionAction<Token<?>[]>(){
+@Override public Token<?>[] run ( ) {
+return cluster.getFileSystem().addDelegationTokens(\"RenewerUser\",null);
+}}); <7...12>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "Assert.assertEquals(identifier.getUser().getUserName(),PROXY_USER); <16>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="ugi"];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = solid, label="proxyUgi"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="tokens"];
+0.3 -> 0.4 [style = bold, label=""];
+0.3 -> 0.5 [style = solid, label="identifier"];
+0.3 -> 0.6 [style = solid, label="identifier"];
+0.3 -> 0.7 [style = solid, label="identifier"];
+0.4 -> 0.5 [style = solid, label="tokenId"];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = solid, label="identifier"];
+0.5 -> 0.6 [style = bold, label=""];
+0.5 -> 0.7 [style = solid, label="identifier"];
+0.6 -> 0.7 [style = bold, label=""];
+0.8 -> 0.0 [style = dotted, label="true"];
+0.8 -> 0.0 [style = bold, label=""];
+0.8 -> 0.1 [style = dotted, label="true"];
+0.8 -> 0.2 [style = dotted, label="true"];
+0.8 -> 0.3 [style = dotted, label="true"];
+0.8 -> 0.4 [style = dotted, label="true"];
+0.8 -> 0.5 [style = dotted, label="true"];
+0.8 -> 0.6 [style = dotted, label="true"];
+0.8 -> 0.7 [style = dotted, label="true"];
+}

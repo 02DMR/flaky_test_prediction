@@ -1,0 +1,18 @@
+digraph PDG {
+label = "assertConnectionRequestSucceeds <3...7>";
+0.2 [style = filled, label = "assert( ( response != null )); <5>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "assertResponse(response,HTTP_1_1,OK,\"\"); <6>", fillcolor = deeppink, shape = ellipse];
+0.1 [style = filled, label = "final StreamingHttpResponse response = await(streamingHttpClient().reserveConnection(request).flatMap(null),VERIFY_REQUEST_AWAIT_MILLIS,MILLISECONDS); <4>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "Enter <3...7>", fillcolor = aquamarine, shape = diamond];
+0.0 [style = filled, label = "final StreamingHttpRequest request <3>", fillcolor = tomato, shape = box];
+0.0 -> 0.1 [style = solid, label="request"];
+0.1 -> 0.2 [style = solid, label="response"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="response"];
+0.2 -> 0.3 [style = bold, label=""];
+0.4 -> 0.0 [style = solid, label="request"];
+0.4 -> 0.1 [style = dotted, label="true"];
+0.4 -> 0.1 [style = bold, label=""];
+0.4 -> 0.2 [style = dotted, label="true"];
+0.4 -> 0.3 [style = dotted, label="true"];
+}

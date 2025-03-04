@@ -1,0 +1,17 @@
+digraph PDG {
+label = "shouldGenerateRandomPastLocalDate <3...8>";
+0.4 [style = filled, label = "Enter <3...8>", fillcolor = aquamarine, shape = diamond];
+0.2 [style = filled, label = "final Generator<LocalDate> pastLocalDateGenerator = RandomGenerator.PAST_LOCAL_DATE; <6>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "final LocalDateTime startDate = now().atStartOfDay(); <4>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "final LocalDateTime endDate = now().minus(Period.ofYears(5)).atStartOfDay(); <5>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "typeCheck(pastLocalDateGenerator,null).verify(times(NUMBER_OF_TIMES)); <7>", fillcolor = deeppink, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = solid, label="pastLocalDateGenerator"];
+0.2 -> 0.3 [style = bold, label=""];
+0.4 -> 0.0 [style = dotted, label="true"];
+0.4 -> 0.0 [style = bold, label=""];
+0.4 -> 0.1 [style = dotted, label="true"];
+0.4 -> 0.2 [style = dotted, label="true"];
+0.4 -> 0.3 [style = dotted, label="true"];
+}

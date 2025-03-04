@@ -1,0 +1,22 @@
+digraph PDG {
+label = "shouldSubstituteCorrectly <3...13>";
+0.0 [style = filled, label = "StrLookup<?> dummyLookup = new StrLookup<Object>(){
+@Override public String lookup (String key  ) {
+return \"baz\";
+}}; <4...9>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "SubstitutingSourceProvider provider = new SubstitutingSourceProvider(new DummySourceProvider(),new StrSubstitutor(dummyLookup)); <10>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "assertThat(results).isEqualTo(\"foo: baz\"); <12>", fillcolor = deeppink, shape = ellipse];
+0.4 [style = filled, label = "Enter <3...13>", fillcolor = aquamarine, shape = diamond];
+0.2 [style = filled, label = "String results = new String(ByteStreams.toByteArray(provider.open(\"foo: ${bar}\")),StandardCharsets.UTF_8); <11>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="dummyLookup"];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = solid, label="provider"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = solid, label="results"];
+0.2 -> 0.3 [style = bold, label=""];
+0.4 -> 0.0 [style = dotted, label="true"];
+0.4 -> 0.0 [style = bold, label=""];
+0.4 -> 0.1 [style = dotted, label="true"];
+0.4 -> 0.2 [style = dotted, label="true"];
+0.4 -> 0.3 [style = dotted, label="true"];
+}

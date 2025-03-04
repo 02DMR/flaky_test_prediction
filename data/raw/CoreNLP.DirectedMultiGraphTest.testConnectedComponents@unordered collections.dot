@@ -1,0 +1,26 @@
+digraph PDG {
+label = "testConnectedComponents <4...12>";
+0.4 [style = filled, label = "System.out.println( ( \"Connected component: \" + cc )); <8>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "assertEquals(CollectionUtils.sorted(ccs.get(0)),Arrays.asList(1,2,3,4)); <11>", fillcolor = deeppink, shape = ellipse];
+0.7 [style = filled, label = "Enter <4...12>", fillcolor = aquamarine, shape = diamond];
+0.5 [style = filled, label = "assertEquals(ccs.size(),4); <10>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "System.out.println( ( \"graph is \" + graph.toString() )); <5>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "Set<Integer> cc <7>", fillcolor = tomato, shape = box];
+0.3 [style = filled, label = "ccs <7>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "List<Set<Integer>> ccs = graph.getConnectedComponents(); <6>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.4 [style = bold, label=""];
+0.1 -> 0.5 [style = solid, label="ccs"];
+0.1 -> 0.6 [style = solid, label="ccs"];
+0.4 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.7 -> 0.0 [style = dotted, label="true"];
+0.7 -> 0.0 [style = bold, label=""];
+0.7 -> 0.1 [style = dotted, label="true"];
+0.7 -> 0.2 [style = dotted, label="true"];
+0.7 -> 0.3 [style = dotted, label="true"];
+0.7 -> 0.4 [style = dotted, label="true"];
+0.7 -> 0.5 [style = dotted, label="true"];
+0.7 -> 0.6 [style = dotted, label="true"];
+}

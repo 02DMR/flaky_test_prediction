@@ -1,0 +1,29 @@
+digraph PDG {
+label = "testLocalPortRange <3...14>";
+0.2 [style = filled, label = "spi.setLocalPortRange(0); <7>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "Enter <3...14>", fillcolor = aquamarine, shape = diamond];
+0.1 [style = filled, label = "TcpCommunicationSpi spi = new TcpCommunicationSpi(); <6>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "cfg.setCommunicationSpi(spi); <8>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "startGrid(cfg.getIgniteInstanceName(),cfg); <9>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "{
+stopAllGrids();
+} <11...13>", fillcolor = deeppink, shape = ellipse];
+0.0 [style = filled, label = "IgniteConfiguration cfg = getConfiguration(); <5>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.3 [style = solid, label="cfg"];
+0.0 -> 0.4 [style = solid, label="cfg"];
+0.1 -> 0.2 [style = solid, label="spi"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="spi"];
+0.2 -> 0.3 [style = solid, label="spi"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = solid, label="cfg"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.6 -> 0.0 [style = dotted, label="true"];
+0.6 -> 0.0 [style = bold, label=""];
+0.6 -> 0.1 [style = dotted, label="true"];
+0.6 -> 0.2 [style = dotted, label="true"];
+0.6 -> 0.3 [style = dotted, label="true"];
+0.6 -> 0.4 [style = dotted, label="true"];
+}

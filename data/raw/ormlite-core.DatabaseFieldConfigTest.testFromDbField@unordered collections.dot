@@ -1,0 +1,27 @@
+digraph PDG {
+label = "testFromDbField <3...10>";
+0.1 [style = filled, label = "assertTrue( ( fields.length >= 1 )); <5>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertEquals(fields[0].getName(),config.getFieldName()); <9>", fillcolor = deeppink, shape = ellipse];
+0.6 [style = filled, label = "Enter <3...10>", fillcolor = aquamarine, shape = diamond];
+0.3 [style = filled, label = "assertNotNull(config); <7>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "Field[] fields = .getDeclaredFields(); <4>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "assertTrue(config.isCanBeNull()); <8>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "DatabaseFieldConfig config = DatabaseFieldConfig.fromField(databaseType,\"foo\",fields[0]); <6>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="fields"];
+0.0 -> 0.5 [style = solid, label="fields"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = solid, label="config"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="config"];
+0.2 -> 0.5 [style = solid, label="config"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.6 -> 0.0 [style = dotted, label="true"];
+0.6 -> 0.0 [style = bold, label=""];
+0.6 -> 0.1 [style = dotted, label="true"];
+0.6 -> 0.2 [style = dotted, label="true"];
+0.6 -> 0.3 [style = dotted, label="true"];
+0.6 -> 0.4 [style = dotted, label="true"];
+0.6 -> 0.5 [style = dotted, label="true"];
+}

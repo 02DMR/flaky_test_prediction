@@ -1,0 +1,23 @@
+digraph PDG {
+label = "testApply <4...10>";
+0.5 [style = filled, label = "Enter <4...10>", fillcolor = aquamarine, shape = diamond];
+0.0 [style = filled, label = "TextClassificationConfig originalConfig = new TextClassificationConfig(VocabularyConfigTests.createRandom(),BertTokenizationTests.createRandom(),List.of(\"one\",\"two\"),randomIntBetween(-1,10),\"foo-results\"); <5>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "assertThat(new TextClassificationConfig.Builder(originalConfig).setResultsField(\"ml-results\").build(),equalTo(new TextClassificationConfigUpdate.Builder().setResultsField(\"ml-results\").build().apply(originalConfig))); <8>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "assertThat(new TextClassificationConfig.Builder(originalConfig).setClassificationLabels(List.of(\"foo\",\"bar\")).build(),equalTo(new TextClassificationConfigUpdate.Builder().setClassificationLabels(List.of(\"foo\",\"bar\")).build().apply(originalConfig))); <7>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "assertThat(originalConfig,equalTo(new TextClassificationConfigUpdate.Builder().build().apply(originalConfig))); <6>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "assertThat(new TextClassificationConfig.Builder(originalConfig).setNumTopClasses( ( originalConfig.getNumTopClasses() + 1 )).build(),equalTo(new TextClassificationConfigUpdate.Builder().setNumTopClasses( ( originalConfig.getNumTopClasses() + 1 )).build().apply(originalConfig))); <9>", fillcolor = deeppink, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="originalConfig"];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="originalConfig"];
+0.0 -> 0.3 [style = solid, label="originalConfig"];
+0.0 -> 0.4 [style = solid, label="originalConfig"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.5 -> 0.0 [style = dotted, label="true"];
+0.5 -> 0.0 [style = bold, label=""];
+0.5 -> 0.1 [style = dotted, label="true"];
+0.5 -> 0.2 [style = dotted, label="true"];
+0.5 -> 0.3 [style = dotted, label="true"];
+0.5 -> 0.4 [style = dotted, label="true"];
+}

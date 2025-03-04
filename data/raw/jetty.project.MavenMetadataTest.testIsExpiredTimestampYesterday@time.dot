@@ -1,0 +1,15 @@
+digraph PDG {
+label = "testIsExpiredTimestampYesterday <3...7>";
+0.1 [style = filled, label = "String timestamp = getTimestampFormatter().format(yesterday); <5>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "LocalDateTime yesterday = LocalDateTime.now().minusDays(1); <4>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "Enter <3...7>", fillcolor = aquamarine, shape = diamond];
+0.2 [style = filled, label = "assertTrue(MavenMetadata.isExpiredTimestamp(timestamp), ( \"Timestamp should be stale: \" + timestamp )); <6>", fillcolor = deeppink, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="yesterday"];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = solid, label="timestamp"];
+0.1 -> 0.2 [style = bold, label=""];
+0.3 -> 0.0 [style = dotted, label="true"];
+0.3 -> 0.0 [style = bold, label=""];
+0.3 -> 0.1 [style = dotted, label="true"];
+0.3 -> 0.2 [style = dotted, label="true"];
+}

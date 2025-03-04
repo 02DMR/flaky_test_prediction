@@ -1,0 +1,35 @@
+digraph PDG {
+label = "shouldNotRemoveConstraintThatGetsReAdded <3...27>";
+0.3 [style = filled, label = "{
+SchemaWriteOperations statement = schemaWriteOperationsInNewTransaction();
+dropConstraint(statement,constraint);
+createConstraint(statement,descriptor);
+commit();
+} <14...20>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "Enter <3...27>", fillcolor = aquamarine, shape = diamond];
+0.1 [style = filled, label = "{
+SchemaWriteOperations statement = schemaWriteOperationsInNewTransaction();
+constraint = createConstraint(statement,descriptor);
+commit();
+} <7...11>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "SchemaStateCheck schemaState = new SchemaStateCheck().setUp(); <13>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "{
+ReadOperations statement = readOperationsInNewTransaction();
+assertEquals(singletonList(constraint),asCollection(statement.constraintsGetAll()));
+schemaState.assertNotCleared(statement);
+} <21...26>", fillcolor = deeppink, shape = ellipse];
+0.0 [style = filled, label = "Constraint constraint; <6>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.3 [style = solid, label="constraint"];
+0.0 -> 0.4 [style = solid, label="constraint"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="constraint"];
+0.1 -> 0.4 [style = solid, label="constraint"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="schemaState"];
+0.3 -> 0.4 [style = solid, label="statement"];
+0.3 -> 0.4 [style = bold, label=""];
+0.5 -> 0.0 [style = dotted, label="true"];
+0.5 -> 0.0 [style = bold, label=""];
+0.5 -> 0.2 [style = dotted, label="true"];
+}

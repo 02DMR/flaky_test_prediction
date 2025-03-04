@@ -1,0 +1,17 @@
+digraph PDG {
+label = "waitAddProject <4...8>";
+0.4 [style = filled, label = "Enter <4...8>", fillcolor = aquamarine, shape = diamond];
+0.1 [style = filled, label = "String condition = \"selenium.browserbot.getCurrentWindow().document.title.replace(/^\s*/, \"\").replace(/\s*$/, \"\") != '' && selenium.browserbot.getCurrentWindow().document.getElementById('footer') != null\"; <5>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "String title <4>", fillcolor = tomato, shape = box];
+0.2 [style = filled, label = "getSelenium().waitForCondition(condition,maxWaitTimeInMs); <6>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "Assert.assertEquals(getTitle(),title); <7>", fillcolor = deeppink, shape = ellipse];
+0.0 -> 0.3 [style = solid, label="title"];
+0.1 -> 0.2 [style = solid, label="condition"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = bold, label=""];
+0.4 -> 0.0 [style = solid, label="title"];
+0.4 -> 0.1 [style = dotted, label="true"];
+0.4 -> 0.1 [style = bold, label=""];
+0.4 -> 0.2 [style = dotted, label="true"];
+0.4 -> 0.3 [style = dotted, label="true"];
+}

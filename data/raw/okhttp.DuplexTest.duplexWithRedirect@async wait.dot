@@ -1,0 +1,54 @@
+digraph PDG {
+label = "duplexWithRedirect <3...22>";
+0.6 [style = filled, label = "BufferedSink requestBody = ((AsyncRequestBody)(call.request().body())).takeSink(); <12>", fillcolor = white, shape = ellipse];
+0.9 [style = filled, label = "fail(); <16>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "BufferedSource responseBody = response.body().source(); <9>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "Call call = client.newCall(new Request.Builder().url(server.url(\"/\")).post(new AsyncRequestBody()).build()); <7>", fillcolor = white, shape = ellipse];
+0.10 [style = filled, label = "catch ( IOException expected ) <17>", fillcolor = white, shape = diamond];
+0.2 [style = filled, label = "server.enqueue(new MockResponse().setBody(\"this is /b\")); <6>", fillcolor = white, shape = ellipse];
+0.14 [style = filled, label = "Enter <3...22>", fillcolor = aquamarine, shape = diamond];
+0.0 [style = filled, label = "enableProtocol(HTTP_2); <4>", fillcolor = white, shape = ellipse];
+0.11 [style = filled, label = "assertThat(expected.getMessage()).isEqualTo(\"stream was reset: CANCEL\"); <18>", fillcolor = white, shape = ellipse];
+0.12 [style = filled, label = "mockDuplexResponseBody.awaitSuccess(); <20>", fillcolor = white, shape = ellipse];
+0.13 [style = filled, label = "assertThat(listener.recordedEventTypes()).containsExactly(\"CallStart\",\"DnsStart\",\"DnsEnd\",\"ConnectStart\",\"SecureConnectStart\",\"SecureConnectEnd\",\"ConnectEnd\",\"ConnectionAcquired\",\"RequestHeadersStart\",\"RequestHeadersEnd\",\"RequestBodyStart\",\"ResponseHeadersStart\",\"ResponseHeadersEnd\",\"ResponseBodyStart\",\"ResponseBodyEnd\",\"RequestHeadersStart\",\"RequestHeadersEnd\",\"ResponseHeadersStart\",\"ResponseHeadersEnd\",\"ResponseBodyStart\",\"ResponseBodyEnd\",\"ConnectionReleased\",\"CallEnd\",\"RequestFailed\"); <21>", fillcolor = deeppink, shape = ellipse];
+0.1 [style = filled, label = "MockDuplexResponseBody mockDuplexResponseBody = enqueueResponseWithBody(new MockResponse().clearHeaders().setResponseCode(HttpURLConnection.HTTP_MOVED_PERM).addHeader(\"Location: /b\"),new MockDuplexResponseBody().sendResponse(\"/a has moved!
+\").requestIOException().exhaustResponse()); <5>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertThat(responseBody.readUtf8Line()).isEqualTo(\"this is /b\"); <10>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "requestBody.flush(); <15>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "requestBody.writeUtf8(\"request body
+\"); <14>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.12 [style = solid, label="mockDuplexResponseBody"];
+0.2 -> 0.3 [style = solid, label="server"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.3 -> 0.6 [style = solid, label="call"];
+0.4 -> 0.5 [style = solid, label="responseBody"];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.6 -> 0.7 [style = solid, label="requestBody"];
+0.6 -> 0.7 [style = bold, label=""];
+0.6 -> 0.8 [style = solid, label="requestBody"];
+0.7 -> 0.8 [style = solid, label="requestBody"];
+0.7 -> 0.8 [style = bold, label=""];
+0.8 -> 0.9 [style = bold, label=""];
+0.9 -> 0.12 [style = bold, label=""];
+0.10 -> 0.11 [style = dotted, label="true"];
+0.10 -> 0.11 [style = bold, label=""];
+0.11 -> 0.12 [style = bold, label=""];
+0.12 -> 0.13 [style = bold, label=""];
+0.14 -> 0.0 [style = dotted, label="true"];
+0.14 -> 0.0 [style = bold, label=""];
+0.14 -> 0.1 [style = dotted, label="true"];
+0.14 -> 0.2 [style = dotted, label="true"];
+0.14 -> 0.3 [style = dotted, label="true"];
+0.14 -> 0.4 [style = dotted, label="true"];
+0.14 -> 0.5 [style = dotted, label="true"];
+0.14 -> 0.6 [style = dotted, label="true"];
+0.14 -> 0.7 [style = dotted, label="true"];
+0.14 -> 0.8 [style = dotted, label="true"];
+0.14 -> 0.9 [style = dotted, label="true"];
+0.14 -> 0.12 [style = dotted, label="true"];
+0.14 -> 0.13 [style = dotted, label="true"];
+}

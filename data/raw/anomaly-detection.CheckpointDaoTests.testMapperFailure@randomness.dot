@@ -1,0 +1,31 @@
+digraph PDG {
+label = "testMapperFailure <3...11>";
+0.0 [style = filled, label = "ThresholdedRandomCutForestMapper mockMapper = mock(); <4>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertEquals(null,JsonDeserializer.getChildNode(json,ENTITY_TRCF)); <9>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "when(mockMapper.toState(any())).thenThrow(); <5>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "String json = checkpointDao.toCheckpoint(state.getModel(),modelId).get(); <8>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "checkpointDao = new CheckpointDao(client,clientUtil,indexName,gson,mapper,converter,mockMapper,trcfSchema,thresholdingModelClass,indexUtil,1,serializeRCFBufferPool,AnomalyDetectorSettings.SERIALIZATION_BUFFER_BYTES,anomalyRate); <6>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "assertTrue( ( null != JsonDeserializer.getChildNode(json,ENTITY_SAMPLE) )); <10>", fillcolor = deeppink, shape = ellipse];
+0.3 [style = filled, label = "ModelState<EntityModel> state = MLUtil.randomModelState(new RandomModelStateConfig.Builder().fullModel(true).build()); <7>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "Enter <3...11>", fillcolor = aquamarine, shape = diamond];
+0.0 -> 0.1 [style = solid, label="mockMapper"];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="mockMapper"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="checkpointDao"];
+0.3 -> 0.4 [style = solid, label="state"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = solid, label="json"];
+0.4 -> 0.5 [style = bold, label=""];
+0.4 -> 0.6 [style = solid, label="json"];
+0.5 -> 0.6 [style = bold, label=""];
+0.7 -> 0.0 [style = dotted, label="true"];
+0.7 -> 0.0 [style = bold, label=""];
+0.7 -> 0.1 [style = dotted, label="true"];
+0.7 -> 0.2 [style = dotted, label="true"];
+0.7 -> 0.3 [style = dotted, label="true"];
+0.7 -> 0.4 [style = dotted, label="true"];
+0.7 -> 0.5 [style = dotted, label="true"];
+0.7 -> 0.6 [style = dotted, label="true"];
+}

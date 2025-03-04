@@ -1,0 +1,19 @@
+digraph PDG {
+label = "testGetJobListFromRoot <4...10>";
+0.0 [style = filled, label = "JobList output = api().jobList(\"\"); <6>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "assertEquals(output.jobs().size(),2); <9>", fillcolor = deeppink, shape = ellipse];
+0.1 [style = filled, label = "assertNotNull(output); <7>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "assertFalse(output.jobs().isEmpty()); <8>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "Enter <4...10>", fillcolor = aquamarine, shape = diamond];
+0.0 -> 0.1 [style = solid, label="output"];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="output"];
+0.0 -> 0.3 [style = solid, label="output"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = bold, label=""];
+0.4 -> 0.0 [style = dotted, label="true"];
+0.4 -> 0.0 [style = bold, label=""];
+0.4 -> 0.1 [style = dotted, label="true"];
+0.4 -> 0.2 [style = dotted, label="true"];
+0.4 -> 0.3 [style = dotted, label="true"];
+}

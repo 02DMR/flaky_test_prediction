@@ -1,0 +1,32 @@
+digraph PDG {
+label = "recurringJobWithErrorShouldStop <3...20>";
+0.7 [style = filled, label = "verify(log,timeout(DEFAULT_TIMEOUT_MS).times(1)).error(\"Uncaught error rethrown\",e); <19>", fillcolor = deeppink, shape = ellipse];
+0.0 [style = filled, label = "RobustJobSchedulerWrapper robustWrapper = new RobustJobSchedulerWrapper(actualScheduler,log); <7>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "Error e = new Error(); <9>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertEventually(\"run count\",null,Matchers.equalTo(1),DEFAULT_TIMEOUT_MS,MILLISECONDS); <17>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "Thread.sleep(50); <16>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "Enter <3...20>", fillcolor = aquamarine, shape = diamond];
+0.3 [style = filled, label = "JobHandle jobHandle = robustWrapper.scheduleRecurring(\"JobName\",1,null); <10...14>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "robustWrapper.cancelAndWaitTermination(jobHandle); <18>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "AtomicInteger count = new AtomicInteger(); <8>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.3 [style = solid, label="robustWrapper"];
+0.0 -> 0.6 [style = solid, label="robustWrapper"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.7 [style = solid, label="e"];
+0.3 -> 0.4 [style = bold, label=""];
+0.3 -> 0.6 [style = solid, label="jobHandle"];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.6 -> 0.7 [style = bold, label=""];
+0.8 -> 0.0 [style = dotted, label="true"];
+0.8 -> 0.0 [style = bold, label=""];
+0.8 -> 0.1 [style = dotted, label="true"];
+0.8 -> 0.2 [style = dotted, label="true"];
+0.8 -> 0.3 [style = dotted, label="true"];
+0.8 -> 0.4 [style = dotted, label="true"];
+0.8 -> 0.5 [style = dotted, label="true"];
+0.8 -> 0.6 [style = dotted, label="true"];
+0.8 -> 0.7 [style = dotted, label="true"];
+}

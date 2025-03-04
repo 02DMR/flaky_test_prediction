@@ -1,0 +1,28 @@
+digraph PDG {
+label = "scanShouldIterateOverAvailableEntries <4...12>";
+0.0 [style = filled, label = "adapter.put(\"1\",object1,COLLECTION_1); <6>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "assertThat(iterator.next()).isEqualTo(new AbstractMap.SimpleEntry<>(\"2\",object2)); <10>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertThat(iterator.hasNext()).isFalse(); <11>", fillcolor = deeppink, shape = ellipse];
+0.2 [style = filled, label = "CloseableIterator<Map.Entry<Object,Object>> iterator = adapter.entries(COLLECTION_1); <8>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "assertThat(iterator.next()).isEqualTo(new AbstractMap.SimpleEntry<>(\"1\",object1)); <9>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "adapter.put(\"2\",object2,COLLECTION_1); <7>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "Enter <4...12>", fillcolor = aquamarine, shape = diamond];
+0.0 -> 0.1 [style = solid, label="adapter"];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="adapter"];
+0.1 -> 0.2 [style = solid, label="adapter"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = solid, label="iterator"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="iterator"];
+0.2 -> 0.5 [style = solid, label="iterator"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.6 -> 0.0 [style = dotted, label="true"];
+0.6 -> 0.0 [style = bold, label=""];
+0.6 -> 0.1 [style = dotted, label="true"];
+0.6 -> 0.2 [style = dotted, label="true"];
+0.6 -> 0.3 [style = dotted, label="true"];
+0.6 -> 0.4 [style = dotted, label="true"];
+0.6 -> 0.5 [style = dotted, label="true"];
+}

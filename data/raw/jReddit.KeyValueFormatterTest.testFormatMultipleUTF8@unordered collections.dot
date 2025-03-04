@@ -1,0 +1,22 @@
+digraph PDG {
+label = "testFormatMultipleUTF8 <3...8>";
+0.0 [style = filled, label = "HashMap<String,String> params = new HashMap<String,String>(); <4>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "params.put(\"c\",\"32626&\"); <6>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "Assert.assertTrue( ( \"a =b%2C+&c=32626%26\".equals(KeyValueFormatter.format(params,true)) || \"c=32626%26&a =b%2C+\".equals(KeyValueFormatter.format(params,true)) )); <7>", fillcolor = deeppink, shape = ellipse];
+0.1 [style = filled, label = "params.put(\"a \",\"b, \"); <5>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "Enter <3...8>", fillcolor = aquamarine, shape = diamond];
+0.0 -> 0.1 [style = solid, label="params"];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="params"];
+0.0 -> 0.3 [style = solid, label="params"];
+0.1 -> 0.2 [style = solid, label="params"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="params"];
+0.2 -> 0.3 [style = solid, label="params"];
+0.2 -> 0.3 [style = bold, label=""];
+0.4 -> 0.0 [style = dotted, label="true"];
+0.4 -> 0.0 [style = bold, label=""];
+0.4 -> 0.1 [style = dotted, label="true"];
+0.4 -> 0.2 [style = dotted, label="true"];
+0.4 -> 0.3 [style = dotted, label="true"];
+}
