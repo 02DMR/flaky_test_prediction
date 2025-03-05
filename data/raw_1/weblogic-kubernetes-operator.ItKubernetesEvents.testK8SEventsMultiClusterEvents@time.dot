@@ -1,0 +1,37 @@
+digraph PDG {
+label = "testK8SEventsMultiClusterEvents <3...13>";
+0.5 [style = filled, label = "logger.info(\"verify the DomainCompleted event is generated\"); <9>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "logger.info(\"verify the Domain_Available event is generated\"); <7>", fillcolor = white, shape = ellipse];
+0.9 [style = filled, label = "Enter <3...13>", fillcolor = aquamarine, shape = diamond];
+0.1 [style = filled, label = "OffsetDateTime timestamp = now(); <5>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "assertEquals(1,getEventCount(domainNamespace1,domainUid,DOMAIN_COMPLETED,timestamp)); <12>", fillcolor = deeppink, shape = ellipse];
+0.7 [style = filled, label = "logger.info(\"verify the only 1 DomainCompleted event is generated\"); <11>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "createNewCluster(); <4>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "checkEvent(opNamespace,domainNamespace1,domainUid,DOMAIN_COMPLETED,\"Normal\",timestamp); <10>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "scaleClusterWithRestApi(domainUid,cluster2Name,1,externalRestHttpsPort,opNamespace,opServiceAccount); <6>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "checkEvent(opNamespace,domainNamespace1,domainUid,DOMAIN_AVAILABLE,\"Normal\",timestamp); <8>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.4 [style = solid, label="timestamp"];
+0.1 -> 0.6 [style = solid, label="timestamp"];
+0.1 -> 0.8 [style = solid, label="timestamp"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.3 -> 0.5 [style = solid, label="logger"];
+0.3 -> 0.7 [style = solid, label="logger"];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.5 -> 0.7 [style = solid, label="logger"];
+0.6 -> 0.7 [style = bold, label=""];
+0.7 -> 0.8 [style = bold, label=""];
+0.9 -> 0.0 [style = dotted, label="true"];
+0.9 -> 0.0 [style = bold, label=""];
+0.9 -> 0.1 [style = dotted, label="true"];
+0.9 -> 0.2 [style = dotted, label="true"];
+0.9 -> 0.3 [style = dotted, label="true"];
+0.9 -> 0.4 [style = dotted, label="true"];
+0.9 -> 0.5 [style = dotted, label="true"];
+0.9 -> 0.6 [style = dotted, label="true"];
+0.9 -> 0.7 [style = dotted, label="true"];
+0.9 -> 0.8 [style = dotted, label="true"];
+}

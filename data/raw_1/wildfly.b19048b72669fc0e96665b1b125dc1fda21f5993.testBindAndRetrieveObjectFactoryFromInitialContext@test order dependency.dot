@@ -1,0 +1,26 @@
+digraph PDG {
+label = "testBindAndRetrieveObjectFactoryFromInitialContext <3...11>";
+0.4 [style = filled, label = "assertTrue(result instanceof String); <9>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "Enter <3...11>", fillcolor = aquamarine, shape = diamond];
+0.0 [style = filled, label = "final Reference reference = new Reference(\"java.util.String\",.getName(),null); <4>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "final InitialContext initialContext = new InitialContext(); <7>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertEquals(\"Test ParsedResult\",result); <10>", fillcolor = deeppink, shape = ellipse];
+0.3 [style = filled, label = "final Object result = initialContext.lookup(\"test\"); <8>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "namingStore.bind(new CompositeName(\"test\"),reference); <5>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="reference"];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = solid, label="initialContext"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = solid, label="result"];
+0.3 -> 0.4 [style = bold, label=""];
+0.3 -> 0.5 [style = solid, label="result"];
+0.4 -> 0.5 [style = bold, label=""];
+0.6 -> 0.0 [style = dotted, label="true"];
+0.6 -> 0.0 [style = bold, label=""];
+0.6 -> 0.1 [style = dotted, label="true"];
+0.6 -> 0.2 [style = dotted, label="true"];
+0.6 -> 0.3 [style = dotted, label="true"];
+0.6 -> 0.4 [style = dotted, label="true"];
+0.6 -> 0.5 [style = dotted, label="true"];
+}

@@ -1,0 +1,30 @@
+digraph PDG {
+label = "sendMessageOnMessage <3...11>";
+0.3 [style = filled, label = "engine.onEvent(messageReceived(\"/message\")); <7>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "engine.deploy(workflow); <6>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "when(messageService.send(anyString(),any())).thenReturn(message); <8>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "verify(messageService,timeout(5000)).send(anyString(),any()); <9>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "assertThat(workflow).isExecuted().hasOutput(String.format(OUTPUTS_MSG_KEY,\"sendMessage1\"),message).hasOutput(String.format(OUTPUTS_MSG_ID_KEY,\"sendMessage1\"),message.getMessageId()); <10>", fillcolor = deeppink, shape = ellipse];
+0.1 [style = filled, label = "final V4Message message = message(\"Hello!\"); <5>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "Enter <3...11>", fillcolor = aquamarine, shape = diamond];
+0.0 [style = filled, label = "final Workflow workflow = SwadlParser.fromYaml(getClass().getResourceAsStream(\"/message/send-message-on-message.swadl.yaml\")); <4>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="workflow"];
+0.0 -> 0.6 [style = solid, label="workflow"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.4 [style = solid, label="message"];
+0.1 -> 0.6 [style = solid, label="message"];
+0.2 -> 0.3 [style = solid, label="engine"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.7 -> 0.0 [style = dotted, label="true"];
+0.7 -> 0.0 [style = bold, label=""];
+0.7 -> 0.1 [style = dotted, label="true"];
+0.7 -> 0.2 [style = dotted, label="true"];
+0.7 -> 0.3 [style = dotted, label="true"];
+0.7 -> 0.4 [style = dotted, label="true"];
+0.7 -> 0.5 [style = dotted, label="true"];
+0.7 -> 0.6 [style = dotted, label="true"];
+}

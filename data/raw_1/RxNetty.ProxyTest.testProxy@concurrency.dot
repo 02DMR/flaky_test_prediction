@@ -1,0 +1,31 @@
+digraph PDG {
+label = "testProxy <3...11>";
+0.6 [style = filled, label = "assertThat(\"Unexpected response.\",output,contains(expectedHeaderString,\"HelloWorld!\")); <10>", fillcolor = deeppink, shape = ellipse];
+0.3 [style = filled, label = "expectedHeader.headers().add(TRANSFER_ENCODING,CHUNKED); <7>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "Enter <3...11>", fillcolor = aquamarine, shape = diamond];
+0.4 [style = filled, label = "String expectedHeaderString = HttpMessageFormatter.formatResponse(expectedHeader.protocolVersion(),expectedHeader.status(),expectedHeader.headers().iteratorCharSequence()); <8>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertThat(\"Unexpected number of messages echoed\",output,hasSize(2)); <9>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "Queue<String> output = ExamplesTestUtil.runClientInMockedEnvironment(); <4>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "HttpResponse expectedHeader = new DefaultHttpResponse(HttpVersion.HTTP_1_1,HttpResponseStatus.OK); <5>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "expectedHeader.headers().add(((CharSequence)(\"X-Proxied-By\")),\"RxNetty\"); <6>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.5 [style = solid, label="output"];
+0.0 -> 0.6 [style = solid, label="output"];
+0.1 -> 0.2 [style = solid, label="expectedHeader"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="expectedHeader"];
+0.1 -> 0.4 [style = solid, label="expectedHeader"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.4 -> 0.6 [style = solid, label="expectedHeaderString"];
+0.5 -> 0.6 [style = bold, label=""];
+0.7 -> 0.0 [style = dotted, label="true"];
+0.7 -> 0.0 [style = bold, label=""];
+0.7 -> 0.1 [style = dotted, label="true"];
+0.7 -> 0.2 [style = dotted, label="true"];
+0.7 -> 0.3 [style = dotted, label="true"];
+0.7 -> 0.4 [style = dotted, label="true"];
+0.7 -> 0.5 [style = dotted, label="true"];
+0.7 -> 0.6 [style = dotted, label="true"];
+}

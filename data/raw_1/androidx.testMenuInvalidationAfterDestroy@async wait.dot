@@ -1,0 +1,24 @@
+digraph PDG {
+label = "testMenuInvalidationAfterDestroy <3...21>";
+0.0 [style = filled, label = "final A activity = getActivity(); <4>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "getInstrumentation().runOnMainSync(new Runnable(){
+@Override public void run ( ) {
+activity.reset();
+assertNull(activity.getMenu());
+activity.supportInvalidateOptionsMenu();
+getInstrumentation().callActivityOnDestroy(activity);
+}}); <5...17>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "Thread.sleep(100); <19>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "Enter <3...21>", fillcolor = aquamarine, shape = diamond];
+0.3 [style = filled, label = "assertNull(activity.getMenu()); <20>", fillcolor = deeppink, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="activity"];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.3 [style = solid, label="activity"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = bold, label=""];
+0.4 -> 0.0 [style = dotted, label="true"];
+0.4 -> 0.0 [style = bold, label=""];
+0.4 -> 0.1 [style = dotted, label="true"];
+0.4 -> 0.2 [style = dotted, label="true"];
+0.4 -> 0.3 [style = dotted, label="true"];
+}

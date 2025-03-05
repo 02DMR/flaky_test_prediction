@@ -1,0 +1,38 @@
+digraph PDG {
+label = "testAuthenticationFromMultipleThreadsWithCachedToken <3...22>";
+0.6 [style = filled, label = "assertion.requests().extracting(null).extracting(null).containsOnly(\"Bearer valid-token\"); <16...19>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "assertThat(redirectHandler.getRedirectionCount()).isEqualTo(1); <21>", fillcolor = deeppink, shape = ellipse];
+0.7 [style = filled, label = "assertion.assertThatNoExceptionsHasBeenThrown(); <20>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "List<Future<Request>> requests = times(4,null).map(null).collect(toImmutableList()); <11...14>", fillcolor = white, shape = ellipse];
+0.9 [style = filled, label = "Enter <3...22>", fillcolor = aquamarine, shape = diamond];
+0.1 [style = filled, label = "MockTokenPoller tokenPoller = new MockTokenPoller().withResult(URI.create(\"http://token.uri\"),successful(new Token(\"valid-token\"))); <6...7>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "MockRedirectHandler redirectHandler = new MockRedirectHandler().sleepOnRedirect(Duration.ofMillis(10)); <8...9>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "ConcurrentRequestAssertion assertion = new ConcurrentRequestAssertion(requests); <15>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "ExternalAuthenticator authenticator = new ExternalAuthenticator(redirectHandler,tokenPoller,KnownToken.memoryCached(),Duration.ofSeconds(1)); <10>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "ExecutorService executor = newCachedThreadPool(daemonThreadsNamed( ( this.getClass().getName() + \"%n\" ))); <5>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="tokenPoller"];
+0.2 -> 0.3 [style = solid, label="redirectHandler"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.8 [style = solid, label="redirectHandler"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = solid, label="requests"];
+0.4 -> 0.5 [style = bold, label=""];
+0.4 -> 0.6 [style = solid, label="requests"];
+0.5 -> 0.6 [style = solid, label="assertion"];
+0.5 -> 0.6 [style = bold, label=""];
+0.5 -> 0.7 [style = solid, label="assertion"];
+0.6 -> 0.7 [style = bold, label=""];
+0.7 -> 0.8 [style = bold, label=""];
+0.9 -> 0.0 [style = dotted, label="true"];
+0.9 -> 0.0 [style = bold, label=""];
+0.9 -> 0.1 [style = dotted, label="true"];
+0.9 -> 0.2 [style = dotted, label="true"];
+0.9 -> 0.3 [style = dotted, label="true"];
+0.9 -> 0.4 [style = dotted, label="true"];
+0.9 -> 0.5 [style = dotted, label="true"];
+0.9 -> 0.6 [style = dotted, label="true"];
+0.9 -> 0.7 [style = dotted, label="true"];
+0.9 -> 0.8 [style = dotted, label="true"];
+}

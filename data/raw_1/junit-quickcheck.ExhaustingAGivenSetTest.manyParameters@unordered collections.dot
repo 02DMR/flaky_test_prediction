@@ -1,0 +1,16 @@
+digraph PDG {
+label = "manyParameters <3...8>";
+0.1 [style = filled, label = "assertEquals(6,ManyParameters.iterations); <5>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "assertEquals(asList(-1,-2,-4,-1,-2,-4),ManyParameters.firstTestCases); <6>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "assertEquals(asList('r','r','r','y','y','y'),ManyParameters.secondTestCases); <7>", fillcolor = deeppink, shape = ellipse];
+0.0 [style = filled, label = "assertThat(testResult(),isSuccessful()); <4>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "Enter <3...8>", fillcolor = aquamarine, shape = diamond];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = bold, label=""];
+0.4 -> 0.0 [style = dotted, label="true"];
+0.4 -> 0.0 [style = bold, label=""];
+0.4 -> 0.1 [style = dotted, label="true"];
+0.4 -> 0.2 [style = dotted, label="true"];
+0.4 -> 0.3 [style = dotted, label="true"];
+}

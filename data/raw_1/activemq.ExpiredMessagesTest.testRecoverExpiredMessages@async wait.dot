@@ -1,0 +1,115 @@
+digraph PDG {
+label = "testRecoverExpiredMessages <3...51>";
+0.19 [style = filled, label = "Wait.waitFor(new Wait.Condition(){
+public boolean isSatisified ( ) {
+boolean result = false;
+try {
+DestinationViewMBean view = createView(destination);
+LOG.info( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( \"Stats: size: \" + view.getQueueSize() )) + \", enqueues: \" )) + view.getDequeueCount() )) + \", dequeues: \" )) + view.getDequeueCount() )) + \", dispatched: \" )) + view.getDispatchCount() )) + \", inflight: \" )) + view.getInFlightCount() )) + \", expiries: \" )) + view.getExpiredCount() ));
+result =  ( view.getQueueSize() == 0 );
+}catch (catch ( Exception notFoundExpectedOnSlowMachines )) 
+return result;
+}}); <36...47>", fillcolor = white, shape = ellipse];
+0.9 [style = filled, label = "producingThread.join(); <26>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "session = connection.createSession(false,AUTO_ACKNOWLEDGE); <7>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "producer = session.createProducer(destination); <8>", fillcolor = white, shape = ellipse];
+0.10 [style = filled, label = "DestinationViewMBean view = createView(destination); <27>", fillcolor = white, shape = ellipse];
+0.17 [style = filled, label = "final boolean deleteAllMessages = false; <34>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory(); <4>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "connection = factory.createConnection(); <5>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "producingThread.start(); <25>", fillcolor = white, shape = ellipse];
+0.12 [style = filled, label = "LOG.info(\"stopping broker\"); <29>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "producer.setDeliveryMode(PERSISTENT); <10>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "Thread producingThread = new Thread(\"Producing Thread\"){
+public void run ( ) {
+try {
+int i = 0;
+while ( ( (i++) < 1000 )) {
+Message message = (useTextMessage)? session.createTextMessage(\"test\"): session.createObjectMessage(\"test\");
+producer.send(message);
+}
+producer.close();
+}catch (catch ( Throwable ex )) 
+}}; <11...24>", fillcolor = white, shape = ellipse];
+0.23 [style = filled, label = "Enter <3...51>", fillcolor = aquamarine, shape = diamond];
+0.11 [style = filled, label = "LOG.info( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( \"Stats: size: \" + view.getQueueSize() )) + \", enqueues: \" )) + view.getDequeueCount() )) + \", dequeues: \" )) + view.getDequeueCount() )) + \", dispatched: \" )) + view.getDispatchCount() )) + \", inflight: \" )) + view.getInFlightCount() )) + \", expiries: \" )) + view.getExpiredCount() )); <28>", fillcolor = white, shape = ellipse];
+0.15 [style = filled, label = "Thread.sleep(5000); <32>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "producer.setTimeToLive(2000); <9>", fillcolor = white, shape = ellipse];
+0.22 [style = filled, label = "assertEquals(\"all dequeues were expired\",view.getDequeueCount(),view.getExpiredCount()); <50>", fillcolor = deeppink, shape = ellipse];
+0.16 [style = filled, label = "LOG.info(\"recovering broker\"); <33>", fillcolor = white, shape = ellipse];
+0.14 [style = filled, label = "broker.waitUntilStopped(); <31>", fillcolor = white, shape = ellipse];
+0.20 [style = filled, label = "view = createView(destination); <48>", fillcolor = white, shape = ellipse];
+0.21 [style = filled, label = "assertEquals(\"Expect empty queue, QueueSize: \",0,view.getQueueSize()); <49>", fillcolor = white, shape = ellipse];
+0.18 [style = filled, label = "broker = createBroker(deleteAllMessages,5000); <35>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "connection.start(); <6>", fillcolor = white, shape = ellipse];
+0.13 [style = filled, label = "broker.stop(); <30>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="factory"];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = solid, label="connection"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="connection"];
+0.2 -> 0.3 [style = solid, label="connection"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = solid, label="session"];
+0.3 -> 0.4 [style = bold, label=""];
+0.3 -> 0.7 [style = solid, label="session"];
+0.4 -> 0.5 [style = solid, label="producer"];
+0.4 -> 0.5 [style = bold, label=""];
+0.4 -> 0.6 [style = solid, label="producer"];
+0.4 -> 0.7 [style = solid, label="producer"];
+0.5 -> 0.6 [style = solid, label="producer"];
+0.5 -> 0.6 [style = bold, label=""];
+0.5 -> 0.7 [style = solid, label="producer"];
+0.6 -> 0.7 [style = solid, label="producer"];
+0.6 -> 0.7 [style = bold, label=""];
+0.7 -> 0.8 [style = solid, label="producingThread"];
+0.7 -> 0.8 [style = bold, label=""];
+0.7 -> 0.9 [style = solid, label="producingThread"];
+0.8 -> 0.9 [style = solid, label="producingThread"];
+0.8 -> 0.9 [style = bold, label=""];
+0.9 -> 0.10 [style = bold, label=""];
+0.10 -> 0.11 [style = solid, label="view"];
+0.10 -> 0.11 [style = bold, label=""];
+0.10 -> 0.19 [style = solid, label="view"];
+0.10 -> 0.21 [style = solid, label="view"];
+0.10 -> 0.22 [style = solid, label="view"];
+0.11 -> 0.12 [style = bold, label=""];
+0.12 -> 0.13 [style = bold, label=""];
+0.13 -> 0.14 [style = solid, label="broker"];
+0.13 -> 0.14 [style = bold, label=""];
+0.14 -> 0.15 [style = bold, label=""];
+0.15 -> 0.16 [style = bold, label=""];
+0.16 -> 0.17 [style = bold, label=""];
+0.17 -> 0.18 [style = solid, label="deleteAllMessages"];
+0.17 -> 0.18 [style = bold, label=""];
+0.18 -> 0.19 [style = bold, label=""];
+0.19 -> 0.20 [style = bold, label=""];
+0.20 -> 0.21 [style = solid, label="view"];
+0.20 -> 0.21 [style = bold, label=""];
+0.20 -> 0.22 [style = solid, label="view"];
+0.21 -> 0.22 [style = bold, label=""];
+0.23 -> 0.0 [style = dotted, label="true"];
+0.23 -> 0.0 [style = bold, label=""];
+0.23 -> 0.1 [style = dotted, label="true"];
+0.23 -> 0.2 [style = dotted, label="true"];
+0.23 -> 0.3 [style = dotted, label="true"];
+0.23 -> 0.4 [style = dotted, label="true"];
+0.23 -> 0.5 [style = dotted, label="true"];
+0.23 -> 0.6 [style = dotted, label="true"];
+0.23 -> 0.7 [style = dotted, label="true"];
+0.23 -> 0.8 [style = dotted, label="true"];
+0.23 -> 0.9 [style = dotted, label="true"];
+0.23 -> 0.10 [style = dotted, label="true"];
+0.23 -> 0.11 [style = dotted, label="true"];
+0.23 -> 0.12 [style = dotted, label="true"];
+0.23 -> 0.13 [style = dotted, label="true"];
+0.23 -> 0.14 [style = dotted, label="true"];
+0.23 -> 0.15 [style = dotted, label="true"];
+0.23 -> 0.16 [style = dotted, label="true"];
+0.23 -> 0.17 [style = dotted, label="true"];
+0.23 -> 0.18 [style = dotted, label="true"];
+0.23 -> 0.19 [style = dotted, label="true"];
+0.23 -> 0.20 [style = dotted, label="true"];
+0.23 -> 0.21 [style = dotted, label="true"];
+0.23 -> 0.22 [style = dotted, label="true"];
+}

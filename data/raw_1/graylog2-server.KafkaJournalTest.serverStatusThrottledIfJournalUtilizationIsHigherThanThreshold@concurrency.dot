@@ -1,0 +1,33 @@
+digraph PDG {
+label = "serverStatusThrottledIfJournalUtilizationIsHigherThanThreshold <3...11>";
+0.5 [style = filled, label = "journal.cleanupLogs(); <9>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "Enter <3...11>", fillcolor = aquamarine, shape = diamond];
+0.2 [style = filled, label = "final KafkaJournal journal = new KafkaJournal(journalDirectory,scheduler,segmentSize,Duration.standardSeconds(1L),Size.kilobytes(4L),Duration.standardSeconds(1L),1000000,Duration.standardSeconds(1L),90,new MetricRegistry(),serverStatus); <6>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "createBulkChunks(journal,segmentSize,4); <7>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "serverStatus.running(); <4>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "assertThat(serverStatus.getLifecycle()).isEqualTo(THROTTLED); <10>", fillcolor = deeppink, shape = ellipse];
+0.1 [style = filled, label = "final Size segmentSize = Size.kilobytes(1L); <5>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "journal.flushDirtyLogs(); <8>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="serverStatus"];
+0.0 -> 0.6 [style = solid, label="serverStatus"];
+0.1 -> 0.2 [style = solid, label="segmentSize"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="segmentSize"];
+0.2 -> 0.3 [style = solid, label="journal"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="journal"];
+0.2 -> 0.5 [style = solid, label="journal"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = solid, label="journal"];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.7 -> 0.0 [style = dotted, label="true"];
+0.7 -> 0.0 [style = bold, label=""];
+0.7 -> 0.1 [style = dotted, label="true"];
+0.7 -> 0.2 [style = dotted, label="true"];
+0.7 -> 0.3 [style = dotted, label="true"];
+0.7 -> 0.4 [style = dotted, label="true"];
+0.7 -> 0.5 [style = dotted, label="true"];
+0.7 -> 0.6 [style = dotted, label="true"];
+}

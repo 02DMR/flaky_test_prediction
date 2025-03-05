@@ -1,0 +1,30 @@
+digraph PDG {
+label = "canHandleFragmentedMessageReceived <3...13>";
+0.6 [style = filled, label = "assertEquals(AISMessageType.ShipAndVoyageRelatedData,aisMessage.getCapturedObject().getMessageType()); <12>", fillcolor = deeppink, shape = ellipse];
+0.2 [style = filled, label = "final ArgumentCaptor<AISMessage> aisMessage = new ArgumentCaptor<>(); <6>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "aisMessageReceiver.accept(fragmentedNMEAMessage1); <10>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "aisMessageReceiver.accept(fragmentedNMEAMessage2); <11>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "context.checking(new Expectations(){
+}); <7...9>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "NMEAMessage fragmentedNMEAMessage1 = NMEAMessage.fromString(\"!AIVDM,2,1,3,B,55DA><02=6wpPuID000qTf059@DlU<00000000171lMDD4q20LmDp3hB,0*27\"); <4>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "Enter <3...13>", fillcolor = aquamarine, shape = diamond];
+0.1 [style = filled, label = "NMEAMessage fragmentedNMEAMessage2 = NMEAMessage.fromString(\"!AIVDM,2,2,3,B,p=Mh00000000000,2*4C\"); <5>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.4 [style = solid, label="fragmentedNMEAMessage1"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.5 [style = solid, label="fragmentedNMEAMessage2"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.6 [style = solid, label="aisMessage"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = solid, label="aisMessageReceiver"];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.7 -> 0.0 [style = dotted, label="true"];
+0.7 -> 0.0 [style = bold, label=""];
+0.7 -> 0.1 [style = dotted, label="true"];
+0.7 -> 0.2 [style = dotted, label="true"];
+0.7 -> 0.3 [style = dotted, label="true"];
+0.7 -> 0.4 [style = dotted, label="true"];
+0.7 -> 0.5 [style = dotted, label="true"];
+0.7 -> 0.6 [style = dotted, label="true"];
+}

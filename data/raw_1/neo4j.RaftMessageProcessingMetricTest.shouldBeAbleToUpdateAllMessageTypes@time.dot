@@ -1,0 +1,35 @@
+digraph PDG {
+label = "shouldBeAbleToUpdateAllMessageTypes <3...15>";
+0.1 [style = filled, label = "RaftMessages.Type type <7>", fillcolor = tomato, shape = box];
+0.6 [style = filled, label = "assertEquals(RaftMessages.Type.values().length,metric.timer().getCount()); <13>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "metric.updateTimer(type,Duration.ofNanos(durationNanos)); <9>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "assertEquals(0,metric.timer().getSnapshot().getMean(),durationNanos); <14>", fillcolor = deeppink, shape = ellipse];
+0.2 [style = filled, label = "RaftMessages.Type.values() <7>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "int durationNanos = 5; <6>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "Enter <3...15>", fillcolor = aquamarine, shape = diamond];
+0.4 [style = filled, label = "assertEquals(1,metric.timer(type).getCount()); <10>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertEquals(durationNanos,metric.timer(type).getSnapshot().getMean(),0); <11>", fillcolor = white, shape = ellipse];
+0.0 -> 0.3 [style = solid, label="durationNanos"];
+0.0 -> 0.3 [style = bold, label=""];
+0.0 -> 0.5 [style = solid, label="durationNanos"];
+0.0 -> 0.7 [style = solid, label="durationNanos"];
+0.3 -> 0.3 [style = solid, label="metric"];
+0.3 -> 0.4 [style = solid, label="metric"];
+0.3 -> 0.4 [style = bold, label=""];
+0.3 -> 0.5 [style = solid, label="metric"];
+0.3 -> 0.6 [style = solid, label="metric"];
+0.3 -> 0.7 [style = solid, label="metric"];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.3 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.6 -> 0.7 [style = bold, label=""];
+0.8 -> 0.0 [style = dotted, label="true"];
+0.8 -> 0.0 [style = bold, label=""];
+0.8 -> 0.1 [style = dotted, label="true"];
+0.8 -> 0.2 [style = dotted, label="true"];
+0.8 -> 0.3 [style = dotted, label="true"];
+0.8 -> 0.4 [style = dotted, label="true"];
+0.8 -> 0.5 [style = dotted, label="true"];
+0.8 -> 0.6 [style = dotted, label="true"];
+0.8 -> 0.7 [style = dotted, label="true"];
+}

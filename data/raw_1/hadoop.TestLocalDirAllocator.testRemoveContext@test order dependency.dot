@@ -1,0 +1,36 @@
+digraph PDG {
+label = "testRemoveContext <3...12>";
+0.2 [style = filled, label = "conf.set(contextCfgItemName,dir); <6>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "localDirAllocator.getLocalPathForWrite(\"p1/x\",SMALL_FILE_SIZE,conf); <8>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "LocalDirAllocator.removeContext(contextCfgItemName); <10>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "Enter <3...12>", fillcolor = aquamarine, shape = diamond];
+0.3 [style = filled, label = "LocalDirAllocator localDirAllocator = new LocalDirAllocator(contextCfgItemName); <7>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertTrue(LocalDirAllocator.isContextValid(contextCfgItemName)); <9>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "assertFalse(LocalDirAllocator.isContextValid(contextCfgItemName)); <11>", fillcolor = deeppink, shape = ellipse];
+0.0 [style = filled, label = "String dir = buildBufferDir(ROOT,0); <4>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "String contextCfgItemName = \"application_1340842292563_0004.app.cache.dirs\"; <5>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="dir"];
+0.1 -> 0.2 [style = solid, label="contextCfgItemName"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="contextCfgItemName"];
+0.1 -> 0.5 [style = solid, label="contextCfgItemName"];
+0.1 -> 0.6 [style = solid, label="contextCfgItemName"];
+0.1 -> 0.7 [style = solid, label="contextCfgItemName"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="conf"];
+0.3 -> 0.4 [style = solid, label="localDirAllocator"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.6 -> 0.7 [style = bold, label=""];
+0.8 -> 0.0 [style = dotted, label="true"];
+0.8 -> 0.0 [style = bold, label=""];
+0.8 -> 0.1 [style = dotted, label="true"];
+0.8 -> 0.2 [style = dotted, label="true"];
+0.8 -> 0.3 [style = dotted, label="true"];
+0.8 -> 0.4 [style = dotted, label="true"];
+0.8 -> 0.5 [style = dotted, label="true"];
+0.8 -> 0.6 [style = dotted, label="true"];
+0.8 -> 0.7 [style = dotted, label="true"];
+}

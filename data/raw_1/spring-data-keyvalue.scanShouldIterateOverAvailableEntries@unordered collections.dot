@@ -1,0 +1,36 @@
+digraph PDG {
+label = "scanShouldIterateOverAvailableEntries <3...14>";
+0.0 [style = filled, label = "adapter.put(\"1\",object1,COLLECTION_1); <4>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "assertThat(iterator.next()).isEqualTo(new AbstractMap.SimpleEntry<>(\"1\",object1)); <9>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "Map.Entry<Object,Object> entry1 = iterator.next(); <11>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "Map.Entry<Object,Object> entry2 = iterator.next(); <12>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "Enter <3...14>", fillcolor = aquamarine, shape = diamond];
+0.4 [style = filled, label = "assertThat(iterator.next()).isEqualTo(new AbstractMap.SimpleEntry<>(\"2\",object2)); <10>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "assertThat(iterator.hasNext()).isFalse(); <13>", fillcolor = deeppink, shape = ellipse];
+0.1 [style = filled, label = "adapter.put(\"2\",object2,COLLECTION_1); <5>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "CloseableIterator<Map.Entry<Object,Object>> iterator = adapter.entries(COLLECTION_1); <7>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="adapter"];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="adapter"];
+0.1 -> 0.2 [style = solid, label="adapter"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = solid, label="iterator"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="iterator"];
+0.2 -> 0.5 [style = solid, label="iterator"];
+0.2 -> 0.6 [style = solid, label="iterator"];
+0.2 -> 0.7 [style = solid, label="iterator"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.6 -> 0.7 [style = bold, label=""];
+0.8 -> 0.0 [style = dotted, label="true"];
+0.8 -> 0.0 [style = bold, label=""];
+0.8 -> 0.1 [style = dotted, label="true"];
+0.8 -> 0.2 [style = dotted, label="true"];
+0.8 -> 0.3 [style = dotted, label="true"];
+0.8 -> 0.4 [style = dotted, label="true"];
+0.8 -> 0.5 [style = dotted, label="true"];
+0.8 -> 0.6 [style = dotted, label="true"];
+0.8 -> 0.7 [style = dotted, label="true"];
+}

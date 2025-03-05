@@ -1,0 +1,28 @@
+digraph PDG {
+label = "should_try_to_verify_correct_number_of_times <3...14>";
+0.1 [style = filled, label = "doThrow(error).when(mode).verify(data); <6>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "verify(mode,times(5)).verify(data); <13>", fillcolor = deeppink, shape = ellipse];
+0.2 [style = filled, label = "when(durationChecker.isVerificationStillInProgress(anyLong())).thenReturn(true,true,true,true,true,false); <7>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "fail(); <10>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "catch ( MockitoAssertionError e ) <11>", fillcolor = white, shape = diamond];
+0.8 [style = filled, label = "Enter <3...14>", fillcolor = aquamarine, shape = diamond];
+0.6 [style = filled, label = "{
+} <11...12>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "t.verify(data); <9>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "Timeout t = new Timeout(10,50,mode,durationChecker); <5>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.3 [style = solid, label="t"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.7 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.6 -> 0.7 [style = bold, label=""];
+0.8 -> 0.0 [style = dotted, label="true"];
+0.8 -> 0.0 [style = bold, label=""];
+0.8 -> 0.1 [style = dotted, label="true"];
+0.8 -> 0.2 [style = dotted, label="true"];
+0.8 -> 0.3 [style = dotted, label="true"];
+0.8 -> 0.4 [style = dotted, label="true"];
+0.8 -> 0.7 [style = dotted, label="true"];
+}

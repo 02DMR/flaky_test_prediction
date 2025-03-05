@@ -1,0 +1,30 @@
+digraph PDG {
+label = "testUpdatePerOperationSamplerUpdatesExistingPerOperationSampler <4...14>";
+0.3 [style = filled, label = "undertest = new RemoteControlledSampler(SERVICE_NAME,samplingManager,perOperationSampler,metrics); <9>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "undertest.updateSampler(); <10>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "PerOperationSampler perOperationSampler = mock(); <5>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "OperationSamplingParameters parameters = mock(); <6>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "Enter <4...14>", fillcolor = aquamarine, shape = diamond];
+0.6 [style = filled, label = "verify(perOperationSampler,times(2)).update(parameters); <12>", fillcolor = deeppink, shape = ellipse];
+0.2 [style = filled, label = "when(samplingManager.getSamplingStrategy(SERVICE_NAME)).thenReturn(new SamplingStrategyResponse(null,null,parameters)); <7...8>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "Thread.sleep(20); <11>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.3 [style = solid, label="perOperationSampler"];
+0.0 -> 0.6 [style = solid, label="perOperationSampler"];
+0.1 -> 0.2 [style = solid, label="parameters"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.6 [style = solid, label="parameters"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = solid, label="undertest"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.7 -> 0.0 [style = dotted, label="true"];
+0.7 -> 0.0 [style = bold, label=""];
+0.7 -> 0.1 [style = dotted, label="true"];
+0.7 -> 0.2 [style = dotted, label="true"];
+0.7 -> 0.3 [style = dotted, label="true"];
+0.7 -> 0.4 [style = dotted, label="true"];
+0.7 -> 0.5 [style = dotted, label="true"];
+0.7 -> 0.6 [style = dotted, label="true"];
+}

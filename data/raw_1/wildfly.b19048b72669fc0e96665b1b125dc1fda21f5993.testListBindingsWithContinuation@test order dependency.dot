@@ -1,0 +1,22 @@
+digraph PDG {
+label = "testListBindingsWithContinuation <3...11>";
+0.0 [style = filled, label = "bindListWithContinuations(); <4>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "checkListWithContinuationsResults(results); <6>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "Enter <3...11>", fillcolor = aquamarine, shape = diamond];
+0.3 [style = filled, label = "results = (NamingEnumeration<Binding>)testActionPermission(JndiPermission.ACTION_LIST_BINDINGS,Arrays.asList(new JndiPermission(\"test\",\"listBindings\")),namingContext,\"comp\"); <7...8>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "checkListWithContinuationsResults(results); <10>", fillcolor = deeppink, shape = ellipse];
+0.1 [style = filled, label = "NamingEnumeration<Binding> results = namingContext.listBindings(new CompositeName(\"comp\")); <5>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = solid, label="results"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.4 [style = solid, label="results"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = solid, label="results"];
+0.3 -> 0.4 [style = bold, label=""];
+0.5 -> 0.0 [style = dotted, label="true"];
+0.5 -> 0.0 [style = bold, label=""];
+0.5 -> 0.1 [style = dotted, label="true"];
+0.5 -> 0.2 [style = dotted, label="true"];
+0.5 -> 0.3 [style = dotted, label="true"];
+0.5 -> 0.4 [style = dotted, label="true"];
+}

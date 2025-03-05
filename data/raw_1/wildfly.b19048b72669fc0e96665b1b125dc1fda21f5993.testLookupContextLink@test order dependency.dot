@@ -1,0 +1,34 @@
+digraph PDG {
+label = "testLookupContextLink <3...14>";
+0.0 [style = filled, label = "final Name name = new CompositeName(\"test/value\"); <4>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "result = testActionPermission(JndiPermission.ACTION_LOOKUP,Arrays.asList(new JndiPermission(\"test\",\"lookup\"),new JndiPermission(\"test/value\",\"lookup\")),namingContext,\"link/value\"); <10...11>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "namingStore.bind(name,\"testValue\"); <5>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "final Name linkName = new CompositeName(\"link\"); <6>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "Enter <3...14>", fillcolor = aquamarine, shape = diamond];
+0.5 [style = filled, label = "assertEquals(\"testValue\",result); <9>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "namingStore.bind(linkName,new LinkRef(\"./test\")); <7>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "assertEquals(\"testValue\",result); <13>", fillcolor = deeppink, shape = ellipse];
+0.4 [style = filled, label = "Object result = namingContext.lookup(\"link/value\"); <8>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="name"];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="namingStore"];
+0.2 -> 0.3 [style = solid, label="linkName"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = solid, label="result"];
+0.4 -> 0.5 [style = bold, label=""];
+0.4 -> 0.7 [style = solid, label="result"];
+0.5 -> 0.6 [style = bold, label=""];
+0.6 -> 0.7 [style = solid, label="result"];
+0.6 -> 0.7 [style = bold, label=""];
+0.8 -> 0.0 [style = dotted, label="true"];
+0.8 -> 0.0 [style = bold, label=""];
+0.8 -> 0.1 [style = dotted, label="true"];
+0.8 -> 0.2 [style = dotted, label="true"];
+0.8 -> 0.3 [style = dotted, label="true"];
+0.8 -> 0.4 [style = dotted, label="true"];
+0.8 -> 0.5 [style = dotted, label="true"];
+0.8 -> 0.6 [style = dotted, label="true"];
+0.8 -> 0.7 [style = dotted, label="true"];
+}

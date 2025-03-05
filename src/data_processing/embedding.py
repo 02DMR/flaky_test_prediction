@@ -49,7 +49,7 @@ def process_dot_file(file_path):
       - 构造 PyG Data 对象，包含节点特征 x、边索引 edge_index、图级标签 y。
     """
     base = os.path.basename(file_path)
-    # 假设文件名格式为 "xxx@<原因类型>.dot"
+    # 文件名格式为 "xxx@<原因类型>.dot"
     if "@" in base:
         label_str = base.split("@")[1].split(".")[0]
     else:
@@ -117,7 +117,7 @@ def process_all_dot_files(raw_dir, processed_file="processed_data.pt"):
 
 if __name__ == "__main__":
     # 指定 .dot 文件目录（根据实际情况修改路径）
-    raw_directory = r"C:\Users\86130\Desktop\Code\Pycharm\flaky_test_prediction\data\raw"
+    raw_directory = r"C:\Users\86130\Desktop\Code\Pycharm\flaky_test_prediction\data\raw_1"
     # 指定保存处理后的数据文件（可放置于项目 processed 目录下）
-    output_file = "../../data/processed/processed_data.pt"
+    output_file = "../../data/processed/processed_data1.pt"
     process_all_dot_files(raw_directory, processed_file=output_file)

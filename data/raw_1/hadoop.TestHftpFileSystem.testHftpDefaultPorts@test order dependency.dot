@@ -1,0 +1,35 @@
+digraph PDG {
+label = "testHftpDefaultPorts <3...12>";
+0.5 [style = filled, label = "assertEquals(DFS_NAMENODE_HTTPS_PORT_DEFAULT,fs.getDefaultSecurePort()); <9>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "resetFileSystem(); <4>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "Configuration conf = new Configuration(); <5>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "URI uri = URI.create(); <6>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "HftpFileSystem fs = ((HftpFileSystem)(FileSystem.get(uri,conf))); <7>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "assertEquals( ( \"127.0.0.1:\" + DFSConfigKeys.DFS_NAMENODE_HTTPS_PORT_DEFAULT ),fs.getCanonicalServiceName()); <11>", fillcolor = deeppink, shape = ellipse];
+0.6 [style = filled, label = "assertEquals(uri,fs.getUri()); <10>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "assertEquals(DFS_NAMENODE_HTTP_PORT_DEFAULT,fs.getDefaultPort()); <8>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "Enter <3...12>", fillcolor = aquamarine, shape = diamond];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="conf"];
+0.2 -> 0.3 [style = solid, label="uri"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.6 [style = solid, label="uri"];
+0.3 -> 0.4 [style = solid, label="fs"];
+0.3 -> 0.4 [style = bold, label=""];
+0.3 -> 0.5 [style = solid, label="fs"];
+0.3 -> 0.6 [style = solid, label="fs"];
+0.3 -> 0.7 [style = solid, label="fs"];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.6 -> 0.7 [style = bold, label=""];
+0.8 -> 0.0 [style = dotted, label="true"];
+0.8 -> 0.0 [style = bold, label=""];
+0.8 -> 0.1 [style = dotted, label="true"];
+0.8 -> 0.2 [style = dotted, label="true"];
+0.8 -> 0.3 [style = dotted, label="true"];
+0.8 -> 0.4 [style = dotted, label="true"];
+0.8 -> 0.5 [style = dotted, label="true"];
+0.8 -> 0.6 [style = dotted, label="true"];
+0.8 -> 0.7 [style = dotted, label="true"];
+}

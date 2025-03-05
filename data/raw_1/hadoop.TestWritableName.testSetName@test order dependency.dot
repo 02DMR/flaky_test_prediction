@@ -1,0 +1,18 @@
+digraph PDG {
+label = "testSetName <3...8>";
+0.0 [style = filled, label = "Configuration conf = new Configuration(); <4>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "WritableName.setName(,testName); <5>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "Class<?> test = WritableName.getClass(testName,conf); <6>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "Enter <3...8>", fillcolor = aquamarine, shape = diamond];
+0.3 [style = filled, label = "assertTrue(test.equals()); <7>", fillcolor = deeppink, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="conf"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = solid, label="test"];
+0.2 -> 0.3 [style = bold, label=""];
+0.4 -> 0.0 [style = dotted, label="true"];
+0.4 -> 0.0 [style = bold, label=""];
+0.4 -> 0.1 [style = dotted, label="true"];
+0.4 -> 0.2 [style = dotted, label="true"];
+0.4 -> 0.3 [style = dotted, label="true"];
+}

@@ -1,0 +1,38 @@
+digraph PDG {
+label = "testInitialFactory <3...14>";
+0.1 [style = filled, label = "InitialContext initialContext = new InitialContext(); <5>", fillcolor = white, shape = ellipse];
+0.9 [style = filled, label = "Enter <3...14>", fillcolor = aquamarine, shape = diamond];
+0.2 [style = filled, label = "Context context = (Context)initialContext.lookup(\"\"); <6>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "assertTrue(context instanceof NamingContext); <13>", fillcolor = deeppink, shape = ellipse];
+0.7 [style = filled, label = "context = (Context)initialContext.lookup(\"\"); <12>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "assertTrue(context instanceof NamingContext); <7>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "NamingManager.setInitialContextFactoryBuilder(new InitialContextFactoryBuilder()); <9>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "initialContext = new InitialContext(); <11>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "System.setProperty(Context.INITIAL_CONTEXT_FACTORY,.getName()); <4>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "if !NamingManager.hasInitialContextFactoryBuilder() <8>", fillcolor = white, shape = diamond];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = solid, label="initialContext"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.7 [style = solid, label="initialContext"];
+0.2 -> 0.3 [style = solid, label="context"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.8 [style = solid, label="context"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = dotted, label="true"];
+0.4 -> 0.5 [style = bold, label=""];
+0.4 -> 0.6 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.6 -> 0.7 [style = solid, label="initialContext"];
+0.6 -> 0.7 [style = bold, label=""];
+0.7 -> 0.8 [style = solid, label="context"];
+0.7 -> 0.8 [style = bold, label=""];
+0.9 -> 0.0 [style = dotted, label="true"];
+0.9 -> 0.0 [style = bold, label=""];
+0.9 -> 0.1 [style = dotted, label="true"];
+0.9 -> 0.2 [style = dotted, label="true"];
+0.9 -> 0.3 [style = dotted, label="true"];
+0.9 -> 0.4 [style = dotted, label="true"];
+0.9 -> 0.6 [style = dotted, label="true"];
+0.9 -> 0.7 [style = dotted, label="true"];
+0.9 -> 0.8 [style = dotted, label="true"];
+}

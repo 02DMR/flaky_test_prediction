@@ -1,0 +1,30 @@
+digraph PDG {
+label = "testContentType <3...11>";
+0.0 [style = filled, label = "byte[] data = \"Hello World\".getBytes(Charset.forName(\"UTF-8\")); <4>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "headers.put(\"Accept-Encoding\",\"compress, gzip\"); <7>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "Enter <3...11>", fillcolor = aquamarine, shape = diamond];
+0.4 [style = filled, label = "String out = template.requestBodyAndHeaders(\"netty-http:http://localhost:{{port}}/foo?decoders=#myDecoders\",data,headers,); <8...9>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertEquals(\"Bye World\",out.trim()); <10>", fillcolor = deeppink, shape = ellipse];
+0.2 [style = filled, label = "headers.put(\"content-type\",\"text/plain; charset=\"UTF-8\"\"); <6>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "Map<String,Object> headers = new HashMap<>(); <5>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.4 [style = solid, label="data"];
+0.1 -> 0.2 [style = solid, label="headers"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="headers"];
+0.1 -> 0.4 [style = solid, label="headers"];
+0.2 -> 0.3 [style = solid, label="headers"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="headers"];
+0.3 -> 0.4 [style = solid, label="headers"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = solid, label="out"];
+0.4 -> 0.5 [style = bold, label=""];
+0.6 -> 0.0 [style = dotted, label="true"];
+0.6 -> 0.0 [style = bold, label=""];
+0.6 -> 0.1 [style = dotted, label="true"];
+0.6 -> 0.2 [style = dotted, label="true"];
+0.6 -> 0.3 [style = dotted, label="true"];
+0.6 -> 0.4 [style = dotted, label="true"];
+0.6 -> 0.5 [style = dotted, label="true"];
+}

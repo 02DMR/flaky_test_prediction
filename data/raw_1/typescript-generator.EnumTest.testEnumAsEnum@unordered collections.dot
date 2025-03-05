@@ -1,0 +1,31 @@
+digraph PDG {
+label = "testEnumAsEnum <3...9>";
+0.4 [style = filled, label = "assertEquals(expected.trim(),output.trim()); <8>", fillcolor = deeppink, shape = ellipse];
+0.3 [style = filled, label = "final String expected = ( ( \"interface AClass {
+\" + ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( \"    direction: Direction;
+\" + \"}
+\" )) + \"
+\" )) + \"declare const enum Direction {
+\" )) + \"    North = 'North',
+\" )) + \"    East = 'East',
+\" )) + \"    South = 'South',
+\" )) + \"    West = 'West',
+\" )) + \"}\" )) )).replace(\"'\",\"\"\"); <7>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "Enter <3...9>", fillcolor = aquamarine, shape = diamond];
+0.2 [style = filled, label = "final String output = new TypeScriptGenerator(settings).generateTypeScript(Input.from()); <6>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "final Settings settings = TestUtils.settings(); <4>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "settings.mapEnum = EnumMapping.asEnum; <5>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="settings"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="output"];
+0.3 -> 0.4 [style = solid, label="expected"];
+0.3 -> 0.4 [style = bold, label=""];
+0.5 -> 0.0 [style = dotted, label="true"];
+0.5 -> 0.0 [style = bold, label=""];
+0.5 -> 0.1 [style = dotted, label="true"];
+0.5 -> 0.2 [style = dotted, label="true"];
+0.5 -> 0.3 [style = dotted, label="true"];
+0.5 -> 0.4 [style = dotted, label="true"];
+}

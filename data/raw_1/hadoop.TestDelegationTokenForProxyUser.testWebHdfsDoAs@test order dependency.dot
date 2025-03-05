@@ -1,0 +1,99 @@
+digraph PDG {
+label = "testWebHdfsDoAs <3...61>";
+0.9 [style = filled, label = "{
+final URL url = WebHdfsTestUtil.toUrl(webhdfs,GETHOMEDIRECTORY,root,new DoAsParam(PROXY_USER){
+@Override public String getName ( ) {
+return \"DOas\";
+}});
+final HttpURLConnection conn = ((HttpURLConnection)(url.openConnection()));
+final Map<?,?> m = WebHdfsTestUtil.connectAndGetJson(conn,SC_OK);
+conn.disconnect();
+final Object responsePath = m.get(.getSimpleName());
+LOG.info( ( \"responsePath=\" + responsePath ));
+Assert.assertEquals( ( \"/user/\" + PROXY_USER ),responsePath);
+} <21...34>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "((Log4JLogger)(LOG)).getLogger().setLevel(ALL); <5>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "LOG.info( ( \"ugi.getShortUserName()=\" + ugi.getShortUserName() )); <8>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "{
+final URL url = WebHdfsTestUtil.toUrl(webhdfs,GETHOMEDIRECTORY,root,new DoAsParam(PROXY_USER));
+final HttpURLConnection conn = ((HttpURLConnection)(url.openConnection()));
+final Map<?,?> m = WebHdfsTestUtil.connectAndGetJson(conn,SC_OK);
+conn.disconnect();
+final Object responsePath = m.get(.getSimpleName());
+LOG.info( ( \"responsePath=\" + responsePath ));
+Assert.assertEquals( ( \"/user/\" + PROXY_USER ),responsePath);
+} <12...20>", fillcolor = white, shape = ellipse];
+0.13 [style = filled, label = "Enter <3...61>", fillcolor = aquamarine, shape = diamond];
+0.11 [style = filled, label = "{
+final PutOpParam.Op op = Op.CREATE;
+final URL url = WebHdfsTestUtil.toUrl(webhdfs,op,f,new DoAsParam(PROXY_USER));
+HttpURLConnection conn = ((HttpURLConnection)(url.openConnection()));
+conn = WebHdfsTestUtil.twoStepWrite(webhdfs,op,conn);
+final FSDataOutputStream out = WebHdfsTestUtil.write(webhdfs,op,conn,4096);
+out.write(\"Hello, webhdfs user!\".getBytes());
+out.close();
+final FileStatus status = webhdfs.getFileStatus(f);
+LOG.info( ( \"status.getOwner()=\" + status.getOwner() ));
+Assert.assertEquals(PROXY_USER,status.getOwner());
+} <36...47>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "((Log4JLogger)(LOG)).getLogger().setLevel(ALL); <6>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "final UserGroupInformation ugi = UserGroupInformation.createRemoteUser(REAL_USER); <7>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "cluster.getFileSystem().setPermission(root,new FsPermission(((short)(0777)))); <11>", fillcolor = white, shape = ellipse];
+0.12 [style = filled, label = "{
+final PostOpParam.Op op = Op.APPEND;
+final URL url = WebHdfsTestUtil.toUrl(webhdfs,op,f,new DoAsParam(PROXY_USER));
+HttpURLConnection conn = ((HttpURLConnection)(url.openConnection()));
+conn = WebHdfsTestUtil.twoStepWrite(webhdfs,op,conn);
+final FSDataOutputStream out = WebHdfsTestUtil.write(webhdfs,op,conn,4096);
+out.write(\"
+Hello again!\".getBytes());
+out.close();
+final FileStatus status = webhdfs.getFileStatus(f);
+LOG.info( ( \"status.getOwner()=\" + status.getOwner() ));
+LOG.info( ( \"status.getLen()  =\" + status.getLen() ));
+Assert.assertEquals(PROXY_USER,status.getOwner());
+} <48...60>", fillcolor = deeppink, shape = ellipse];
+0.0 [style = filled, label = "LOG.info(\"START: testWebHdfsDoAs()\"); <4>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "final WebHdfsFileSystem webhdfs = WebHdfsTestUtil.getWebHdfsFileSystemAs(ugi,config); <9>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "final Path root = new Path(\"/\"); <10>", fillcolor = white, shape = ellipse];
+0.10 [style = filled, label = "final Path f = new Path(\"/testWebHdfsDoAs/a.txt\"); <35>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = solid, label="ugi"];
+0.3 -> 0.4 [style = bold, label=""];
+0.3 -> 0.5 [style = solid, label="ugi"];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.5 -> 0.8 [style = solid, label="webhdfs"];
+0.5 -> 0.9 [style = solid, label="webhdfs"];
+0.5 -> 0.11 [style = solid, label="webhdfs"];
+0.5 -> 0.12 [style = solid, label="webhdfs"];
+0.6 -> 0.7 [style = solid, label="root"];
+0.6 -> 0.7 [style = bold, label=""];
+0.6 -> 0.8 [style = solid, label="root"];
+0.6 -> 0.9 [style = solid, label="root"];
+0.7 -> 0.8 [style = bold, label=""];
+0.8 -> 0.9 [style = solid, label="conn"];
+0.8 -> 0.9 [style = bold, label=""];
+0.8 -> 0.11 [style = solid, label="conn"];
+0.8 -> 0.12 [style = solid, label="conn"];
+0.9 -> 0.10 [style = bold, label=""];
+0.9 -> 0.11 [style = solid, label="conn"];
+0.9 -> 0.12 [style = solid, label="conn"];
+0.10 -> 0.11 [style = solid, label="f"];
+0.10 -> 0.11 [style = bold, label=""];
+0.10 -> 0.12 [style = solid, label="f"];
+0.11 -> 0.12 [style = solid, label="conn"];
+0.11 -> 0.12 [style = bold, label=""];
+0.13 -> 0.0 [style = dotted, label="true"];
+0.13 -> 0.0 [style = bold, label=""];
+0.13 -> 0.1 [style = dotted, label="true"];
+0.13 -> 0.2 [style = dotted, label="true"];
+0.13 -> 0.3 [style = dotted, label="true"];
+0.13 -> 0.4 [style = dotted, label="true"];
+0.13 -> 0.5 [style = dotted, label="true"];
+0.13 -> 0.6 [style = dotted, label="true"];
+0.13 -> 0.7 [style = dotted, label="true"];
+0.13 -> 0.10 [style = dotted, label="true"];
+}

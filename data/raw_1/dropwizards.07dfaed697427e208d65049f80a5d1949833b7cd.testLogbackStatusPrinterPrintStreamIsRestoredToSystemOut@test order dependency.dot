@@ -1,0 +1,20 @@
+digraph PDG {
+label = "testLogbackStatusPrinterPrintStreamIsRestoredToSystemOut <3...9>";
+0.4 [style = filled, label = "Enter <3...9>", fillcolor = aquamarine, shape = diamond];
+0.1 [style = filled, label = "field.setAccessible(true); <5>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "assertThat(out).isSameAs(System.out); <8>", fillcolor = deeppink, shape = ellipse];
+0.2 [style = filled, label = "PrintStream out = (PrintStream)field.get(null); <7>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "Field field = .getDeclaredField(\"ps\"); <4>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="field"];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="field"];
+0.1 -> 0.2 [style = solid, label="field"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = solid, label="out"];
+0.2 -> 0.3 [style = bold, label=""];
+0.4 -> 0.0 [style = dotted, label="true"];
+0.4 -> 0.0 [style = bold, label=""];
+0.4 -> 0.1 [style = dotted, label="true"];
+0.4 -> 0.2 [style = dotted, label="true"];
+0.4 -> 0.3 [style = dotted, label="true"];
+}

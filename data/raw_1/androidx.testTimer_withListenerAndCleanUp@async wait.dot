@@ -1,0 +1,26 @@
+digraph PDG {
+label = "testTimer_withListenerAndCleanUp <4...12>";
+0.0 [style = filled, label = "TestTimeLimitExceededListener listenerSpy = spy(mListener); <6>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "mWorkTimer.startTimer(WORKSPEC_ID_1,0,listenerSpy); <7>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "assertThat(mWorkTimer.getTimerMap().size(),is(0)); <10>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "Enter <4...12>", fillcolor = aquamarine, shape = diamond];
+0.3 [style = filled, label = "verify(listenerSpy,times(1)).onTimeLimitExceeded(WORKSPEC_ID_1); <9>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "Thread.sleep(10); <8>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertThat(mWorkTimer.getListeners().size(),is(0)); <11>", fillcolor = deeppink, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="listenerSpy"];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.3 [style = solid, label="listenerSpy"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.4 [style = solid, label="mWorkTimer"];
+0.1 -> 0.5 [style = solid, label="mWorkTimer"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.6 -> 0.0 [style = dotted, label="true"];
+0.6 -> 0.0 [style = bold, label=""];
+0.6 -> 0.1 [style = dotted, label="true"];
+0.6 -> 0.2 [style = dotted, label="true"];
+0.6 -> 0.3 [style = dotted, label="true"];
+0.6 -> 0.4 [style = dotted, label="true"];
+0.6 -> 0.5 [style = dotted, label="true"];
+}

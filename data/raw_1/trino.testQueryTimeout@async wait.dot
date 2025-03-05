@@ -1,0 +1,32 @@
+digraph PDG {
+label = "testQueryTimeout <3...44>";
+0.0 [style = filled, label = "statement.executeUpdate( ( \"CREATE TABLE test_query_timeout (key BIGINT) \" + \"WITH (\" ) + \"   split_count = 1, \" + \"   pages_per_split = 1, \" + \"   rows_per_page = 1, \" + \"   page_processing_delay = '1m'\" + \")\"); <8...14>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "CountDownLatch queryFinished = new CountDownLatch(1); <16>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "AtomicReference<Throwable> queryFailure = new AtomicReference<>(); <17>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "assertTrue(queryFinished.await(2,SECONDS)); <36>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "Enter <3...44>", fillcolor = aquamarine, shape = diamond];
+0.3 [style = filled, label = "executorService.submit(null); <18...35>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "statement.executeUpdate(\"DROP TABLE test_query_timeout\"); <42>", fillcolor = deeppink, shape = ellipse];
+0.5 [style = filled, label = "assertNotNull(queryFailure.get()); <37>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "assertContains(queryFailure.get().getMessage(),\"Query exceeded maximum time limit of 1.00s\"); <38>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.7 [style = solid, label="statement"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.4 [style = solid, label="queryFinished"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.5 [style = solid, label="queryFailure"];
+0.2 -> 0.6 [style = solid, label="queryFailure"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.6 -> 0.7 [style = bold, label=""];
+0.8 -> 0.0 [style = dotted, label="true"];
+0.8 -> 0.0 [style = bold, label=""];
+0.8 -> 0.1 [style = dotted, label="true"];
+0.8 -> 0.2 [style = dotted, label="true"];
+0.8 -> 0.3 [style = dotted, label="true"];
+0.8 -> 0.4 [style = dotted, label="true"];
+0.8 -> 0.5 [style = dotted, label="true"];
+0.8 -> 0.6 [style = dotted, label="true"];
+0.8 -> 0.7 [style = dotted, label="true"];
+}

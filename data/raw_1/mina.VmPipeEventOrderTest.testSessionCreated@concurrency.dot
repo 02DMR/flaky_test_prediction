@@ -1,0 +1,83 @@
+digraph PDG {
+label = "testSessionCreated <3...43>";
+0.5 [style = filled, label = "vmPipeAcceptor.bind(vmPipeAddress); <28>", fillcolor = white, shape = ellipse];
+0.11 [style = filled, label = "connectFuture.getSession().close(); <39>", fillcolor = white, shape = ellipse];
+0.14 [style = filled, label = "Assert.assertEquals(\"ABCD\",stringBuffer.toString()); <42>", fillcolor = deeppink, shape = ellipse];
+0.7 [style = filled, label = "vmPipeConnector.getFilterChain().addLast(\"executor\",new ExecutorFilter()); <30>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "final Semaphore semaphore = new Semaphore(0); <4>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "final VmPipeConnector vmPipeConnector = new VmPipeConnector(); <29>", fillcolor = white, shape = ellipse];
+0.10 [style = filled, label = "connectFuture.awaitUninterruptibly(); <38>", fillcolor = white, shape = ellipse];
+0.9 [style = filled, label = "ConnectFuture connectFuture = vmPipeConnector.connect(vmPipeAddress); <37>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "VmPipeAcceptor vmPipeAcceptor = new VmPipeAcceptor(); <6>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "vmPipeConnector.setHandler(new IoHandlerAdapter(){
+@Override public void sessionOpened (IoSession session  ) {
+session.write(IoBuffer.wrap(new byte[][]));
+}}); <31...36>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "vmPipeAcceptor.setHandler(new IoHandlerAdapter(){
+@Override public void sessionCreated (IoSession session  ) {
+Thread.sleep(1000);
+stringBuffer.append(\"A\");
+}@Override public void sessionOpened (IoSession session  ) {
+stringBuffer.append(\"B\");
+}@Override public void messageReceived (IoSession session ,Object message  ) {
+stringBuffer.append(\"C\");
+}@Override public void sessionClosed (IoSession session  ) {
+stringBuffer.append(\"D\");
+semaphore.release();
+}}); <8...27>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "final VmPipeAddress vmPipeAddress = new VmPipeAddress(12345); <7>", fillcolor = white, shape = ellipse];
+0.13 [style = filled, label = "vmPipeAcceptor.unbind(vmPipeAddress); <41>", fillcolor = white, shape = ellipse];
+0.15 [style = filled, label = "Enter <3...43>", fillcolor = aquamarine, shape = diamond];
+0.1 [style = filled, label = "final StringBuffer stringBuffer = new StringBuffer(); <5>", fillcolor = white, shape = ellipse];
+0.12 [style = filled, label = "semaphore.tryAcquire(1,TimeUnit.SECONDS); <40>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.4 [style = solid, label="semaphore"];
+0.0 -> 0.12 [style = solid, label="semaphore"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.4 [style = solid, label="stringBuffer"];
+0.1 -> 0.14 [style = solid, label="stringBuffer"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="vmPipeAcceptor"];
+0.2 -> 0.5 [style = solid, label="vmPipeAcceptor"];
+0.2 -> 0.13 [style = solid, label="vmPipeAcceptor"];
+0.3 -> 0.4 [style = bold, label=""];
+0.3 -> 0.5 [style = solid, label="vmPipeAddress"];
+0.3 -> 0.9 [style = solid, label="vmPipeAddress"];
+0.3 -> 0.13 [style = solid, label="vmPipeAddress"];
+0.4 -> 0.5 [style = solid, label="vmPipeAcceptor"];
+0.4 -> 0.5 [style = bold, label=""];
+0.4 -> 0.13 [style = solid, label="vmPipeAcceptor"];
+0.5 -> 0.6 [style = bold, label=""];
+0.5 -> 0.13 [style = solid, label="vmPipeAcceptor"];
+0.6 -> 0.7 [style = solid, label="vmPipeConnector"];
+0.6 -> 0.7 [style = bold, label=""];
+0.6 -> 0.8 [style = solid, label="vmPipeConnector"];
+0.6 -> 0.9 [style = solid, label="vmPipeConnector"];
+0.7 -> 0.8 [style = bold, label=""];
+0.8 -> 0.9 [style = solid, label="vmPipeConnector"];
+0.8 -> 0.9 [style = bold, label=""];
+0.9 -> 0.10 [style = solid, label="connectFuture"];
+0.9 -> 0.10 [style = bold, label=""];
+0.9 -> 0.11 [style = solid, label="connectFuture"];
+0.10 -> 0.11 [style = solid, label="connectFuture"];
+0.10 -> 0.11 [style = bold, label=""];
+0.11 -> 0.12 [style = bold, label=""];
+0.12 -> 0.13 [style = bold, label=""];
+0.13 -> 0.14 [style = bold, label=""];
+0.15 -> 0.0 [style = dotted, label="true"];
+0.15 -> 0.0 [style = bold, label=""];
+0.15 -> 0.1 [style = dotted, label="true"];
+0.15 -> 0.2 [style = dotted, label="true"];
+0.15 -> 0.3 [style = dotted, label="true"];
+0.15 -> 0.4 [style = dotted, label="true"];
+0.15 -> 0.5 [style = dotted, label="true"];
+0.15 -> 0.6 [style = dotted, label="true"];
+0.15 -> 0.7 [style = dotted, label="true"];
+0.15 -> 0.8 [style = dotted, label="true"];
+0.15 -> 0.9 [style = dotted, label="true"];
+0.15 -> 0.10 [style = dotted, label="true"];
+0.15 -> 0.11 [style = dotted, label="true"];
+0.15 -> 0.12 [style = dotted, label="true"];
+0.15 -> 0.13 [style = dotted, label="true"];
+0.15 -> 0.14 [style = dotted, label="true"];
+}

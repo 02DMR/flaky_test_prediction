@@ -1,0 +1,25 @@
+digraph PDG {
+label = "testRunWriteAfterRead <3...21>";
+0.5 [style = filled, label = "Assert.assertEquals(2,this.sharedState.get()); <20>", fillcolor = deeppink, shape = ellipse];
+0.3 [style = filled, label = "final Function2<CancelIndicator,Object,Integer> _function_2 = null; <11...18>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "this.requestManager.runWrite(_function_1,_function_2).join(); <19>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "final Function1<CancelIndicator,Integer> _function = null; <4...6>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "this.requestManager.runRead(_function); <7>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "Enter <3...21>", fillcolor = aquamarine, shape = diamond];
+0.2 [style = filled, label = "final Function0<Object> _function_1 = null; <8...10>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="_function"];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="_function_1"];
+0.3 -> 0.4 [style = solid, label="_function_2"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.6 -> 0.0 [style = dotted, label="true"];
+0.6 -> 0.0 [style = bold, label=""];
+0.6 -> 0.1 [style = dotted, label="true"];
+0.6 -> 0.2 [style = dotted, label="true"];
+0.6 -> 0.3 [style = dotted, label="true"];
+0.6 -> 0.4 [style = dotted, label="true"];
+0.6 -> 0.5 [style = dotted, label="true"];
+}

@@ -1,0 +1,26 @@
+digraph PDG {
+label = "createDefaultDirectoryManagerPath <3...11>";
+0.6 [style = filled, label = "Enter <3...11>", fillcolor = aquamarine, shape = diamond];
+0.2 [style = filled, label = "assertTrue(dm instanceof DirectoryManagerImpl); <7>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "DirectoryManagerImpl dmi = (DirectoryManagerImpl)dm; <8>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "DirectoryManager dm = DirectoryManagerFactory.createDirectoryManager(path,true); <5...6>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "Path path = Paths.get(System.getProperty(\"user.dir\")); <4>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertEquals(path,dmi.directory); <10>", fillcolor = deeppink, shape = ellipse];
+0.4 [style = filled, label = "assertTrue(dmi.readOnly); <9>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="path"];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.5 [style = solid, label="path"];
+0.1 -> 0.2 [style = solid, label="dm"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="dm"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.6 -> 0.0 [style = dotted, label="true"];
+0.6 -> 0.0 [style = bold, label=""];
+0.6 -> 0.1 [style = dotted, label="true"];
+0.6 -> 0.2 [style = dotted, label="true"];
+0.6 -> 0.3 [style = dotted, label="true"];
+0.6 -> 0.4 [style = dotted, label="true"];
+0.6 -> 0.5 [style = dotted, label="true"];
+}

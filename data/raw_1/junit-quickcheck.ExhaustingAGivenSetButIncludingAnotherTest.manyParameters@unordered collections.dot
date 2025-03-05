@@ -1,0 +1,25 @@
+digraph PDG {
+label = "manyParameters <4...12>";
+0.2 [style = filled, label = "assertEquals(asList(-1,-2,-4),ManyParameters.firstTestCases.subList(0,3)); <7>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "Enter <4...12>", fillcolor = aquamarine, shape = diamond];
+0.1 [style = filled, label = "assertEquals(16,ManyParameters.iterations); <6>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertEquals(asList(-1,-2,-4),ManyParameters.firstTestCases.subList(12,15)); <10>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "assertEquals(asList(-1,-2,-4),ManyParameters.firstTestCases.subList(8,11)); <9>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "assertEquals(asList('r','r','r','r','y','y','y','y'),ManyParameters.secondTestCases.subList(0,8)); <11>", fillcolor = deeppink, shape = ellipse];
+0.0 [style = filled, label = "assertThat(testResult(),isSuccessful()); <5>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "assertEquals(asList(-1,-2,-4),ManyParameters.firstTestCases.subList(4,7)); <8>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.7 -> 0.0 [style = dotted, label="true"];
+0.7 -> 0.0 [style = bold, label=""];
+0.7 -> 0.1 [style = dotted, label="true"];
+0.7 -> 0.2 [style = dotted, label="true"];
+0.7 -> 0.3 [style = dotted, label="true"];
+0.7 -> 0.4 [style = dotted, label="true"];
+0.7 -> 0.5 [style = dotted, label="true"];
+0.7 -> 0.6 [style = dotted, label="true"];
+}

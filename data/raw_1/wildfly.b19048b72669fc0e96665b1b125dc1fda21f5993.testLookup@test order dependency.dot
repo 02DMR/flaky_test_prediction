@@ -1,0 +1,33 @@
+digraph PDG {
+label = "testLookup <3...12>";
+0.6 [style = filled, label = "assertEquals(object,result); <11>", fillcolor = deeppink, shape = ellipse];
+0.0 [style = filled, label = "final Name name = new CompositeName(\"test\"); <4>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "assertEquals(object,result); <9>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "Object result = namingContext.lookup(name); <8>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "Enter <3...12>", fillcolor = aquamarine, shape = diamond];
+0.2 [style = filled, label = "namingStore.bind(name,object); <6>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "result = testActionPermission(JndiPermission.ACTION_LOOKUP,namingContext,\"test\"); <10>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "final Object object = new Object(); <5>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="name"];
+0.0 -> 0.3 [style = solid, label="name"];
+0.1 -> 0.2 [style = solid, label="object"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.4 [style = solid, label="object"];
+0.1 -> 0.6 [style = solid, label="object"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = solid, label="result"];
+0.3 -> 0.4 [style = bold, label=""];
+0.3 -> 0.6 [style = solid, label="result"];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = solid, label="result"];
+0.5 -> 0.6 [style = bold, label=""];
+0.7 -> 0.0 [style = dotted, label="true"];
+0.7 -> 0.0 [style = bold, label=""];
+0.7 -> 0.1 [style = dotted, label="true"];
+0.7 -> 0.2 [style = dotted, label="true"];
+0.7 -> 0.3 [style = dotted, label="true"];
+0.7 -> 0.4 [style = dotted, label="true"];
+0.7 -> 0.5 [style = dotted, label="true"];
+0.7 -> 0.6 [style = dotted, label="true"];
+}

@@ -1,0 +1,33 @@
+digraph PDG {
+label = "testInterruption <3...15>";
+0.2 [style = filled, label = "WorkerWrapper workerWrapper = createBuilder(work.getStringId()).withSchedulers(Collections.singletonList(mMockScheduler)).build(); <6...9>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "Thread.sleep(6000L); <13>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "insertWork(work); <5>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "FutureListener listener = createAndAddFutureListener(workerWrapper); <10>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "workerWrapper.interrupt(); <12>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "Enter <3...15>", fillcolor = aquamarine, shape = diamond];
+0.7 [style = filled, label = "assertThat(listener.mResult,is(true)); <14>", fillcolor = deeppink, shape = ellipse];
+0.0 [style = filled, label = "OneTimeWorkRequest work = new OneTimeWorkRequest.Builder().build(); <4>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "Executors.newSingleThreadExecutor().submit(workerWrapper); <11>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="work"];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="work"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = solid, label="workerWrapper"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="workerWrapper"];
+0.2 -> 0.5 [style = solid, label="workerWrapper"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.6 -> 0.7 [style = bold, label=""];
+0.8 -> 0.0 [style = dotted, label="true"];
+0.8 -> 0.0 [style = bold, label=""];
+0.8 -> 0.1 [style = dotted, label="true"];
+0.8 -> 0.2 [style = dotted, label="true"];
+0.8 -> 0.3 [style = dotted, label="true"];
+0.8 -> 0.4 [style = dotted, label="true"];
+0.8 -> 0.5 [style = dotted, label="true"];
+0.8 -> 0.6 [style = dotted, label="true"];
+0.8 -> 0.7 [style = dotted, label="true"];
+}

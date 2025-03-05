@@ -4,12 +4,21 @@ import torch.nn.functional as F
 from torch_geometric.data import DataLoader
 from gnn_model import GATNet
 from torch.optim import Adam
+from sklearn.metrics import f1_score  # Removed Precision import
+import random  # Added for shuffling
 
-# 加载之前处理好的数据集（保存为 processed_data.pt）
-dataset = torch.load("C:\\Users\\86130\\Desktop\\Code\\Pycharm\\flaky_test_prediction\\data\\processed\\processed_data.pt")
-print("数据集图数量:", len(dataset))
+# Load the previously processed dataset
+dataset = torch.load("C:\\Users\\86130\\Desktop\\Code\\Pycharm\\flaky_test_prediction\\data\\processed\\processed_data1.pt")
+print("Number of graphs in dataset:", len(dataset))
 
-# 划分训练、验证和测试集（例如 70%/10%/20%）
+# Set a fixed random seed for reproducibility
+random.seed(42)
+torch.manual_seed(42)
+
+# Shuffle the dataset before splitting
+random.shuffle(dataset)
+
+# Split into train, validation, and test sets (70%/10%/20%)
 num_graphs = len(dataset)
 train_num = int(num_graphs * 0.6)
 val_num = int(num_graphs * 0.2)
@@ -19,17 +28,17 @@ train_dataset = dataset[:train_num]
 val_dataset = dataset[train_num:train_num + val_num]
 test_dataset = dataset[train_num + val_num:]
 
-# 构造 DataLoader
+# Create DataLoaders
 train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=16, shuffle=False)
 test_loader = DataLoader(test_dataset, batch_size=16, shuffle=False)
 
-# 超参数设置
-in_channels = dataset[0].x.size(1)  # CodeBERT 嵌入维度（例如 768）
+# Hyperparameters
+in_channels = dataset[0].x.size(1)  # CodeBERT embedding dimension (e.g., 768)
 hidden_channels = 128
 num_classes = 13
-learning_rate = 0.001
-epochs = 500
+learning_rate = 0.0002
+epochs = 200
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = GATNet(in_channels, hidden_channels, num_classes).to(device)
@@ -43,9 +52,9 @@ def train():
     for data in train_loader:
         data = data.to(device)
         optimizer.zero_grad()
-        # 预测输出
+        # Prediction output
         out = model(data)
-        # 注意：由于每个图的标签是形如 [label]，故需 view 成一维张量
+        # Note: Each graph's label is in [label] format, so we need to view it as a 1D tensor
         loss = criterion(out, data.y.view(-1))
         loss.backward()
         optimizer.step()
@@ -58,7 +67,7 @@ def evaluate(loader):
     total_loss = 0
     correct = 0
     total = 0
-    # 可选：保存所有预测与真实标签，方便后续分析
+    # Collect all predictions and true labels for further metric calculation
     all_preds = []
     all_labels = []
     with torch.no_grad():
@@ -74,23 +83,26 @@ def evaluate(loader):
             all_labels.extend(data.y.view(-1).cpu().numpy())
     avg_loss = total_loss / total
     accuracy = correct / total
-    return accuracy, avg_loss, all_preds, all_labels
+    # Calculate F1 score using macro averaging
+    f1 = f1_score(all_labels, all_preds, average='macro')
+    return accuracy, avg_loss, f1, all_preds, all_labels
 
 
 if __name__ == "__main__":
     best_val_acc = 0
     for epoch in range(1, epochs + 1):
         loss = train()
-        train_acc, train_loss, _, _ = evaluate(train_loader)
-        val_acc, val_loss, _, _ = evaluate(val_loader)
-        print(
-            f"Epoch: {epoch:03d}, Train Loss: {train_loss:.4f}, Train Acc: {train_acc:.4f}, Val Loss: {val_loss:.4f}, Val Acc: {val_acc:.4f}")
-        # 保存验证集上最优模型
+        train_acc, train_loss, train_f1, _, _ = evaluate(train_loader)
+        val_acc, val_loss, val_f1, _, _ = evaluate(val_loader)
+        print(f"Epoch: {epoch:03d}, "
+              f"Train Loss: {train_loss:.4f}, Train Acc: {train_acc:.4f}, Train F1: {train_f1:.4f}, "
+              f"Val Loss: {val_loss:.4f}, Val Acc: {val_acc:.4f}, Val F1: {val_f1:.4f}")
+        # Save the best model based on validation accuracy
         if val_acc > best_val_acc:
             best_val_acc = val_acc
             torch.save(model.state_dict(), "best_model.pth")
 
-    # 加载最优模型并在测试集上评估
+    # Load the best model and evaluate on the test set
     model.load_state_dict(torch.load("best_model.pth"))
-    test_acc, test_loss, preds, labels = evaluate(test_loader)
-    print(f"Test Loss: {test_loss:.4f}, Test Acc: {test_acc:.4f}")
+    test_acc, test_loss, test_f1, preds, labels = evaluate(test_loader)
+    print(f"Test Loss: {test_loss:.4f}, Test Acc: {test_acc:.4f}, Test F1: {test_f1:.4f}")
