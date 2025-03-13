@@ -4,7 +4,7 @@ from torch_geometric.nn import GATConv, GlobalAttention
 
 
 class GATNet(torch.nn.Module):
-    def __init__(self, in_channels, hidden_channels, num_classes, dropout=0.2, heads=8):
+    def __init__(self, in_channels, hidden_channels, num_classes, dropout=0.3, heads=8):
         super(GATNet, self).__init__()
         # 第一层 GAT，使用多头注意力，输出维度为 hidden_channels * heads
         self.gat1 = GATConv(in_channels, hidden_channels, heads=heads, dropout=dropout)
@@ -42,5 +42,6 @@ class GATNet(torch.nn.Module):
         # 通过全连接层得到分类结果
         x = self.fc(x)
         return x
+
 
 

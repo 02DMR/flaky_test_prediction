@@ -1,0 +1,2160 @@
+2025-03-05 14:56:07,587 - INFO: Using device: cuda
+2025-03-05 14:56:07,682 - INFO: Number of graphs in dataset: 397
+2025-03-05 14:56:07,682 - INFO: Dataset split: Train=239, Val=79, Test=79
+2025-03-05 14:56:07,682 - INFO: Class Distribution:
+2025-03-05 14:56:07,682 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:07,682 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:07,682 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:07,682 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:07,682 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:07,682 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:10,623 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           6       0.00      1.00      0.00       0.0
+          11       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.75      0.25      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:10,623 - INFO: Class Distribution:
+2025-03-05 14:56:10,623 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:10,623 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:10,623 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:10,623 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:10,623 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:10,623 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:10,742 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:10,742 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:10,742 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:10,742 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:10,742 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:10,742 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:10,742 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:10,782 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           6       0.00      1.00      0.00       0.0
+          11       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.75      0.25      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:10,782 - INFO: Class Distribution:
+2025-03-05 14:56:10,782 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:10,782 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:10,782 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:10,782 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:10,782 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:10,782 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:11,170 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:11,170 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:11,170 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:11,170 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:11,170 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:11,170 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:11,170 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:11,170 - INFO: Epoch: 001, Train Loss: 8.1819, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.8462, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:11,590 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+          11       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:11,590 - INFO: Class Distribution:
+2025-03-05 14:56:11,590 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:11,590 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:11,590 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:11,590 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:11,590 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:11,590 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:11,732 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:11,732 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:11,732 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:11,732 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:11,732 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:11,732 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:11,732 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:11,768 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+          11       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:11,770 - INFO: Class Distribution:
+2025-03-05 14:56:11,770 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:11,770 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:11,770 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:11,770 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:11,770 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:11,770 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:12,125 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:12,125 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:12,125 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:12,125 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:12,125 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:12,125 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:12,125 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:12,125 - INFO: Epoch: 002, Train Loss: 8.0541, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7477, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:12,570 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+          11       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:12,570 - INFO: Class Distribution:
+2025-03-05 14:56:12,570 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:12,570 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:12,570 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:12,570 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:12,570 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:12,570 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:12,723 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:12,723 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:12,723 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:12,723 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:12,723 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:12,723 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:12,723 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:12,761 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+          11       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:12,761 - INFO: Class Distribution:
+2025-03-05 14:56:12,761 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:12,761 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:12,761 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:12,761 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:12,761 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:12,761 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:13,199 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:13,199 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:13,199 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:13,199 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:13,199 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:13,199 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:13,199 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:13,199 - INFO: Epoch: 003, Train Loss: 8.0048, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.6653, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:13,585 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           7       0.00      1.00      0.00       0.0
+          11       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.75      0.25      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:13,585 - INFO: Class Distribution:
+2025-03-05 14:56:13,585 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:13,585 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:13,585 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:13,585 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:13,585 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:13,585 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:13,722 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:13,722 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:13,722 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:13,722 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:13,722 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:13,722 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:13,722 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:13,766 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           7       0.00      1.00      0.00       0.0
+          11       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.75      0.25      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:13,766 - INFO: Class Distribution:
+2025-03-05 14:56:13,766 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:13,766 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:13,766 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:13,766 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:13,766 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:13,766 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:14,147 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:14,147 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:14,147 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:14,147 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:14,147 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:14,147 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:14,147 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:14,149 - INFO: Epoch: 004, Train Loss: 8.0399, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.6217, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:14,555 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+          11       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:14,555 - INFO: Class Distribution:
+2025-03-05 14:56:14,555 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:14,555 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:14,555 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:14,555 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:14,555 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:14,555 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:14,697 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:14,697 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:14,697 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:14,697 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:14,697 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:14,697 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:14,697 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:14,737 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+          11       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:14,737 - INFO: Class Distribution:
+2025-03-05 14:56:14,737 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:14,737 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:14,737 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:14,737 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:14,737 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:14,737 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:15,088 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:15,088 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:15,088 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:15,088 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:15,088 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:15,088 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:15,088 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:15,089 - INFO: Epoch: 005, Train Loss: 8.0144, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.6493, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:15,541 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:15,541 - INFO: Class Distribution:
+2025-03-05 14:56:15,541 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:15,541 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:15,541 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:15,541 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:15,541 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:15,541 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:15,669 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:15,669 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:15,669 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:15,671 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:15,671 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:15,671 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:15,671 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:15,709 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:15,709 - INFO: Class Distribution:
+2025-03-05 14:56:15,709 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:15,709 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:15,709 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:15,709 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:15,709 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:15,709 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:16,045 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:16,045 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:16,045 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:16,045 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:16,045 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:16,045 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:16,045 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:16,045 - INFO: Epoch: 006, Train Loss: 7.9875, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.6407, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:16,507 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+          11       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:16,507 - INFO: Class Distribution:
+2025-03-05 14:56:16,507 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:16,507 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:16,507 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:16,507 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:16,507 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:16,507 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:16,636 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:16,636 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:16,636 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:16,636 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:16,638 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:16,638 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:16,638 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:16,668 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+          11       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:16,668 - INFO: Class Distribution:
+2025-03-05 14:56:16,668 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:16,668 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:16,668 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:16,668 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:16,668 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:16,668 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:17,002 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:17,002 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:17,002 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:17,002 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:17,002 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:17,002 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:17,002 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:17,002 - INFO: Epoch: 007, Train Loss: 8.0238, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.6430, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:17,412 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:17,412 - INFO: Class Distribution:
+2025-03-05 14:56:17,412 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:17,412 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:17,412 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:17,412 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:17,412 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:17,412 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:17,538 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:17,538 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:17,538 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:17,538 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:17,538 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:17,538 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:17,538 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:17,578 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:17,578 - INFO: Class Distribution:
+2025-03-05 14:56:17,578 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:17,578 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:17,578 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:17,578 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:17,578 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:17,578 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:17,986 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:17,986 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:17,986 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:17,986 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:17,986 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:17,986 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:17,986 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:17,986 - INFO: Epoch: 008, Train Loss: 8.0183, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.6860, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:18,419 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:18,419 - INFO: Class Distribution:
+2025-03-05 14:56:18,419 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:18,419 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:18,419 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:18,419 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:18,419 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:18,419 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:18,550 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:18,550 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:18,550 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:18,550 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:18,550 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:18,550 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:18,550 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:18,590 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:18,590 - INFO: Class Distribution:
+2025-03-05 14:56:18,590 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:18,590 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:18,590 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:18,590 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:18,590 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:18,590 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:18,940 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:18,940 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:18,940 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:18,940 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:18,940 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:18,940 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:18,940 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:18,940 - INFO: Epoch: 009, Train Loss: 8.0794, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7386, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:19,372 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           7       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:19,372 - INFO: Class Distribution:
+2025-03-05 14:56:19,372 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:19,372 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:19,372 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:19,372 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:19,372 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:19,372 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:19,510 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:19,510 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:19,510 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:19,510 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:19,510 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:19,510 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:19,510 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:19,546 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           7       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:19,546 - INFO: Class Distribution:
+2025-03-05 14:56:19,546 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:19,546 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:19,546 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:19,546 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:19,546 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:19,546 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:19,886 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:19,886 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:19,886 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:19,886 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:19,886 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:19,886 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:19,886 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:19,886 - INFO: Epoch: 010, Train Loss: 8.1073, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7750, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:20,327 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           7       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:20,327 - INFO: Class Distribution:
+2025-03-05 14:56:20,327 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:20,327 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:20,327 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:20,327 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:20,327 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:20,327 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:20,450 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:20,450 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:20,450 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:20,450 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:20,450 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:20,450 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:20,450 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:20,488 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           7       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:20,488 - INFO: Class Distribution:
+2025-03-05 14:56:20,488 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:20,488 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:20,488 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:20,488 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:20,488 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:20,488 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:20,834 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:20,834 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:20,834 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:20,834 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:20,834 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:20,834 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:20,834 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:20,834 - INFO: Epoch: 011, Train Loss: 8.1543, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7837, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:21,284 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+          11       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:21,284 - INFO: Class Distribution:
+2025-03-05 14:56:21,284 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:21,284 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:21,284 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:21,284 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:21,284 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:21,284 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:21,417 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:21,417 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:21,417 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:21,417 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:21,417 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:21,417 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:21,417 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:21,456 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+          11       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:21,456 - INFO: Class Distribution:
+2025-03-05 14:56:21,456 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:21,456 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:21,456 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:21,456 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:21,456 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:21,456 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:21,796 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:21,796 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:21,796 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:21,796 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:21,796 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:21,796 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:21,796 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:21,796 - INFO: Epoch: 012, Train Loss: 8.0935, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7138, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:22,211 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+          10       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:22,211 - INFO: Class Distribution:
+2025-03-05 14:56:22,211 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:22,211 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:22,211 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:22,213 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:22,213 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:22,213 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:22,337 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:22,337 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:22,337 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:22,337 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:22,337 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:22,337 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:22,337 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:22,378 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+          10       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:22,378 - INFO: Class Distribution:
+2025-03-05 14:56:22,378 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:22,378 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:22,378 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:22,378 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:22,378 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:22,378 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:22,785 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:22,785 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:22,785 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:22,785 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:22,785 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:22,785 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:22,785 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:22,785 - INFO: Epoch: 013, Train Loss: 8.1080, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.6671, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:23,225 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+          11       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:23,225 - INFO: Class Distribution:
+2025-03-05 14:56:23,225 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:23,225 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:23,225 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:23,225 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:23,225 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:23,225 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:23,343 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:23,343 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:23,343 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:23,343 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:23,343 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:23,343 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:23,343 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:23,384 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+          11       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:23,394 - INFO: Class Distribution:
+2025-03-05 14:56:23,394 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:23,394 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:23,394 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:23,394 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:23,394 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:23,394 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:23,720 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:23,720 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:23,720 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:23,720 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:23,720 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:23,720 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:23,720 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:23,720 - INFO: Epoch: 014, Train Loss: 8.0485, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.6514, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:24,158 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+          11       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.75      0.25      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:24,158 - INFO: Class Distribution:
+2025-03-05 14:56:24,158 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:24,158 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:24,158 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:24,158 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:24,158 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:24,158 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:24,281 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:24,281 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:24,281 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:24,281 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:24,281 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:24,281 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:24,281 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:24,319 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+          11       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.75      0.25      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:24,319 - INFO: Class Distribution:
+2025-03-05 14:56:24,319 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:24,319 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:24,319 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:24,319 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:24,319 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:24,319 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:24,678 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:24,678 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:24,678 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:24,678 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:24,678 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:24,678 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:24,678 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:24,678 - INFO: Epoch: 015, Train Loss: 8.0692, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.6930, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:25,122 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+          10       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:25,122 - INFO: Class Distribution:
+2025-03-05 14:56:25,122 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:25,122 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:25,122 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:25,122 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:25,122 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:25,122 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:25,245 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:25,245 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:25,245 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:25,245 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:25,245 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:25,245 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:25,245 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:25,286 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+          10       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:25,286 - INFO: Class Distribution:
+2025-03-05 14:56:25,286 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:25,286 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:25,286 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:25,286 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:25,286 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:25,286 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:25,634 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:25,634 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:25,634 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:25,634 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:25,634 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:25,634 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:25,634 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:25,634 - INFO: Epoch: 016, Train Loss: 8.0916, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7197, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:26,069 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+          10       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:26,069 - INFO: Class Distribution:
+2025-03-05 14:56:26,069 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:26,069 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:26,069 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:26,069 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:26,069 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:26,069 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:26,204 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:26,204 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:26,204 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:26,204 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:26,204 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:26,204 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:26,204 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:26,246 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+          10       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:26,247 - INFO: Class Distribution:
+2025-03-05 14:56:26,247 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:26,247 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:26,247 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:26,247 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:26,247 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:26,247 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:26,579 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:26,579 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:26,579 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:26,579 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:26,579 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:26,579 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:26,579 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:26,579 - INFO: Epoch: 017, Train Loss: 8.1044, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7223, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:26,972 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+          10       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.75      0.25      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:26,972 - INFO: Class Distribution:
+2025-03-05 14:56:26,972 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:26,972 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:26,974 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:26,974 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:26,974 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:26,974 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:27,095 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:27,095 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:27,095 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:27,095 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:27,095 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:27,095 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:27,095 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:27,133 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+          10       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.75      0.25      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:27,133 - INFO: Class Distribution:
+2025-03-05 14:56:27,133 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:27,133 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:27,133 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:27,133 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:27,133 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:27,133 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:27,564 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:27,564 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:27,564 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:27,564 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:27,564 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:27,564 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:27,564 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:27,564 - INFO: Epoch: 018, Train Loss: 8.0959, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7205, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:27,973 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:27,973 - INFO: Class Distribution:
+2025-03-05 14:56:27,973 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:27,973 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:27,973 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:27,973 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:27,973 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:27,973 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:28,099 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:28,099 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:28,099 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:28,099 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:28,099 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:28,099 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:28,099 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:28,143 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:28,143 - INFO: Class Distribution:
+2025-03-05 14:56:28,143 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:28,143 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:28,143 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:28,143 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:28,143 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:28,143 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:28,486 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:28,486 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:28,486 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:28,486 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:28,486 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:28,486 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:28,486 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:28,486 - INFO: Epoch: 019, Train Loss: 8.0655, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7221, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:28,908 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:28,908 - INFO: Class Distribution:
+2025-03-05 14:56:28,908 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:28,908 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:28,908 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:28,908 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:28,908 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:28,908 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:29,040 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:29,040 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:29,040 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:29,040 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:29,040 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:29,040 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:29,040 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:29,081 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:29,081 - INFO: Class Distribution:
+2025-03-05 14:56:29,081 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:29,081 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:29,081 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:29,081 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:29,081 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:29,081 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:29,438 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:29,438 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:29,438 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:29,438 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:29,438 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:29,438 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:29,438 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:29,438 - INFO: Epoch: 020, Train Loss: 8.0491, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7108, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:29,874 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:29,882 - INFO: Class Distribution:
+2025-03-05 14:56:29,882 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:29,882 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:29,882 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:29,882 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:29,882 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:29,882 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:30,014 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:30,014 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:30,014 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:30,014 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:30,014 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:30,014 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:30,014 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:30,067 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:30,067 - INFO: Class Distribution:
+2025-03-05 14:56:30,067 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:30,067 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:30,067 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:30,067 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:30,067 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:30,067 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:30,469 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:30,469 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:30,469 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:30,469 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:30,469 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:30,469 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:30,469 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:30,469 - INFO: Epoch: 021, Train Loss: 8.0687, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7258, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:30,926 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:30,926 - INFO: Class Distribution:
+2025-03-05 14:56:30,926 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:30,926 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:30,926 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:30,926 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:30,926 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:30,926 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:31,046 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:31,046 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:31,046 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:31,046 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:31,046 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:31,046 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:31,046 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:31,086 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:31,086 - INFO: Class Distribution:
+2025-03-05 14:56:31,086 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:31,086 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:31,086 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:31,086 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:31,086 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:31,086 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:31,443 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:31,443 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:31,443 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:31,443 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:31,443 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:31,443 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:31,443 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:31,443 - INFO: Epoch: 022, Train Loss: 8.0736, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7198, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:31,878 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:31,878 - INFO: Class Distribution:
+2025-03-05 14:56:31,878 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:31,878 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:31,878 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:31,878 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:31,878 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:31,878 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:32,003 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:32,003 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:32,003 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:32,003 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:32,003 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:32,003 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:32,003 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:32,045 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:32,045 - INFO: Class Distribution:
+2025-03-05 14:56:32,045 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:32,045 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:32,045 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:32,045 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:32,045 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:32,045 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:32,451 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:32,451 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:32,451 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:32,451 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:32,451 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:32,451 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:32,451 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:32,451 - INFO: Epoch: 023, Train Loss: 8.1045, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7208, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:32,858 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:32,858 - INFO: Class Distribution:
+2025-03-05 14:56:32,858 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:32,858 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:32,858 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:32,858 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:32,858 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:32,858 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:32,979 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:32,979 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:32,979 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:32,979 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:32,979 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:32,979 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:32,979 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:33,029 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:33,029 - INFO: Class Distribution:
+2025-03-05 14:56:33,029 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:33,029 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:33,029 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:33,029 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:33,029 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:33,029 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:33,356 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:33,356 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:33,356 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:33,356 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:33,356 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:33,356 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:33,356 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:33,356 - INFO: Epoch: 024, Train Loss: 8.0828, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7035, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:33,814 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:33,814 - INFO: Class Distribution:
+2025-03-05 14:56:33,814 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:33,814 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:33,814 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:33,814 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:33,814 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:33,814 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:33,935 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:33,935 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:33,935 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:33,935 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:33,935 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:33,935 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:33,935 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:33,975 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:33,975 - INFO: Class Distribution:
+2025-03-05 14:56:33,975 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:33,975 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:33,975 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:33,975 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:33,975 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:33,975 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:34,312 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:34,312 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:34,312 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:34,312 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:34,312 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:34,312 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:34,312 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:34,312 - INFO: Epoch: 025, Train Loss: 8.0461, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7257, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:34,775 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:34,775 - INFO: Class Distribution:
+2025-03-05 14:56:34,775 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:34,775 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:34,775 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:34,776 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:34,776 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:34,776 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:34,916 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:34,916 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:34,916 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:34,916 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:34,916 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:34,916 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:34,916 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:34,958 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:34,958 - INFO: Class Distribution:
+2025-03-05 14:56:34,958 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:34,958 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:34,958 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:34,958 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:34,958 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:34,958 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:35,318 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:35,318 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:35,318 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:35,318 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:35,318 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:35,318 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:35,318 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:35,318 - INFO: Epoch: 026, Train Loss: 8.0712, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7204, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:35,788 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:35,788 - INFO: Class Distribution:
+2025-03-05 14:56:35,788 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:35,788 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:35,788 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:35,788 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:35,790 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:35,790 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:35,920 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:35,920 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:35,920 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:35,920 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:35,920 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:35,920 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:35,920 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:35,960 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:35,960 - INFO: Class Distribution:
+2025-03-05 14:56:35,960 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:35,960 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:35,960 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:35,960 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:35,960 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:35,960 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:36,320 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:36,320 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:36,320 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:36,320 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:36,320 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:36,320 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:36,320 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:36,320 - INFO: Epoch: 027, Train Loss: 8.0858, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7337, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:36,774 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:36,774 - INFO: Class Distribution:
+2025-03-05 14:56:36,774 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:36,774 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:36,774 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:36,774 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:36,774 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:36,774 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:36,898 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:36,906 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:36,906 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:36,906 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:36,906 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:36,906 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:36,906 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:36,948 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:36,948 - INFO: Class Distribution:
+2025-03-05 14:56:36,948 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:36,948 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:36,948 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:36,948 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:36,948 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:36,948 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:37,377 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:37,377 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:37,377 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:37,377 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:37,377 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:37,377 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:37,377 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:37,377 - INFO: Epoch: 028, Train Loss: 8.1285, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7567, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:37,837 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:37,837 - INFO: Class Distribution:
+2025-03-05 14:56:37,837 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:37,837 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:37,837 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:37,837 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:37,837 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:37,837 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:37,971 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:37,971 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:37,971 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:37,971 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:37,971 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:37,971 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:37,971 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:38,009 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:38,009 - INFO: Class Distribution:
+2025-03-05 14:56:38,009 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:38,009 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:38,009 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:38,009 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:38,009 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:38,009 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:38,326 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:38,326 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:38,326 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:38,326 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:38,326 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:38,326 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:38,326 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:38,326 - INFO: Epoch: 029, Train Loss: 8.0863, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7253, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:38,749 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:38,749 - INFO: Class Distribution:
+2025-03-05 14:56:38,749 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:38,749 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:38,749 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:38,749 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:38,749 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:38,749 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:38,880 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:38,880 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:38,880 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:38,880 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:38,880 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:38,880 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:38,880 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:38,921 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:38,921 - INFO: Class Distribution:
+2025-03-05 14:56:38,921 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:38,921 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:38,921 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:38,921 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:38,921 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:38,921 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:39,248 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:39,248 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:39,248 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:39,248 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:39,248 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:39,248 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:39,248 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:39,248 - INFO: Epoch: 030, Train Loss: 8.0461, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7278, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:39,713 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:39,713 - INFO: Class Distribution:
+2025-03-05 14:56:39,713 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:39,713 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:39,713 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:39,713 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:39,713 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:39,713 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:39,841 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:39,841 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:39,841 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:39,841 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:39,841 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:39,841 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:39,841 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:39,876 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:39,876 - INFO: Class Distribution:
+2025-03-05 14:56:39,876 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:39,876 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:39,876 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:39,876 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:39,876 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:39,876 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:40,218 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:40,218 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:40,218 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:40,218 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:40,218 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:40,218 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:40,218 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:40,218 - INFO: Epoch: 031, Train Loss: 8.0476, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7259, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:40,639 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:40,639 - INFO: Class Distribution:
+2025-03-05 14:56:40,639 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:40,639 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:40,639 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:40,639 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:40,639 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:40,639 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:40,770 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:40,770 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:40,770 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:40,770 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:40,770 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:40,770 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:40,770 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:40,805 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:40,805 - INFO: Class Distribution:
+2025-03-05 14:56:40,805 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:40,805 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:40,805 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:40,805 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:40,805 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:40,805 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:41,136 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:41,138 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:41,138 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:41,138 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:41,138 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:41,138 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:41,138 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:41,138 - INFO: Epoch: 032, Train Loss: 8.0707, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7408, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:41,564 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:41,564 - INFO: Class Distribution:
+2025-03-05 14:56:41,564 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:41,564 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:41,564 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:41,564 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:41,564 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:41,564 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:41,688 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:41,688 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:41,688 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:41,688 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:41,688 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:41,688 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:41,688 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:41,734 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:41,734 - INFO: Class Distribution:
+2025-03-05 14:56:41,734 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:41,734 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:41,734 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:41,734 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:41,734 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:41,734 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:42,144 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:42,144 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:42,144 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:42,144 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:42,144 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:42,144 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:42,144 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:42,144 - INFO: Epoch: 033, Train Loss: 8.1036, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7391, Val Acc: 0.0000, Val F1: 0.0000
+2025-03-05 14:56:42,566 - INFO: 
+Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      72.0
+           1       1.00      0.00      0.00      56.0
+           2       1.00      0.00      0.00      32.0
+           3       1.00      0.00      0.00      33.0
+           4       1.00      0.00      0.00      25.0
+           5       1.00      0.00      0.00      21.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00     239.0
+   macro avg       0.86      0.14      0.00     239.0
+weighted avg       1.00      0.00      0.00     239.0
+
+2025-03-05 14:56:42,566 - INFO: Class Distribution:
+2025-03-05 14:56:42,566 - INFO: Class 0: 72 samples (30.13%)
+2025-03-05 14:56:42,566 - INFO: Class 1: 56 samples (23.43%)
+2025-03-05 14:56:42,566 - INFO: Class 2: 32 samples (13.39%)
+2025-03-05 14:56:42,566 - INFO: Class 3: 33 samples (13.81%)
+2025-03-05 14:56:42,566 - INFO: Class 4: 25 samples (10.46%)
+2025-03-05 14:56:42,566 - INFO: Class 5: 21 samples (8.79%)
+2025-03-05 14:56:42,710 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:42,710 - INFO: Class 0: 72 misclassifications
+2025-03-05 14:56:42,710 - INFO: Class 1: 56 misclassifications
+2025-03-05 14:56:42,710 - INFO: Class 3: 33 misclassifications
+2025-03-05 14:56:42,710 - INFO: Class 2: 32 misclassifications
+2025-03-05 14:56:42,710 - INFO: Class 4: 25 misclassifications
+2025-03-05 14:56:42,710 - INFO: Class 5: 21 misclassifications
+2025-03-05 14:56:42,760 - INFO: 
+Validation Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.00      33.0
+           1       1.00      0.00      0.00      18.0
+           2       1.00      0.00      0.00      11.0
+           3       1.00      0.00      0.00       6.0
+           4       1.00      0.00      0.00       8.0
+           5       1.00      0.00      0.00       3.0
+           9       0.00      1.00      0.00       0.0
+
+    accuracy                           1.00      79.0
+   macro avg       0.86      0.14      0.00      79.0
+weighted avg       1.00      0.00      0.00      79.0
+
+2025-03-05 14:56:42,760 - INFO: Class Distribution:
+2025-03-05 14:56:42,760 - INFO: Class 0: 33 samples (41.77%)
+2025-03-05 14:56:42,760 - INFO: Class 1: 18 samples (22.78%)
+2025-03-05 14:56:42,760 - INFO: Class 2: 11 samples (13.92%)
+2025-03-05 14:56:42,760 - INFO: Class 3: 6 samples (7.59%)
+2025-03-05 14:56:42,760 - INFO: Class 4: 8 samples (10.13%)
+2025-03-05 14:56:42,760 - INFO: Class 5: 3 samples (3.80%)
+2025-03-05 14:56:43,097 - INFO: 
+Incorrectly Predicted Classes:
+2025-03-05 14:56:43,097 - INFO: Class 0: 33 misclassifications
+2025-03-05 14:56:43,097 - INFO: Class 1: 18 misclassifications
+2025-03-05 14:56:43,097 - INFO: Class 2: 11 misclassifications
+2025-03-05 14:56:43,097 - INFO: Class 4: 8 misclassifications
+2025-03-05 14:56:43,097 - INFO: Class 3: 6 misclassifications
+2025-03-05 14:56:43,097 - INFO: Class 5: 3 misclassifications
+2025-03-05 14:56:43,097 - INFO: Epoch: 034, Train Loss: 8.0973, Train Acc: 0.0000, Train F1: 0.0000, Val Loss: 8.7349, Val Acc: 0.0000, Val F1: 0.0000
