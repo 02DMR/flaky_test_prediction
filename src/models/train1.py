@@ -45,7 +45,7 @@ dataset = [dataset[i] for i in indices]
 
 # 划分训练集、验证集和测试集（70%/20%/10%）
 num_graphs = len(dataset)
-train_num = int(num_graphs * 0.6)
+train_num = int(num_graphs * 0.7)
 val_num = int(num_graphs * 0.2)
 test_num = num_graphs - train_num - val_num
 
@@ -59,7 +59,7 @@ train_label_counts = Counter(train_labels)
 print("Training set class distribution before balancing:", train_label_counts)
 
 # 应用GraphSMOTE仅对训练集进行平衡处理
-graphsmote = GraphSMOTE(k=5, ratio=1, sigma=0.1, n_connect=3)
+graphsmote = GraphSMOTE(k=5, ratio=0.9, sigma=0.1, n_connect=3)
 balanced_train_dataset = graphsmote(train_dataset)
 
 # 打印平衡后的训练集类别分布
