@@ -1,0 +1,50 @@
+digraph PDG {
+label = "testBlueprintCompNamespaceWorks <4...22>";
+0.0 [style = filled, label = "Bundle bBiz = getInstalledBundle(\"org.apache.aries.jndi.url.itest.biz\"); <5>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "assertNotNull(bBiz); <6>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "{
+} <12...13>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "Bundle bweb = getInstalledBundle(\"org.apache.aries.jndi.url.itest.web\"); <7>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "catch ( IOException iox ) <12>", fillcolor = white, shape = diamond];
+0.8 [style = filled, label = "Thread.sleep(5000); <15>", fillcolor = white, shape = ellipse];
+0.9 [style = filled, label = "catch ( InterruptedException iox ) <16>", fillcolor = white, shape = diamond];
+0.4 [style = filled, label = "printBundleStatus(\"Before first request\"); <9>", fillcolor = white, shape = ellipse];
+0.13 [style = filled, label = "String response = getTestServletResponse(); <20>", fillcolor = white, shape = ellipse];
+0.10 [style = filled, label = "{
+} <16...17>", fillcolor = white, shape = ellipse];
+0.11 [style = filled, label = "printBundleStatus(\"After workaround, before test proper\"); <18>", fillcolor = white, shape = ellipse];
+0.12 [style = filled, label = "System.out.println(\"In test and trying to get connection....\"); <19>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "getTestServletResponse(); <11>", fillcolor = white, shape = ellipse];
+0.15 [style = filled, label = "Enter <4...22>", fillcolor = aquamarine, shape = diamond];
+0.14 [style = filled, label = "assertEquals(\"ITest servlet response wrong\",\"Mark.2.0.three\",response); <21>", fillcolor = deeppink, shape = ellipse];
+0.3 [style = filled, label = "assertNotNull(bweb); <8>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="bBiz"];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = solid, label="bweb"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.8 [style = bold, label=""];
+0.6 -> 0.7 [style = bold, label=""];
+0.7 -> 0.8 [style = bold, label=""];
+0.8 -> 0.11 [style = bold, label=""];
+0.9 -> 0.10 [style = bold, label=""];
+0.10 -> 0.11 [style = bold, label=""];
+0.11 -> 0.12 [style = bold, label=""];
+0.12 -> 0.13 [style = bold, label=""];
+0.13 -> 0.14 [style = solid, label="response"];
+0.13 -> 0.14 [style = bold, label=""];
+0.15 -> 0.0 [style = dotted, label="true"];
+0.15 -> 0.0 [style = bold, label=""];
+0.15 -> 0.1 [style = dotted, label="true"];
+0.15 -> 0.2 [style = dotted, label="true"];
+0.15 -> 0.3 [style = dotted, label="true"];
+0.15 -> 0.4 [style = dotted, label="true"];
+0.15 -> 0.5 [style = dotted, label="true"];
+0.15 -> 0.8 [style = dotted, label="true"];
+0.15 -> 0.11 [style = dotted, label="true"];
+0.15 -> 0.12 [style = dotted, label="true"];
+0.15 -> 0.13 [style = dotted, label="true"];
+0.15 -> 0.14 [style = dotted, label="true"];
+}

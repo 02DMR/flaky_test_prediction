@@ -1,0 +1,24 @@
+digraph PDG {
+label = "testRead <3...9>";
+0.4 [style = filled, label = "bench.analyzeResult(fs,TestType.TEST_TYPE_READ,execTime); <8>", fillcolor = deeppink, shape = ellipse];
+0.5 [style = filled, label = "Enter <3...9>", fillcolor = aquamarine, shape = diamond];
+0.2 [style = filled, label = "bench.readTest(fs); <6>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "long tStart = System.currentTimeMillis(); <5>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "FileSystem fs = cluster.getFileSystem(); <4>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "long execTime =  ( System.currentTimeMillis() - tStart ); <7>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="fs"];
+0.0 -> 0.4 [style = solid, label="fs"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="tStart"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="bench"];
+0.3 -> 0.4 [style = solid, label="execTime"];
+0.3 -> 0.4 [style = bold, label=""];
+0.5 -> 0.0 [style = dotted, label="true"];
+0.5 -> 0.0 [style = bold, label=""];
+0.5 -> 0.1 [style = dotted, label="true"];
+0.5 -> 0.2 [style = dotted, label="true"];
+0.5 -> 0.3 [style = dotted, label="true"];
+0.5 -> 0.4 [style = dotted, label="true"];
+}

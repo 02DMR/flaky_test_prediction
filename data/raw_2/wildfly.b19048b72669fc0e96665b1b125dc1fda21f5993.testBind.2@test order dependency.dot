@@ -1,0 +1,28 @@
+digraph PDG {
+label = "testBind <3...13>";
+0.5 [style = filled, label = "assertEquals(value,store.lookup(name)); <12>", fillcolor = deeppink, shape = ellipse];
+0.2 [style = filled, label = "WritableServiceBasedNamingStore.pushOwner(OWNER_FOO); <6>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "{
+WritableServiceBasedNamingStore.popOwner();
+} <9...11>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "final Object value = new Object(); <5>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "Enter <3...13>", fillcolor = aquamarine, shape = diamond];
+0.0 [style = filled, label = "final Name name = new CompositeName(\"test\"); <4>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "store.bind(name,value); <8>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.3 [style = solid, label="name"];
+0.0 -> 0.5 [style = solid, label="name"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="value"];
+0.1 -> 0.5 [style = solid, label="value"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.3 -> 0.5 [style = solid, label="store"];
+0.4 -> 0.5 [style = bold, label=""];
+0.6 -> 0.0 [style = dotted, label="true"];
+0.6 -> 0.0 [style = bold, label=""];
+0.6 -> 0.1 [style = dotted, label="true"];
+0.6 -> 0.2 [style = dotted, label="true"];
+0.6 -> 0.3 [style = dotted, label="true"];
+0.6 -> 0.5 [style = dotted, label="true"];
+}

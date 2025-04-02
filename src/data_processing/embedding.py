@@ -117,7 +117,7 @@ def process_all_dot_files(raw_dir, processed_file="processed_data.pt"):
 
 if __name__ == "__main__":
     # 指定 .dot 文件目录（根据实际情况修改路径）
-    raw_directory = r"C:\Users\86130\Desktop\Code\Pycharm\flaky_test_prediction\data\raw_1"
+    raw_directory = r"C:\Users\86130\Desktop\Code\Pycharm\flaky_test_prediction\data\raw_2"
     # 指定保存处理后的数据文件（可放置于项目 processed 目录下）
-    output_file = "../../data/processed/processed_data1.pt"
+    output_file = "../../data/processed/processed_data2.pt"
     process_all_dot_files(raw_directory, processed_file=output_file)

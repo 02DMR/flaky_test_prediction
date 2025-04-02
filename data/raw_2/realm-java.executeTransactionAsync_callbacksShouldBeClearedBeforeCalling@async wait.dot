@@ -1,0 +1,48 @@
+digraph PDG {
+label = "executeTransactionAsync_callbacksShouldBeClearedBeforeCalling <3...48>";
+0.0 [style = filled, label = "final AtomicInteger callbackCounter = new AtomicInteger(0); <5>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "final Realm foregroundRealm = looperThread.getRealm(); <6>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "Enter <3...48>", fillcolor = aquamarine, shape = diamond];
+0.2 [style = filled, label = "foregroundRealm.setAutoRefresh(false); <7>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "foregroundRealm.executeTransactionAsync(new Realm.Transaction(){
+@Override public void execute (Realm realm  ) {
+realm.createObject();
+looperThread.postRunnableDelayed(new Runnable(){
+@Override public void run ( ) {
+foregroundRealm.sharedRealm.refresh();
+foregroundRealm.setAutoRefresh(true);
+}},50);
+}},new Realm.Transaction.OnSuccess(){
+@Override public void onSuccess ( ) {
+assertEquals(1,callbackCounter.getAndIncrement());
+looperThread.testComplete();
+}}); <24...45>", fillcolor = deeppink, shape = ellipse];
+0.3 [style = filled, label = "foregroundRealm.executeTransactionAsync(new Realm.Transaction(){
+@Override public void execute (Realm realm  ) {
+realm.createObject();
+}},new Realm.Transaction.OnSuccess(){
+@Override public void onSuccess ( ) {
+assertEquals(0,callbackCounter.getAndIncrement());
+foregroundRealm.beginTransaction();
+foregroundRealm.createObject();
+foregroundRealm.commitTransaction();
+}}); <8...23>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.3 [style = solid, label="callbackCounter"];
+0.0 -> 0.4 [style = solid, label="callbackCounter"];
+0.1 -> 0.2 [style = solid, label="foregroundRealm"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="foregroundRealm"];
+0.1 -> 0.4 [style = solid, label="foregroundRealm"];
+0.2 -> 0.3 [style = solid, label="foregroundRealm"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="foregroundRealm"];
+0.3 -> 0.4 [style = solid, label="foregroundRealm"];
+0.3 -> 0.4 [style = bold, label=""];
+0.5 -> 0.0 [style = dotted, label="true"];
+0.5 -> 0.0 [style = bold, label=""];
+0.5 -> 0.1 [style = dotted, label="true"];
+0.5 -> 0.2 [style = dotted, label="true"];
+0.5 -> 0.3 [style = dotted, label="true"];
+0.5 -> 0.4 [style = dotted, label="true"];
+}

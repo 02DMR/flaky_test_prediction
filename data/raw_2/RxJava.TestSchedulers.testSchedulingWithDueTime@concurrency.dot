@@ -1,0 +1,51 @@
+digraph PDG {
+label = "testSchedulingWithDueTime <3...28>";
+0.9 [style = filled, label = "fail(\"it should have taken over 250ms since each step was scheduled 50ms in the future\"); <26>", fillcolor = deeppink, shape = ellipse];
+0.5 [style = filled, label = "fail(\"didn't execute ... timed out\"); <21>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "long end = System.currentTimeMillis(); <23>", fillcolor = white, shape = ellipse];
+0.10 [style = filled, label = "Enter <3...28>", fillcolor = aquamarine, shape = diamond];
+0.0 [style = filled, label = "final CountDownLatch latch = new CountDownLatch(5); <4>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "if !latch.await(3000,TimeUnit.MILLISECONDS) <20>", fillcolor = white, shape = diamond];
+0.1 [style = filled, label = "final AtomicInteger counter = new AtomicInteger(); <5>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "assertEquals(5,counter.get()); <24>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "long start = System.currentTimeMillis(); <6>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "Schedulers.threadPoolForComputation().schedule(null,new Func2<Scheduler,String,Subscription>(){
+@Override public Subscription call (Scheduler scheduler ,String state  ) {
+System.out.println(\"doing work\");
+latch.countDown();
+counter.incrementAndGet();
+if ( ( latch.getCount() == 0 )) {
+return Subscriptions.empty();
+}{
+return scheduler.schedule(state,this,new Date( ( System.currentTimeMillis() + 50 )));
+}
+}},new Date( ( System.currentTimeMillis() + 100 ))); <7...19>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "if  ( ( ( end - start )) < 250 ) <25>", fillcolor = deeppink, shape = diamond];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.3 [style = solid, label="latch"];
+0.0 -> 0.4 [style = solid, label="latch"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="counter"];
+0.1 -> 0.7 [style = solid, label="counter"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.8 [style = solid, label="start"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = dotted, label="true"];
+0.4 -> 0.5 [style = bold, label=""];
+0.4 -> 0.6 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.6 -> 0.7 [style = bold, label=""];
+0.6 -> 0.8 [style = solid, label="end"];
+0.7 -> 0.8 [style = bold, label=""];
+0.8 -> 0.9 [style = dotted, label="true"];
+0.8 -> 0.9 [style = bold, label=""];
+0.10 -> 0.0 [style = dotted, label="true"];
+0.10 -> 0.0 [style = bold, label=""];
+0.10 -> 0.1 [style = dotted, label="true"];
+0.10 -> 0.2 [style = dotted, label="true"];
+0.10 -> 0.3 [style = dotted, label="true"];
+0.10 -> 0.4 [style = dotted, label="true"];
+0.10 -> 0.6 [style = dotted, label="true"];
+0.10 -> 0.7 [style = dotted, label="true"];
+0.10 -> 0.8 [style = dotted, label="true"];
+}

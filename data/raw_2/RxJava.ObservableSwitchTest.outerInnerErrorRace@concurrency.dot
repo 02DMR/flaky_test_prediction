@@ -1,0 +1,77 @@
+digraph PDG {
+label = "outerInnerErrorRace <3...46>";
+0.8 [style = filled, label = "Runnable r1 = new Runnable(){
+@Override public void run ( ) {
+ps1.onError(ex1);
+}}; <24...29>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "i++ <5>", fillcolor = white, shape = ellipse];
+0.11 [style = filled, label = "TestHelper.race(r1,r2); <37>", fillcolor = white, shape = ellipse];
+0.9 [style = filled, label = "final TestException ex2 = new TestException(); <30>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = " ( i < 500 ) <5>", fillcolor = deeppink, shape = diamond];
+0.3 [style = filled, label = "List<Throwable> errors = TestHelper.trackPluginErrors(); <6>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "ps1.switchMap(new Function<Integer,ObservableSource<Integer>>(){
+@Override public ObservableSource<Integer> apply (Integer v  ) {
+if ( ( v == 1 )) {
+return ps2;
+}
+return Observable.never();
+}}).test(); <11...20>", fillcolor = white, shape = ellipse];
+0.15 [style = filled, label = "{
+RxJavaPlugins.reset();
+} <42...44>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "final PublishSubject<Integer> ps2 = PublishSubject.create(); <10>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "final PublishSubject<Integer> ps1 = PublishSubject.create(); <9>", fillcolor = white, shape = ellipse];
+0.14 [style = filled, label = "assertTrue(e.toString(),e instanceof TestException); <40>", fillcolor = white, shape = ellipse];
+0.12 [style = filled, label = "Throwable e <39>", fillcolor = tomato, shape = box];
+0.0 [style = filled, label = "int i = 0 <5>", fillcolor = white, shape = ellipse];
+0.16 [style = filled, label = "Enter <3...46>", fillcolor = aquamarine, shape = diamond];
+0.10 [style = filled, label = "Runnable r2 = new Runnable(){
+@Override public void run ( ) {
+ps2.onError(ex2);
+}}; <31...36>", fillcolor = white, shape = ellipse];
+0.13 [style = filled, label = "errors <39>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "final TestException ex1 = new TestException(); <22>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="i"];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="i"];
+0.1 -> 0.2 [style = dotted, label="true"];
+0.1 -> 0.3 [style = dotted, label="true"];
+0.1 -> 0.3 [style = bold, label=""];
+0.1 -> 0.4 [style = dotted, label="true"];
+0.1 -> 0.5 [style = dotted, label="true"];
+0.1 -> 0.6 [style = dotted, label="true"];
+0.1 -> 0.7 [style = dotted, label="true"];
+0.1 -> 0.8 [style = dotted, label="true"];
+0.1 -> 0.9 [style = dotted, label="true"];
+0.1 -> 0.10 [style = dotted, label="true"];
+0.1 -> 0.11 [style = dotted, label="true"];
+0.1 -> 0.12 [style = dotted, label="true"];
+0.1 -> 0.13 [style = dotted, label="true"];
+0.1 -> 0.14 [style = dotted, label="true"];
+0.2 -> 0.1 [style = solid, label="i"];
+0.2 -> 0.1 [style = bold, label=""];
+0.2 -> 0.2 [style = solid, label="i"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.4 -> 0.6 [style = solid, label="ps1"];
+0.4 -> 0.8 [style = solid, label="ps1"];
+0.5 -> 0.6 [style = solid, label="ps2"];
+0.5 -> 0.6 [style = bold, label=""];
+0.5 -> 0.10 [style = solid, label="ps2"];
+0.6 -> 0.7 [style = bold, label=""];
+0.7 -> 0.8 [style = solid, label="ex1"];
+0.7 -> 0.8 [style = bold, label=""];
+0.8 -> 0.9 [style = bold, label=""];
+0.8 -> 0.11 [style = solid, label="r1"];
+0.9 -> 0.10 [style = solid, label="ex2"];
+0.9 -> 0.10 [style = bold, label=""];
+0.10 -> 0.11 [style = solid, label="r2"];
+0.10 -> 0.11 [style = bold, label=""];
+0.11 -> 0.14 [style = bold, label=""];
+0.14 -> 0.14 [style = bold, label=""];
+0.14 -> 0.15 [style = bold, label=""];
+0.15 -> 0.2 [style = bold, label=""];
+0.16 -> 0.0 [style = dotted, label="true"];
+0.16 -> 0.0 [style = bold, label=""];
+0.16 -> 0.1 [style = dotted, label="true"];
+}

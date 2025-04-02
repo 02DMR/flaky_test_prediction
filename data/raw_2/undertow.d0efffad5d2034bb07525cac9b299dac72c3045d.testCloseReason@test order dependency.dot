@@ -1,0 +1,31 @@
+digraph PDG {
+label = "testCloseReason <3...16>";
+0.2 [style = filled, label = "Assert.assertEquals(\"hi Bob (protocol=foo)\",AnnotatedClientEndpoint.message()); <8>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "Assert.assertEquals(CloseReason.CloseCodes.VIOLATED_POLICY.getCode(),cr.getCloseCode().getCode()); <13>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "session.close(new CloseReason(CloseReason.CloseCodes.VIOLATED_POLICY,\"Foo!\")); <10>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "Assert.assertEquals(\"CLOSED\",AnnotatedClientEndpoint.message()); <11>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "Enter <3...16>", fillcolor = aquamarine, shape = diamond];
+0.5 [style = filled, label = "CloseReason cr = MessageEndpoint.getReason(); <12>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "Assert.assertEquals(\"Foo!\",cr.getReasonPhrase()); <14>", fillcolor = deeppink, shape = ellipse];
+0.1 [style = filled, label = "Session session = deployment.connectToServer(,new URI( ( \"ws://\" + DefaultServer.getHostAddress(\"default\") ) + \":\" + DefaultServer.getHostPort(\"default\") + \"/ws/chat/Bob\")); <6>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "MessageEndpoint.reset(); <4>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="session"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = solid, label="cr"];
+0.5 -> 0.6 [style = bold, label=""];
+0.5 -> 0.7 [style = solid, label="cr"];
+0.6 -> 0.7 [style = bold, label=""];
+0.8 -> 0.0 [style = dotted, label="true"];
+0.8 -> 0.0 [style = bold, label=""];
+0.8 -> 0.1 [style = dotted, label="true"];
+0.8 -> 0.2 [style = dotted, label="true"];
+0.8 -> 0.3 [style = dotted, label="true"];
+0.8 -> 0.4 [style = dotted, label="true"];
+0.8 -> 0.5 [style = dotted, label="true"];
+0.8 -> 0.6 [style = dotted, label="true"];
+0.8 -> 0.7 [style = dotted, label="true"];
+}

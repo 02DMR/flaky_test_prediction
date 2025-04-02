@@ -1,0 +1,10 @@
+digraph PDG {
+label = "testCreateSubcontext <3...6>";
+0.2 [style = filled, label = "Enter <3...6>", fillcolor = aquamarine, shape = diamond];
+0.0 [style = filled, label = "assertTrue(namingContext.createSubcontext(new CompositeName(\"test\")) instanceof NamingContext); <4>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "assertTrue(testActionPermission(JndiPermission.ACTION_CREATE_SUBCONTEXT,namingContext,\"securitytest\") instanceof NamingContext); <5>", fillcolor = deeppink, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.2 -> 0.0 [style = dotted, label="true"];
+0.2 -> 0.0 [style = bold, label=""];
+0.2 -> 0.1 [style = dotted, label="true"];
+}

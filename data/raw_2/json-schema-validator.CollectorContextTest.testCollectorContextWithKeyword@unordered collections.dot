@@ -1,0 +1,31 @@
+digraph PDG {
+label = "testCollectorContextWithKeyword <4...12>";
+0.1 [style = filled, label = "Assertions.assertEquals(0,validationResult.getValidationMessages().size()); <6>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "List<String> contextValues = ((List<String>)(validationResult.getCollectorContext().get(SAMPLE_COLLECTOR))); <7>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "Assertions.assertEquals(contextValues.get(0),\"actual_value_added_to_context1\"); <10>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "Assertions.assertEquals(0,validationResult.getValidationMessages().size()); <8>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "Assertions.assertEquals(contextValues.get(1),\"actual_value_added_to_context2\"); <11>", fillcolor = deeppink, shape = ellipse];
+0.0 [style = filled, label = "ValidationResult validationResult = validate(\"{\"test-property1\":\"sample1\",\"test-property2\":\"sample2\"}\"); <5>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "Assertions.assertEquals(2,contextValues.size()); <9>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "Enter <4...12>", fillcolor = aquamarine, shape = diamond];
+0.0 -> 0.1 [style = solid, label="validationResult"];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="validationResult"];
+0.0 -> 0.3 [style = solid, label="validationResult"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="contextValues"];
+0.2 -> 0.5 [style = solid, label="contextValues"];
+0.2 -> 0.6 [style = solid, label="contextValues"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.7 -> 0.0 [style = dotted, label="true"];
+0.7 -> 0.0 [style = bold, label=""];
+0.7 -> 0.1 [style = dotted, label="true"];
+0.7 -> 0.2 [style = dotted, label="true"];
+0.7 -> 0.3 [style = dotted, label="true"];
+0.7 -> 0.4 [style = dotted, label="true"];
+0.7 -> 0.5 [style = dotted, label="true"];
+0.7 -> 0.6 [style = dotted, label="true"];
+}

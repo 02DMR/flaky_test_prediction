@@ -1,0 +1,28 @@
+digraph PDG {
+label = "testUseExport <3...10>";
+0.2 [style = filled, label = "mojo.setCheckoutDirectory(checkoutDir); <6>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "mojo.execute(); <7>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertFalse(new File(checkoutDir,\".svn\").exists()); <9>", fillcolor = deeppink, shape = ellipse];
+0.0 [style = filled, label = "checkoutDir.mkdirs(); <4>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "CheckoutMojo mojo = ((CheckoutMojo)(lookupMojo(\"checkout\",getTestFile(\"src/test/resources/mojos/checkout/checkoutUsingExport.xml\")))); <5>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "assertTrue( ( checkoutDir.listFiles().length > 0 )); <8>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "Enter <3...10>", fillcolor = aquamarine, shape = diamond];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="checkoutDir"];
+0.0 -> 0.4 [style = solid, label="checkoutDir"];
+0.0 -> 0.5 [style = solid, label="checkoutDir"];
+0.1 -> 0.2 [style = solid, label="mojo"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="mojo"];
+0.2 -> 0.3 [style = solid, label="mojo"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.6 -> 0.0 [style = dotted, label="true"];
+0.6 -> 0.0 [style = bold, label=""];
+0.6 -> 0.1 [style = dotted, label="true"];
+0.6 -> 0.2 [style = dotted, label="true"];
+0.6 -> 0.3 [style = dotted, label="true"];
+0.6 -> 0.4 [style = dotted, label="true"];
+0.6 -> 0.5 [style = dotted, label="true"];
+}

@@ -1,0 +1,22 @@
+digraph PDG {
+label = "canHandleUnfragmentedMessageReceived <3...15>";
+0.0 [style = filled, label = "NMEAMessage unfragmentedNMEAMessage = NMEAMessage.fromString(\"!AIVDM,1,1,,B,15MqdBP000G@qoLEi69PVGaN0D0=,0*3A\"); <4>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "assertEquals(AISMessageType.PositionReportClassAScheduled,aisMessage.getCapturedObject().getMessageType()); <14>", fillcolor = deeppink, shape = ellipse];
+0.5 [style = filled, label = "Enter <3...15>", fillcolor = aquamarine, shape = diamond];
+0.2 [style = filled, label = "context.checking(new Expectations(){
+}); <8...10>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "aisMessageReceiver.accept(unfragmentedNMEAMessage); <12>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "final ArgumentCaptor<AISMessage> aisMessage = new ArgumentCaptor<>(); <6>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.3 [style = solid, label="unfragmentedNMEAMessage"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.4 [style = solid, label="aisMessage"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.5 -> 0.0 [style = dotted, label="true"];
+0.5 -> 0.0 [style = bold, label=""];
+0.5 -> 0.1 [style = dotted, label="true"];
+0.5 -> 0.2 [style = dotted, label="true"];
+0.5 -> 0.3 [style = dotted, label="true"];
+0.5 -> 0.4 [style = dotted, label="true"];
+}

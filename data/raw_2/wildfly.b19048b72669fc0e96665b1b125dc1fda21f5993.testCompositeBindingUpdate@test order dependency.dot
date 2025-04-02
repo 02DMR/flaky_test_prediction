@@ -1,0 +1,19 @@
+digraph PDG {
+label = "testCompositeBindingUpdate <3...12>";
+0.1 [style = filled, label = "final ModelNode addr = Operations.createAddress(ModelDescriptionConstants.SUBSYSTEM,NamingExtension.SUBSYSTEM_NAME,NamingSubsystemModel.BINDING,\"java:global/a\"); <6>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "final ModelNode compositeOp = Operations.CompositeOperationBuilder.create().addStep(Operations.createWriteAttributeOperation(addr,NamingSubsystemModel.BINDING_TYPE,NamingSubsystemModel.LOOKUP)).addStep(Operations.createWriteAttributeOperation(addr,NamingSubsystemModel.LOOKUP,\"java:global/b\")).build().getOperation(); <7...10>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "Enter <3...12>", fillcolor = aquamarine, shape = diamond];
+0.3 [style = filled, label = "ModelTestUtils.checkOutcome(services.executeOperation(compositeOp)); <11>", fillcolor = deeppink, shape = ellipse];
+0.0 [style = filled, label = "final KernelServices services = createKernelServicesBuilder(createAdditionalInitialization()).setSubsystemXml(getSubsystemXml()).build(); <4>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.3 [style = solid, label="services"];
+0.1 -> 0.2 [style = solid, label="addr"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = solid, label="compositeOp"];
+0.2 -> 0.3 [style = bold, label=""];
+0.4 -> 0.0 [style = dotted, label="true"];
+0.4 -> 0.0 [style = bold, label=""];
+0.4 -> 0.1 [style = dotted, label="true"];
+0.4 -> 0.2 [style = dotted, label="true"];
+0.4 -> 0.3 [style = dotted, label="true"];
+}

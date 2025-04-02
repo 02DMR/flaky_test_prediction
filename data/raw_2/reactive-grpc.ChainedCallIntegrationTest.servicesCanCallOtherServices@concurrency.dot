@@ -1,0 +1,14 @@
+digraph PDG {
+label = "servicesCanCallOtherServices <3...8>";
+0.0 [style = filled, label = "ReactorGreeterGrpc.ReactorGreeterStub stub = ReactorGreeterGrpc.newReactorStub(channel); <4>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "Mono<String> chain = Mono.just(request(\"X\")).compose(null).map(null).doOnSuccess(null).as(null).map(null).doOnNext(null).compose(null).map(null).doOnNext(null).as(null).map(null).doOnSuccess(null).compose(null).map(null).doOnSuccess(null); <5...6>", fillcolor = white, shape = ellipse];
+0.3 [style = filled, label = "Enter <3...8>", fillcolor = aquamarine, shape = diamond];
+0.2 [style = filled, label = "StepVerifier.create(chain).expectNext(\"[<{[X]}> :: </[X]/> :: <\[X]\> :: <([X])>]\").expectComplete().verify(Duration.ofSeconds(2)); <7>", fillcolor = deeppink, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = solid, label="chain"];
+0.1 -> 0.2 [style = bold, label=""];
+0.3 -> 0.0 [style = dotted, label="true"];
+0.3 -> 0.0 [style = bold, label=""];
+0.3 -> 0.1 [style = dotted, label="true"];
+0.3 -> 0.2 [style = dotted, label="true"];
+}

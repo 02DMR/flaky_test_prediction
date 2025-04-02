@@ -1,0 +1,27 @@
+digraph PDG {
+label = "testAddAnExistingBuildAgent <3...11>";
+0.2 [style = filled, label = "enableDistributedBuilds(); <6>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "String BUILD_AGENT_NAME = getProperty(\"BUILD_AGENT_NAME\"); <4>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "addBuildAgent(BUILD_AGENT_NAME,BUILD_AGENT_DESCRIPTION,false,false); <8>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertTextPresent(\"Build agent already exists\"); <9>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "String BUILD_AGENT_DESCRIPTION = getProperty(\"BUILD_AGENT_DESCRIPTION\"); <5>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "disableDistributedBuilds(); <10>", fillcolor = deeppink, shape = ellipse];
+0.3 [style = filled, label = "goToAddBuildAgent(); <7>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "Enter <3...11>", fillcolor = aquamarine, shape = diamond];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.4 [style = solid, label="BUILD_AGENT_NAME"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.4 [style = solid, label="BUILD_AGENT_DESCRIPTION"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.7 -> 0.0 [style = dotted, label="true"];
+0.7 -> 0.0 [style = bold, label=""];
+0.7 -> 0.1 [style = dotted, label="true"];
+0.7 -> 0.2 [style = dotted, label="true"];
+0.7 -> 0.3 [style = dotted, label="true"];
+0.7 -> 0.4 [style = dotted, label="true"];
+0.7 -> 0.5 [style = dotted, label="true"];
+0.7 -> 0.6 [style = dotted, label="true"];
+}

@@ -1,0 +1,24 @@
+digraph PDG {
+label = "testSkipCheckoutWhenCheckoutDirectoryExistsAndSkip <3...9>";
+0.1 [style = filled, label = "CheckoutMojo mojo = ((CheckoutMojo)(lookupMojo(\"checkout\",getTestFile(\"src/test/resources/mojos/checkout/checkoutWhenCheckoutDirectoryExistsAndSkip.xml\")))); <5>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "assertEquals(0,checkoutDir.listFiles().length); <8>", fillcolor = deeppink, shape = ellipse];
+0.0 [style = filled, label = "checkoutDir.mkdirs(); <4>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "Enter <3...9>", fillcolor = aquamarine, shape = diamond];
+0.3 [style = filled, label = "mojo.execute(); <7>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "mojo.setCheckoutDirectory(checkoutDir); <6>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="checkoutDir"];
+0.0 -> 0.4 [style = solid, label="checkoutDir"];
+0.1 -> 0.2 [style = solid, label="mojo"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.3 [style = solid, label="mojo"];
+0.2 -> 0.3 [style = solid, label="mojo"];
+0.2 -> 0.3 [style = bold, label=""];
+0.3 -> 0.4 [style = bold, label=""];
+0.5 -> 0.0 [style = dotted, label="true"];
+0.5 -> 0.0 [style = bold, label=""];
+0.5 -> 0.1 [style = dotted, label="true"];
+0.5 -> 0.2 [style = dotted, label="true"];
+0.5 -> 0.3 [style = dotted, label="true"];
+0.5 -> 0.4 [style = dotted, label="true"];
+}

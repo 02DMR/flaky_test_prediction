@@ -1,0 +1,36 @@
+digraph PDG {
+label = "testTimeWindows <4...15>";
+0.3 [style = filled, label = "assertTrue( ( getWindowBoundsInMillis(TimeUnit.HOURS,1,tstamp1).left.compareTo(lowHour) == 0 )); <9>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "return; <13>", fillcolor = deeppink, shape = ellipse];
+0.2 [style = filled, label = "Long lowHour = 1451001600000L; <8>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertTrue( ( getWindowBoundsInMillis(TimeUnit.DAYS,1,tstamp1).left.compareTo(lowHour) == 0 )); <11>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "Enter <4...15>", fillcolor = aquamarine, shape = diamond];
+0.4 [style = filled, label = "assertTrue( ( getWindowBoundsInMillis(TimeUnit.MINUTES,1,tstamp1).left.compareTo(lowHour) == 0 )); <10>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "assertTrue( ( getWindowBoundsInMillis(TimeUnit.DAYS,2,tstamp2).left.compareTo(lowHour) == 0 )); <12>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "Long tstamp2 = 1451088001000L; <7>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "Long tstamp1 = 1451001601000L; <6>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.3 [style = solid, label="tstamp1"];
+0.0 -> 0.4 [style = solid, label="tstamp1"];
+0.0 -> 0.5 [style = solid, label="tstamp1"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.6 [style = solid, label="tstamp2"];
+0.2 -> 0.3 [style = solid, label="lowHour"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="lowHour"];
+0.2 -> 0.5 [style = solid, label="lowHour"];
+0.2 -> 0.6 [style = solid, label="lowHour"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.6 -> 0.7 [style = bold, label=""];
+0.8 -> 0.0 [style = dotted, label="true"];
+0.8 -> 0.0 [style = bold, label=""];
+0.8 -> 0.1 [style = dotted, label="true"];
+0.8 -> 0.2 [style = dotted, label="true"];
+0.8 -> 0.3 [style = dotted, label="true"];
+0.8 -> 0.4 [style = dotted, label="true"];
+0.8 -> 0.5 [style = dotted, label="true"];
+0.8 -> 0.6 [style = dotted, label="true"];
+0.8 -> 0.7 [style = dotted, label="true"];
+}

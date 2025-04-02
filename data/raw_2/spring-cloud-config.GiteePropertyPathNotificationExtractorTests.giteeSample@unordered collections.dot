@@ -1,0 +1,23 @@
+digraph PDG {
+label = "giteeSample <3...9>";
+0.0 [style = filled, label = "Map<String,Object> value = new ObjectMapper().readValue(new ClassPathResource(\"pathsamples/gitee.json\").getInputStream(),new TypeReference<Map<String,Object>>(){
+}); <4>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "this.headers.set(\"x-git-oschina-event\",\"Push Hook\"); <5>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "PropertyPathNotification extracted = this.extractor.extract(this.headers,value); <6>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "assertThat(extracted.getPaths()[0]).isEqualTo(\"d.txt\"); <8>", fillcolor = deeppink, shape = ellipse];
+0.3 [style = filled, label = "assertThat(extracted).isNotNull(); <7>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "Enter <3...9>", fillcolor = aquamarine, shape = diamond];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.2 [style = solid, label="value"];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = solid, label="extracted"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="extracted"];
+0.3 -> 0.4 [style = bold, label=""];
+0.5 -> 0.0 [style = dotted, label="true"];
+0.5 -> 0.0 [style = bold, label=""];
+0.5 -> 0.1 [style = dotted, label="true"];
+0.5 -> 0.2 [style = dotted, label="true"];
+0.5 -> 0.3 [style = dotted, label="true"];
+0.5 -> 0.4 [style = dotted, label="true"];
+}

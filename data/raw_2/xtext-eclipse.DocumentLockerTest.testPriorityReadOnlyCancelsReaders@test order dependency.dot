@@ -1,0 +1,69 @@
+digraph PDG {
+label = "testPriorityReadOnlyCancelsReaders <3...36>";
+0.6 [style = filled, label = "Runnable runnable = new Runnable(){
+@Override public void run ( ) {
+document.readOnly(new CancelableUnitOfWork<Object,XtextResource>(){
+@Override public Object exec (XtextResource state ,CancelIndicator cancelIndicator  ) {
+check.countDown();
+int wait = 4000;
+int i = 0;
+while (!cancelIndicator.isCanceled()) {
+Thread.sleep(10L);
+if ( ( i > wait )) {
+throw new InterruptedException();
+}
+i =  ( i + 1 );
+}
+return null;
+}});
+}}; <10...30>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "Thread thread = new Thread(runnable); <31>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "XtextDocument document = new XtextDocument(createTokenSource(),null,outdatedStateManager,operationCanceledManager); <5>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "thread.start(); <32>", fillcolor = white, shape = ellipse];
+0.10 [style = filled, label = "document.priorityReadOnly(null); <34>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "XtextResource resource = new XtextResource(); <6>", fillcolor = white, shape = ellipse];
+0.12 [style = filled, label = "Enter <3...36>", fillcolor = aquamarine, shape = diamond];
+0.3 [style = filled, label = "new XtextResourceSet().getResources().add(resource); <7>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "CountDownLatch check = new CountDownLatch(1); <9>", fillcolor = white, shape = ellipse];
+0.9 [style = filled, label = "check.await(); <33>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "document.setInput(resource); <8>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "Thread.interrupted(); <4>", fillcolor = white, shape = ellipse];
+0.11 [style = filled, label = "Assert.assertFalse(thread.isInterrupted()); <35>", fillcolor = deeppink, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.4 [style = solid, label="document"];
+0.1 -> 0.6 [style = solid, label="document"];
+0.1 -> 0.10 [style = solid, label="document"];
+0.2 -> 0.3 [style = solid, label="resource"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="resource"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = bold, label=""];
+0.4 -> 0.6 [style = solid, label="document"];
+0.4 -> 0.10 [style = solid, label="document"];
+0.5 -> 0.6 [style = solid, label="check"];
+0.5 -> 0.6 [style = bold, label=""];
+0.5 -> 0.9 [style = solid, label="check"];
+0.6 -> 0.7 [style = solid, label="runnable"];
+0.6 -> 0.7 [style = bold, label=""];
+0.7 -> 0.8 [style = solid, label="thread"];
+0.7 -> 0.8 [style = bold, label=""];
+0.7 -> 0.11 [style = solid, label="thread"];
+0.8 -> 0.9 [style = bold, label=""];
+0.8 -> 0.11 [style = solid, label="thread"];
+0.9 -> 0.10 [style = bold, label=""];
+0.10 -> 0.11 [style = bold, label=""];
+0.12 -> 0.0 [style = dotted, label="true"];
+0.12 -> 0.0 [style = bold, label=""];
+0.12 -> 0.1 [style = dotted, label="true"];
+0.12 -> 0.2 [style = dotted, label="true"];
+0.12 -> 0.3 [style = dotted, label="true"];
+0.12 -> 0.4 [style = dotted, label="true"];
+0.12 -> 0.5 [style = dotted, label="true"];
+0.12 -> 0.6 [style = dotted, label="true"];
+0.12 -> 0.7 [style = dotted, label="true"];
+0.12 -> 0.8 [style = dotted, label="true"];
+0.12 -> 0.9 [style = dotted, label="true"];
+0.12 -> 0.10 [style = dotted, label="true"];
+0.12 -> 0.11 [style = dotted, label="true"];
+}

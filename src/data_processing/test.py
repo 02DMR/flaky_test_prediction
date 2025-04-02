@@ -63,7 +63,7 @@ def extract_and_deduplicate_and_copy(directory, destination):
 
         # 对于每个类别，如果文件数超过30，将这些文件复制到目标目录
         for category, files in category_files.items():
-            if len(files) > 30:
+            if len(files) > 35:
                 for filename in files:
                     src_path = os.path.join(directory, filename)
                     dest_path = os.path.join(destination, filename)
@@ -78,7 +78,7 @@ def extract_and_deduplicate_and_copy(directory, destination):
 
 # 指定源目录和目标目录路径
 source_directory = r"C:\Users\86130\Desktop\Code\Pycharm\flaky_test_prediction\data\raw"
-destination_directory = r"C:\Users\86130\Desktop\Code\Pycharm\flaky_test_prediction\data\raw_1"
+destination_directory = r"C:\Users\86130\Desktop\Code\Pycharm\flaky_test_prediction\data\raw_2"
 
 # 调用函数
 extract_and_deduplicate_and_copy(source_directory, destination_directory)

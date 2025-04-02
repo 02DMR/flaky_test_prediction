@@ -1,0 +1,36 @@
+digraph PDG {
+label = "testToMetricResponse <3...12>";
+0.3 [style = filled, label = "tags.add(new Tag(\"tag1\",\"value1\")); <7>", fillcolor = white, shape = ellipse];
+0.8 [style = filled, label = "Enter <3...12>", fillcolor = aquamarine, shape = diamond];
+0.6 [style = filled, label = "String expected = \"{\"metric\":\"sys.cpu.user\",\"timestamp\":1000,\"value\":2.0,\"tags\":[{\"tag1\":\"value1\"},{\"viz\":\"(a&b)|(c&d)\"}],\"subscriptionId\":\"12345\",\"complete\":false}\"; <10>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "String subscriptionId = \"12345\"; <4>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "List<Tag> tags = new ArrayList<>(); <6>", fillcolor = white, shape = ellipse];
+0.4 [style = filled, label = "Metric m = Metric.newBuilder().name(\"sys.cpu.user\").value(ts,2.0).tags(tags).tag(VISIBILITY_TAG,\"(a&b)|(c&d)\").build(); <8>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "String json = JsonUtil.getObjectMapper().writeValueAsString(MetricResponse.fromMetric(m,subscriptionId)); <9>", fillcolor = white, shape = ellipse];
+0.7 [style = filled, label = "Assert.assertEquals(expected,json); <11>", fillcolor = deeppink, shape = ellipse];
+0.1 [style = filled, label = "long ts = 1000L; <5>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = bold, label=""];
+0.0 -> 0.5 [style = solid, label="subscriptionId"];
+0.1 -> 0.2 [style = bold, label=""];
+0.1 -> 0.4 [style = solid, label="ts"];
+0.2 -> 0.3 [style = solid, label="tags"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="tags"];
+0.3 -> 0.4 [style = solid, label="tags"];
+0.3 -> 0.4 [style = bold, label=""];
+0.4 -> 0.5 [style = solid, label="m"];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.5 -> 0.7 [style = solid, label="json"];
+0.6 -> 0.7 [style = solid, label="expected"];
+0.6 -> 0.7 [style = bold, label=""];
+0.8 -> 0.0 [style = dotted, label="true"];
+0.8 -> 0.0 [style = bold, label=""];
+0.8 -> 0.1 [style = dotted, label="true"];
+0.8 -> 0.2 [style = dotted, label="true"];
+0.8 -> 0.3 [style = dotted, label="true"];
+0.8 -> 0.4 [style = dotted, label="true"];
+0.8 -> 0.5 [style = dotted, label="true"];
+0.8 -> 0.6 [style = dotted, label="true"];
+0.8 -> 0.7 [style = dotted, label="true"];
+}

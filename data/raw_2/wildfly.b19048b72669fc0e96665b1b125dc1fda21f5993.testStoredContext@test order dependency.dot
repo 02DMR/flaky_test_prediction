@@ -1,0 +1,82 @@
+digraph PDG {
+label = "testStoredContext <3...151>";
+0.3 [style = filled, label = "final Object obj = ctx.lookup(new CompositeName(\"foo-stored/again/blah/blah2\")); <147>", fillcolor = white, shape = ellipse];
+0.2 [style = filled, label = "final NamingContext ctx = new NamingContext(new CompositeName(),store,null); <146>", fillcolor = white, shape = ellipse];
+0.6 [style = filled, label = "assertEquals(new Integer(5),obj); <150>", fillcolor = deeppink, shape = ellipse];
+0.7 [style = filled, label = "Enter <3...151>", fillcolor = aquamarine, shape = diamond];
+0.4 [style = filled, label = "ctx.listBindings(\"foo-stored/again/hi/there\"); <148>", fillcolor = white, shape = ellipse];
+0.1 [style = filled, label = "bindObject(bindingName,new Context(){
+@Override public Object lookup (Name name  ) {
+if (\"blah/blah2\".equals(name.toString())) {
+return new Integer(5);
+}
+return null;
+}@Override public Object lookup (String name  ) {
+return lookup(new CompositeName(name));
+}@Override public void bind (Name name ,Object obj  ) {
+}@Override public void bind (String name ,Object obj  ) {
+}@Override public void rebind (Name name ,Object obj  ) {
+}@Override public void rebind (String name ,Object obj  ) {
+}@Override public void unbind (Name name  ) {
+}@Override public void unbind (String name  ) {
+}@Override public void rename (Name oldName ,Name newName  ) {
+}@Override public void rename (String oldName ,String newName  ) {
+}@Override public NamingEnumeration<NameClassPair> list (Name name  ) {
+return null;
+}@Override public NamingEnumeration<NameClassPair> list (String name  ) {
+return null;
+}@Override public NamingEnumeration<Binding> listBindings (Name name  ) {
+if (!\"hi/there\".equals(name.toString())) throw new IllegalArgumentException(\"Expected hi/there\");
+return null;
+}@Override public NamingEnumeration<Binding> listBindings (String name  ) {
+return null;
+}@Override public void destroySubcontext (Name name  ) {
+}@Override public void destroySubcontext (String name  ) {
+}@Override public Context createSubcontext (Name name  ) {
+return null;
+}@Override public Context createSubcontext (String name  ) {
+return null;
+}@Override public Object lookupLink (Name name  ) {
+return null;
+}@Override public Object lookupLink (String name  ) {
+return null;
+}@Override public NameParser getNameParser (Name name  ) {
+return null;
+}@Override public NameParser getNameParser (String name  ) {
+return null;
+}@Override public Name composeName (Name name ,Name prefix  ) {
+return null;
+}@Override public String composeName (String name ,String prefix  ) {
+return null;
+}@Override public Object addToEnvironment (String propName ,Object propVal  ) {
+return null;
+}@Override public Object removeFromEnvironment (String propName  ) {
+return null;
+}@Override public Hashtable<?,?> getEnvironment ( ) {
+return null;
+}@Override public void close ( ) {
+}@Override public String getNameInNamespace ( ) {
+return null;
+}}); <5...145>", fillcolor = white, shape = ellipse];
+0.0 [style = filled, label = "final ServiceName bindingName = ServiceName.JBOSS.append(\"foo-stored\").append(\"again\"); <4>", fillcolor = white, shape = ellipse];
+0.5 [style = filled, label = "assertNotNull(obj); <149>", fillcolor = white, shape = ellipse];
+0.0 -> 0.1 [style = solid, label="bindingName"];
+0.0 -> 0.1 [style = bold, label=""];
+0.1 -> 0.2 [style = bold, label=""];
+0.2 -> 0.3 [style = solid, label="ctx"];
+0.2 -> 0.3 [style = bold, label=""];
+0.2 -> 0.4 [style = solid, label="ctx"];
+0.3 -> 0.4 [style = bold, label=""];
+0.3 -> 0.5 [style = solid, label="obj"];
+0.3 -> 0.6 [style = solid, label="obj"];
+0.4 -> 0.5 [style = bold, label=""];
+0.5 -> 0.6 [style = bold, label=""];
+0.7 -> 0.0 [style = dotted, label="true"];
+0.7 -> 0.0 [style = bold, label=""];
+0.7 -> 0.1 [style = dotted, label="true"];
+0.7 -> 0.2 [style = dotted, label="true"];
+0.7 -> 0.3 [style = dotted, label="true"];
+0.7 -> 0.4 [style = dotted, label="true"];
+0.7 -> 0.5 [style = dotted, label="true"];
+0.7 -> 0.6 [style = dotted, label="true"];
+}

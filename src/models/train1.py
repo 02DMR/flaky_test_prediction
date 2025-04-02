@@ -26,7 +26,7 @@ def set_seed(seed):
 
 
 # 设置随机种子
-set_seed(654321)
+set_seed(234561)
 
 # 加载预处理好的数据集
 dataset = torch.load(
@@ -75,9 +75,9 @@ test_loader = DataLoader(test_dataset, batch_size=16, shuffle=False)
 # 超参数设置
 in_channels = dataset[0].x.size(1)  # CodeBERT嵌入维度
 hidden_channels = 128
-num_classes = 13  # 根据您的数据集调整
-learning_rate = 0.0002
-epochs = 300
+num_classes = 6
+learning_rate = 0.0001
+epochs = 200
 
 # 检查是否有CUDA可用
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -140,8 +140,7 @@ def evaluate(loader, dataset_len):
     avg_loss = total_loss / total
     accuracy = correct / total
 
-    # 计算各种指标
-    f1_macro = f1_score(all_labels, all_preds, average='macro')
+    # 计算F1 Weighted指标
     f1_weighted = f1_score(all_labels, all_preds, average='weighted')
     precision_macro = precision_score(all_labels, all_preds, average='macro')
     recall_macro = recall_score(all_labels, all_preds, average='macro')
@@ -152,7 +151,6 @@ def evaluate(loader, dataset_len):
     return {
         'accuracy': accuracy,
         'loss': avg_loss,
-        'f1_macro': f1_macro,
         'f1_weighted': f1_weighted,
         'precision_macro': precision_macro,
         'recall_macro': recall_macro,
@@ -192,7 +190,7 @@ def plot_confusion_matrix(labels, preds, class_names=None):
         plt.yticks(np.arange(len(class_names)) + 0.5, class_names, rotation=0)
 
     plt.tight_layout()
-    plt.savefig("confusion_matrix_graphsmote.png")
+    plt.savefig("confusion_matrix_graphsmote6.png")
     plt.close()
 
 
@@ -218,11 +216,11 @@ def plot_training_history(history):
     plt.ylabel('Accuracy')
     plt.legend()
 
-    # 绘制F1曲线
+    # 绘制F1 Weighted曲线
     plt.subplot(2, 2, 3)
-    plt.plot(history['train_f1'], label='Train F1 (Macro)')
-    plt.plot(history['val_f1'], label='Validation F1 (Macro)')
-    plt.title('F1 Score (Macro)')
+    plt.plot(history['train_f1'], label='Train F1 (Weighted)')
+    plt.plot(history['val_f1'], label='Validation F1 (Weighted)')
+    plt.title('F1 Score (Weighted)')
     plt.xlabel('Epoch')
     plt.ylabel('F1 Score')
     plt.legend()
@@ -239,7 +237,7 @@ def plot_training_history(history):
     plt.legend()
 
     plt.tight_layout()
-    plt.savefig("training_history_graphsmote.png")
+    plt.savefig("training_history_graphsmote6.png")
     plt.close()
 
 
@@ -259,14 +257,14 @@ def plot_class_f1_scores(test_f1_per_class):
         plt.text(i, v + 0.02, f'{v:.2f}', ha='center')
 
     plt.tight_layout()
-    plt.savefig("class_f1_scores_graphsmote.png")
+    plt.savefig("class_f1_scores_graphsmote6.png")
     plt.close()
 
 
 if __name__ == "__main__":
     best_val_acc = 0
     best_val_f1 = 0
-    patience = 100  # 早停耐心值
+    patience = 200  # 早停耐心值
     counter = 0  # 早停计数器
 
     # 记录训练历史
@@ -291,32 +289,32 @@ if __name__ == "__main__":
         train_metrics = evaluate(train_loader, len(balanced_train_dataset))
         val_metrics = evaluate(val_loader, len(val_dataset))
 
-        # 记录历史
+        # 记录历史（使用F1 Weighted）
         history['train_loss'].append(train_metrics['loss'])
         history['train_acc'].append(train_metrics['accuracy'])
-        history['train_f1'].append(train_metrics['f1_macro'])
+        history['train_f1'].append(train_metrics['f1_weighted'])
         history['train_precision'].append(train_metrics['precision_macro'])
         history['train_recall'].append(train_metrics['recall_macro'])
         history['val_loss'].append(val_metrics['loss'])
         history['val_acc'].append(val_metrics['accuracy'])
-        history['val_f1'].append(val_metrics['f1_macro'])
+        history['val_f1'].append(val_metrics['f1_weighted'])
         history['val_precision'].append(val_metrics['precision_macro'])
         history['val_recall'].append(val_metrics['recall_macro'])
 
-        # 打印当前epoch的结果
+        # 打印当前epoch的结果（使用F1 Weighted）
         print(f"Epoch: {epoch:03d}, "
               f"Train Loss: {train_metrics['loss']:.4f}, Train Acc: {train_metrics['accuracy']:.4f}, "
-              f"Train F1 (Macro): {train_metrics['f1_macro']:.4f}, "
+              f"Train F1 (Weighted): {train_metrics['f1_weighted']:.4f}, "
               f"Train Prec: {train_metrics['precision_macro']:.4f}, Train Rec: {train_metrics['recall_macro']:.4f}, "
               f"Val Loss: {val_metrics['loss']:.4f}, Val Acc: {val_metrics['accuracy']:.4f}, "
-              f"Val F1 (Macro): {val_metrics['f1_macro']:.4f}, "
+              f"Val F1 (Weighted): {val_metrics['f1_weighted']:.4f}, "
               f"Val Prec: {val_metrics['precision_macro']:.4f}, Val Rec: {val_metrics['recall_macro']:.4f}")
 
-        # 保存最佳模型（基于验证F1分数）
-        if val_metrics['f1_macro'] > best_val_f1:
-            best_val_f1 = val_metrics['f1_macro']
+        # 保存最佳模型（基于验证F1 Weighted指标）
+        if val_metrics['f1_weighted'] > best_val_f1:
+            best_val_f1 = val_metrics['f1_weighted']
             best_val_acc = val_metrics['accuracy']
-            torch.save(model.state_dict(), "best_model_graphsmote.pth")
+            torch.save(model.state_dict(), "best_model_graphsmote6.pth")
             counter = 0  # 重置早停计数器
         else:
             counter += 1
@@ -330,14 +328,13 @@ if __name__ == "__main__":
     plot_training_history(history)
 
     # 加载最佳模型并在测试集上评估
-    model.load_state_dict(torch.load("best_model_graphsmote.pth"))
+    model.load_state_dict(torch.load("best_model_graphsmote6.pth"))
     test_metrics = evaluate(test_loader, len(test_dataset))
 
     # 打印测试结果
     print("\nTest Results:")
     print(f"Test Loss: {test_metrics['loss']:.4f}")
     print(f"Test Accuracy: {test_metrics['accuracy']:.4f}")
-    print(f"Test F1 (Macro): {test_metrics['f1_macro']:.4f}")
     print(f"Test F1 (Weighted): {test_metrics['f1_weighted']:.4f}")
     print(f"Test Precision: {test_metrics['precision_macro']:.4f}")
     print(f"Test Recall: {test_metrics['recall_macro']:.4f}")
