@@ -26,7 +26,7 @@ def set_seed(seed):
 
 
 # 设置随机种子
-set_seed(234561)
+set_seed(654312)
 
 # 加载预处理好的数据集
 dataset = torch.load(
@@ -45,7 +45,7 @@ dataset = [dataset[i] for i in indices]
 
 # 划分训练集、验证集和测试集（70%/20%/10%）
 num_graphs = len(dataset)
-train_num = int(num_graphs * 0.7)
+train_num = int(num_graphs * 0.6)
 val_num = int(num_graphs * 0.2)
 test_num = num_graphs - train_num - val_num
 
